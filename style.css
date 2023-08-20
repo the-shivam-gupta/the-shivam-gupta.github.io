@@ -22,7 +22,7 @@ body {
 }
 
 .logo {
-  background: url("image1.jpg");
+  background: url("public\image1.jpg");
   background-repeat: repeat;
   background-clip: text;
   -webkit-background-clip: text;
