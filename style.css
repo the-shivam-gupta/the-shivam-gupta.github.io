@@ -180,6 +180,8 @@ img {
 
 .front,
 .back {
+  object-fit: contain;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,9 +191,13 @@ img {
   width: 100%;
   border: 2px solid rgb(10, 52, 61);
   box-shadow: 10px 10px 20px rgb(42, 10, 107);
-  filter: drop-shadow(10px 10px 20px rgb(11, 13, 133));
   border-radius: 50%;
   backface-visibility: hidden;
+}
+
+.front img{
+  width: fit-content;
+  border-radius: 50%;
 }
 
 .back {
@@ -213,3 +219,84 @@ img {
   position: absolute;
   top: 2rem;
 }
+
+
+/* Scroll animation start */
+section{
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1){
+  color: #e0ffff;
+  }
+section:nth-child(2){
+  color: #42455a;
+  background: #e0ffff;
+} 
+section:nth-child(3){
+  color: #e0ffff;
+}
+section:nth-child(4){
+  color: #e0ffff;
+  background: rgb(12, 12, 30);
+}
+section .container{
+  margin: 100px;
+}
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2{
+  margin: 20px;
+  font-size: 40px;
+  text-align: left;
+  text-transform: uppercase;
+}
+section .text-container{
+   display: flex;
+}
+section .text-container .text-box{
+  border: 2px solid red;
+  width: 100%;
+  height: fit-content;
+  margin: 20px;
+  padding: 20px;
+  background: #00c2cb;
+}
+section .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1.5s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.container{
+  color: white;
+}
+/* Scroll animation ends */
