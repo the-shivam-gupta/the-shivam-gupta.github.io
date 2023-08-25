@@ -15,4 +15,13 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
-  
+
+/* arrow onclick scroll down */
+document.addEventListener("DOMContentLoaded", function () {
+  const arrow = document.querySelector(".arrow");
+
+  arrow.addEventListener("click", () => {
+    const scrollDistance = window.innerHeight;
+    window.scrollBy(0, scrollDistance);
+  });
+});

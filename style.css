@@ -22,7 +22,7 @@ body {
 }
 
 .logo {
-  background: url("public\image1.jpg");
+  background: url("public/image1.jpg");
   background-repeat: repeat;
   background-clip: text;
   -webkit-background-clip: text;
@@ -246,6 +246,34 @@ section:nth-child(4){
 section .container{
   margin: 100px;
 }
+
+
+.arrow {
+  font-size: 1.25em;
+  position: absolute;
+  display: inline-block;
+  animation: moveArrow 3s infinite linear;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+    color: rgb(41, 174, 214);
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 1;
+    color: rgb(61, 52, 168);
+  }
+}
+
 section h1{
   font-size: 3rem;
   margin: 20px;
@@ -260,7 +288,6 @@ section .text-container{
    display: flex;
 }
 section .text-container .text-box{
-  border: 2px solid red;
   width: 100%;
   height: fit-content;
   margin: 20px;
