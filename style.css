@@ -22,9 +22,9 @@ body {
 }
 
 .logo {
-  background: url("public/image1.jpg");
+  background-color: #36096d;
+  background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
   background-repeat: repeat;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
@@ -133,21 +133,50 @@ h3 {
   color: aliceblue;
 }
 
+/* resume button start */
+
 .resume {
-  color: rgb(34, 0, 0);
-  cursor: pointer;
-  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100px;
+  display: block;
+  padding: 8px;
   border-radius: 5px;
-  background: linear-gradient(45deg, white, blue);
-  font-weight: bold;
+  background: linear-gradient(to left, black 50%, white 50%, blue);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all 0.5s ease-out;
 }
+
+.resume:hover {
+  background-position: right bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text {
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  transition: all 0.6s ease-out;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text:hover {
+  color: white;
+}
+/* resume button end */
 
 img {
   width: 300px;
   overflow: visible;
 }
 
-.image{
+.image {
   position: absolute;
   top: 8rem;
   width: fit-content;
@@ -174,7 +203,7 @@ img {
 }
 
 .card:hover .__content {
-  transform: rotateY( 180deg ) ;
+  transform: rotateY(180deg);
   transition: 0.5s ease-in-out;
 }
 
@@ -195,7 +224,7 @@ img {
   backface-visibility: hidden;
 }
 
-.front img{
+.front img {
   width: fit-content;
   border-radius: 50%;
 }
@@ -203,26 +232,25 @@ img {
 .back {
   background: linear-gradient(135deg, blue, rgb(1, 179, 255), white);
   color: white;
-  transform: rotateY( 180deg );
+  transform: rotateY(180deg);
 }
 /* End of Card Flip animation */
 
-
-.back ul{
+.back ul {
   position: absolute;
   bottom: 3rem;
   list-style-position: inside;
   list-style-type: circle;
 }
 
-.back h1{
+.back h1 {
   position: absolute;
   top: 2rem;
 }
 /* wave animation for scroll section */
 .wave {
   position: relative;
-  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, .2));
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
 
 .wave span {
@@ -231,51 +259,49 @@ img {
   color: #fff;
   font-size: 1em;
   animation: wave 2s ease-in-out infinite;
-  animation-delay: calc(.1s*var(--i));
+  animation-delay: calc(0.1s * var(--i));
 }
 
 @keyframes wave {
   0% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 
   20% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 
   40%,
   100% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
-
 /* Scroll animation start */
-section{
+section {
   text-align: center;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section:nth-child(1){
-  color: #e0ffff;
-  }
-section:nth-child(2){
-  color: #42455a;
-  background: #e0ffff;
-} 
-section:nth-child(3){
+section:nth-child(1) {
   color: #e0ffff;
 }
-section:nth-child(4){
+section:nth-child(2) {
+  color: #42455a;
+  background: #e0ffff;
+}
+section:nth-child(3) {
+  color: #e0ffff;
+}
+section:nth-child(4) {
   color: #e0ffff;
   background: rgb(12, 12, 30);
 }
-section .container{
+section .container {
   margin: 100px;
 }
-
 
 .arrow {
   font-size: 1.25em;
@@ -283,7 +309,17 @@ section .container{
   display: inline-block;
   animation: moveArrow 2s infinite linear;
   cursor: pointer;
-  background: linear-gradient(#ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  background: linear-gradient(
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
+    #ff5722
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -303,56 +339,59 @@ section .container{
   }
 }
 
-section h1{
+section h1 {
   font-size: 3rem;
   margin: 20px;
 }
-section h2{
-  margin: 20px;
+section h2 {
   font-size: 40px;
-  text-align: left;
-  text-transform: uppercase;
-}
-section .text-container{
-   display: flex;
-}
-section .text-container .text-box{
-  width: 100%;
-  height: fit-content;
-  margin: 20px;
-  padding: 20px;
-  background: #00c2cb;
-}
-section .text-container .text-box h3{
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
-@media (max-width: 900px){
-  section h1{
+section .text-container .text-box {
+  margin: 20px;
+  padding: 20px;
+}
+
+.text-box{
+  overflow: hidden;
+}
+
+.text-box img{
+  width: 60%;
+  cursor: pointer;
+  transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.text-box img:hover{
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 900px) {
+  section h1 {
     font-size: 2rem;
     text-align: center;
   }
-  section .text-container{
+  section .text-container {
     flex-direction: column;
   }
 }
 
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 1.5s all ease;
 }
 
-.reveal.active{
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
 
-.container{
+.container {
   color: white;
 }
 /* Scroll animation ends */
