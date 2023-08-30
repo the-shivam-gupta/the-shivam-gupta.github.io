@@ -450,7 +450,7 @@ section .text-container .text-box {
 .text-box img{
   width: 60%;
   cursor: pointer;
-  transition: transform .5s, filter 1.5s ease-in-out;
+  transition: transform .5s, filter 1.2s ease-in-out;
   filter: grayscale(100%);
 }
 

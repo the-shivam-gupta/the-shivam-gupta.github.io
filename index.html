@@ -30,10 +30,10 @@
           <div class="navbar2">
             <div class="header2">
               <ul class="menu2">
-                <li>Home</li>
-                <li>Project</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li class="button">Home</li>
+                <li class="button">Project</li>
+                <li class="button">About</li>
+                <li class="button">Contact</li>
               </ul>
             </div>
           </div>
@@ -152,6 +152,17 @@
         backSpeed: 0,
         fadeOut: true,
         cursorChar: "_",
+      });
+    </script>
+
+    <script>
+      const audio = new Audio("./public/sound.mp3");
+      const buttons = document.querySelectorAll(".button");
+
+      buttons.forEach((play) => {
+        play.addEventListener("click", () => {
+          audio.play();
+        });
       });
     </script>
   </body>
