@@ -262,10 +262,6 @@ a {
 }
 /* resume button end */
 
-img {
-  width: 300px;
-  overflow: visible;
-}
 
 .image {
   position: absolute;
@@ -339,6 +335,10 @@ img {
   top: 2rem;
 }
 /* wave animation for scroll section */
+.wave-container{
+  background: rgb(9, 9, 23);
+}
+
 .wave {
   position: relative;
   -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
@@ -394,11 +394,15 @@ section .container {
   margin: 100px;
 }
 
+.text-box img{
+  border-radius: 10px;
+}
+
 /* arrow animation starts */
 .arrow {
   position: absolute;
   top: 170%;
-  left: 50%;
+  left: 53.5%;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
@@ -458,7 +462,7 @@ section .text-container .text-box {
 
 .text-box img:hover {
   filter: grayscale(0);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .text-box {
@@ -511,3 +515,41 @@ section .text-container .text-box {
   color: white;
 }
 /* Scroll animation ends */
+
+/* Back to top button start */
+#button {
+  display: inline-block;
+  background-color: transparent;
+  width: 51.5px;
+  text-align: center;
+  border: 2px solid blue;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+#button:active {
+  background-color: rgb(22, 22, 200);
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
