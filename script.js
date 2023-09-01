@@ -25,3 +25,26 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollBy(0, scrollDistance);
   });
 });
+
+// bottom to top button script
+
+$(document).ready(function() {
+  var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+    console.log("show")
+  } else {
+    btn.removeClass('show');
+    console.log("not show")
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+})
+
+
