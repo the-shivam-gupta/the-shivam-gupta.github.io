@@ -477,16 +477,14 @@ section .text-container .text-box {
   padding: 60px 10px;
   color: white;
   background: rgba(9, 9, 23, 0.509);
+  border: 2px solid white;
   border-radius: 10px 10px 0 10px;
+  text-align: justify;
   text-shadow: 0 10px 20px #8e54e9;
   display: flex;
   align-items: center;
   text-align: left;
   justify-content: center;
-}
-
-.text-box p {
-  border: 2px solid white;
 }
 
 @media (max-width: 900px) {
@@ -553,3 +551,23 @@ section .text-container .text-box {
   opacity: 1;
   visibility: visible;
 }
+
+/* project-section effect start */
+.letter {
+  font-family: monospace;
+  font-size: 3em;
+  font-weight: bolder;
+  text-shadow: 0.03em 0.03em 0.1em #ffffff;
+  cursor: default;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.letter-spacing{
+  padding: 5px;
+}
+
+.letter:hover {
+  transform: scaleX(1) scaleY(1.4);
+}
+/* project-section effect end */
