@@ -251,7 +251,7 @@ h3 {
   transition: all 0.5s ease-out;
 }
 
-.resume-container{
+.resume-container {
   border: 1px solid white;
   border-radius: 3.5px;
 }
@@ -586,3 +586,45 @@ section .text-container .text-box {
   transform: scaleX(1) scaleY(1.4);
 }
 /* project-section effect end */
+.skills {
+  height: 100vh;
+  color: white;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills ul{
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 100px 200px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.skills ul::-webkit-scrollbar {
+  display: none;
+}
+
+.skills ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 6em 3em;
+  cursor: pointer;
+  transition: 1s all ease;
+  filter: grayscale(100%);
+}
+
+.skills ul li:hover {
+  filter: grayscale(0);
+}
+
+.skills h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
