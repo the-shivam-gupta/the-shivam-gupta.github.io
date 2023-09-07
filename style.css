@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* #contentContainer {
+  display: none;
+} */
+
+.main-screen-container {
+  height: 100vh;
+}
+
 body {
   background: black;
 }
@@ -227,16 +239,21 @@ h3 {
 /* resume button start */
 
 .resume {
-  border: 1px solid black;
+  /* border: 2px solid white; */
   border-radius: 10px;
   width: 100px;
   display: block;
   padding: 8px;
-  border-radius: 5px;
+  border-radius: 3.5px;
   background: linear-gradient(to left, black 50%, white 50%, blue);
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all 0.5s ease-out;
+}
+
+.resume-container{
+  border: 1px solid white;
+  border-radius: 3.5px;
 }
 
 .resume:hover {
@@ -261,7 +278,6 @@ a {
   color: white;
 }
 /* resume button end */
-
 
 .image {
   position: absolute;
@@ -335,7 +351,7 @@ a {
   top: 2rem;
 }
 /* wave animation for scroll section */
-.wave-container{
+.wave-container {
   background: rgb(9, 9, 23);
 }
 
@@ -394,7 +410,7 @@ section .container {
   margin: 100px;
 }
 
-.text-box img{
+.text-box img {
   border-radius: 10px;
 }
 
@@ -423,15 +439,15 @@ section .container {
 
 @keyframes arrow {
   0% {
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
   }
 }
 /* arrow animation ends */
@@ -525,8 +541,7 @@ section .text-container .text-box {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
@@ -563,7 +578,7 @@ section .text-container .text-box {
   transition: transform 0.2s ease;
 }
 
-.letter-spacing{
+.letter-spacing {
   padding: 5px;
 }
 
