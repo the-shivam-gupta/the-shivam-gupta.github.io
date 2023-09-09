@@ -239,8 +239,6 @@ h3 {
 /* resume button start */
 
 .resume {
-  /* border: 2px solid white; */
-  border-radius: 10px;
   width: 100px;
   display: block;
   padding: 8px;
@@ -252,7 +250,7 @@ h3 {
 }
 
 .resume-container {
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 3.5px;
 }
 
@@ -536,7 +534,7 @@ section .text-container .text-box {
   background-color: transparent;
   width: 51.5px;
   text-align: center;
-  border: 2px solid blue;
+  border: 2px solid rgba(255, 255, 255, 0.409);
   border-radius: 50%;
   position: fixed;
   bottom: 30px;
@@ -586,6 +584,27 @@ section .text-container .text-box {
   transform: scaleX(1) scaleY(1.4);
 }
 /* project-section effect end */
+hr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+
+  &::before {
+    content: "";
+    background-image: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 156.2 17' enable-background='0 0 156.2 17'><path d='m156.2 0v1c-4.6 0-6.9 3.8-9.3 7.8-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2c-2.4-4-4.7-7.8-9.3-7.8s-6.9 3.8-9.3 7.8c-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2-4.8-7.8-9.4-7.8-6.9 3.8-9.3 7.8c-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2-4.8-7.8-9.4-7.8-6.9 3.8-9.3 7.8c-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2c-2.4-4-4.7-7.8-9.3-7.8v-1c5.2 0 7.7 4.2 10.2 8.2 2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.5-4 5.1-8.2 10.2-8.2 5.2 0 7.7 4.2 10.2 8.2 2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.5-4.1 5-8.2 10.2-8.2s7.7 4.2 10.2 8.2c2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.5-4.1 5-8.2 10.2-8.2s7.7 4.2 10.2 8.2c2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.7-4 5.2-8.2 10.4-8.2' fill='lightcyan'/></svg>");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+
 .skills {
   height: 100vh;
   color: white;
@@ -595,12 +614,15 @@ section .text-container .text-box {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
-.skills ul{
+.skills ul {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
+  border-radius: 20px;
+  background: rgba(9, 9, 23, 0.75);
   margin: 100px 200px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -616,15 +638,31 @@ section .text-container .text-box {
   margin: 6em 3em;
   cursor: pointer;
   transition: 1s all ease;
-  filter: grayscale(100%);
+  animation: scrollAnimation 20s linear infinite;
 }
 
-.skills ul li:hover {
-  filter: grayscale(0);
+.coding-languages {
+  overflow: hidden;
+}
+.skills ul li img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 6px #8e54e9);
+  transition: all 0.5s ease;
 }
 
 .skills h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  letter-spacing: 1px;
+  font-weight: bolder;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1600px);
+  }
 }
