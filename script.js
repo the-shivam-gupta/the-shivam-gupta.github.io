@@ -44,3 +44,22 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
   });
 });
+
+// links for directing to specific content to tag
+document.addEventListener("DOMContentLoaded", function() {
+  const navItems = document.querySelectorAll(".__container [data-section]");
+
+  navItems.forEach(function(item) {
+      item.addEventListener("click", function() {
+          const targetId = this.getAttribute("data-section");
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+              window.scrollTo({
+                  top: targetSection.offsetTop,
+                  behavior: "smooth"
+              });
+          }
+      });
+  });
+});

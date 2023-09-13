@@ -12,11 +12,8 @@ html {
   display: none;
 } */
 
-.main-screen-container {
-  height: 100vh;
-}
-
 body {
+  overflow-x: clip;
   background: black;
 }
 
@@ -170,11 +167,16 @@ body {
 
 /* logo animation end */
 
+#about-container{
+  height: 100vh;
+  width: 100vw;
+}
+
 .content {
-  width: fit-content;
   color: white;
-  margin: 10em;
-  margin-left: 15.9em;
+  position: absolute;
+  left: 16em;
+  top: 14em;
 }
 
 .content h1 {
@@ -284,16 +286,10 @@ a {
 }
 /* resume button end */
 
-.image {
-  position: absolute;
-  top: 8rem;
-  width: fit-content;
-}
-
 /* Start of Card Flip animation */
 .card {
   position: absolute;
-  top: 14rem;
+  top: 23rem;
   left: 57rem;
   width: 300px;
   height: 300px;
@@ -357,6 +353,7 @@ a {
 }
 /* wave animation for scroll section */
 .wave-container {
+  width: 100vw;
   background: rgb(9, 9, 23);
 }
 
@@ -684,20 +681,20 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .content {
+  /* .content {
     margin: 5em;
-  }
+  } */
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .content {
+  /* .content {
     margin-top: 15rem;
     font-size: 10px;
-  }
+  } */
 }
 
 @media (min-width: 1025px) {
-  .content {
+  /* .content {
     margin: 15em;
-  }
+  } */
 }

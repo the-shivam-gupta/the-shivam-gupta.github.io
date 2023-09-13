@@ -32,28 +32,26 @@
   </head>
   <body>
     <a id="button"></a>
-    <div class="main-screen-container">
-      <div class="container">
-        <div class="header">
-          <div class="logo">
-            <h2>Portfolio</h2>
-            <h2>Portfolio</h2>
-          </div>
-          <div class="__container">
-            <div class="navbar2">
-              <div class="header2">
-                <ul class="menu2">
-                  <li>Home</li>
-                  <li>Project</li>
-                  <li>Skills</li>
-                  <li>About</li>
-                  <li>Contact</li>
-                </ul>
-              </div>
-            </div>
+    <div class="header" id="home">
+      <div class="logo">
+        <h2>Portfolio</h2>
+        <h2>Portfolio</h2>
+      </div>
+      <div class="__container">
+        <div class="navbar2">
+          <div class="header2">
+            <ul class="menu2">
+              <li data-section="home">Home</li>
+              <li data-section="project">Project</li>
+              <li data-section="skills">Skills</li>
+              <li data-section="about">About</li>
+              <li data-section="contact">Contact</li>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
+    <div id="about-container">
       <div class="content">
         <h1>Hi, I'm Shivam Gupta</h1>
         <span id="element"></span>
@@ -87,9 +85,7 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="image">
       <div class="card">
         <div class="__content">
           <div class="front">
@@ -111,6 +107,7 @@
         </div>
       </div>
     </div>
+
     <!-- Scroll Content -->
     <section class="wave-container">
       <h1 class="wave">
@@ -132,7 +129,7 @@
         </div>
       </h1>
     </section>
-    <section>
+    <section id="project">
       <div class="container reveal">
         <div class="projects">
           <span class="letter">P</span>
@@ -220,7 +217,7 @@
     </section>
     <hr />
     <br />
-    <div class="skills">
+    <div class="skills" id="skills">
       <div class="container reveal">
         <div class="skills-header">
           <span class="letter">S</span>
