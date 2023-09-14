@@ -611,6 +611,7 @@ hr {
 }
 
 .skills {
+  width: 100vw;
   height: 100vh;
   color: white;
   overflow: auto;
@@ -697,4 +698,18 @@ hr {
   /* .content {
     margin: 15em;
   } */
+}
+
+
+*::-webkit-scrollbar {
+  width: 0.8em;
+}
+ 
+*::-webkit-scrollbar-track {
+  background: linear-gradient(rgb(183, 188, 246), rgb(135, 196, 239))
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(93, 95, 238, 0.831);
+  border-radius: 10px;
 }
