@@ -31,6 +31,12 @@
     <script src="script.js"></script>
   </head>
   <body>
+    <div id="splash-screen">
+      <div class="splash-content">
+        <h1 id="splash"></h1>
+        <span class="loader"></span>
+      </div>
+    </div>
     <a id="button"></a>
     <div class="header" id="home">
       <div class="logo">
@@ -92,7 +98,7 @@
             <img src="public/image.png" alt="photo" />
           </div>
           <div class="back">
-            <h1>Hobbies</h1>
+            <h1>HOBBIES</h1>
             <ul>
               <li>Fitness freak</li>
               <br />
@@ -143,7 +149,12 @@
         </div>
         <div class="text-container">
           <div class="text-box">
-            <img src="public/labourService_P1.jpg" alt="image" />
+            <img
+              src="public/labourService_P1.jpg"
+              alt="image"
+              onmouseover="hoverImage2(this)"
+              onmouseout="unhoverImage2(this)"
+            />
             <div class="project-content">
               <h1>Labour Service</h1>
               <p>
@@ -174,8 +185,8 @@
             <img
               src="public/HSM_P2.jpg"
               alt="image"
-              onmouseover="hoverImage(this)"
-              onmouseout="unhoverImage(this)"
+              onmouseover="hoverImage1(this)"
+              onmouseout="unhoverImage1(this)"
             />
             <div class="project-content">
               <h1>HMS</h1>
@@ -302,14 +313,46 @@
         cursorChar: "_",
       });
 
+      var typed = new Typed("#splash", {
+        strings: ["Welcome to Shivam's Portfolio"],
+        typeSpeed: 50,
+        backSpeed: 0,
+        fadeOut: true,
+        cursorChar: "",
+      });
+
       // project image section
-      function hoverImage(element) {
+      function hoverImage1(element) {
         element.src = "public/HSM_registration_img.jpg";
       }
 
-      function unhoverImage(element) {
+      function unhoverImage1(element) {
         element.src = "public/HSM_P2.jpg";
       }
+
+      function hoverImage2(element) {
+        element.src = "public/labourService_about_img.jpg";
+      }
+
+      function unhoverImage2(element) {
+        element.src = "public/labourService_P1.jpg";
+      }
+
+      // JavaScript to hide the splash screen when the page is fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        var splashScreen = document.getElementById("splash-screen");
+        if (splashScreen) {
+          var delay = 3000;
+
+          setTimeout(function () {
+            splashScreen.classList.add("hidden");
+
+            setTimeout(function () {
+              splashScreen.style.display = "none";
+            }, 500);
+          }, delay);
+        }
+      });
     </script>
   </body>
 </html>
