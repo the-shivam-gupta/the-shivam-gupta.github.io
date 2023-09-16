@@ -504,6 +504,7 @@ section .text-container .text-box {
 }
 
 .text-box .project-content {
+  width: 40%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -518,7 +519,31 @@ section .text-container .text-box {
 }
 
 .project-content p{
-  text-align: left;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: justify;
+}
+
+.project-content i{
+  color: gray;
+  font-size: 1.8em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: color 0.5s ease;
+}
+
+.project-content p span{
+  color: white;
+  background: linear-gradient(45deg, rgb(1, 39, 252), rgba(255, 255, 255, 0.131));
+  text-decoration-line: underline;
+}
+
+.project-content i:hover{
+  color: white;
 }
 
 @media (max-width: 900px) {
