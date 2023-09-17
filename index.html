@@ -32,10 +32,17 @@
   </head>
   <body>
     <div id="splash-screen">
-      <div class="splash-content">
-        <h1 id="splash"></h1>
-        <span class="loader"></span>
-      </div>
+      <section class="splash-content">
+        <video src="public\smoke.mp4" autoplay muted></video>
+        <h1>
+          <span>S</span>
+          <span>H</span>
+          <span>I</span>
+          <span>V</span>
+          <span>A</span>
+          <span>M</span>
+        </h1>
+      </section>
     </div>
     <a id="button"></a>
     <div class="header" id="home">
@@ -167,11 +174,17 @@
                 ratings, helping build a community of trust within the labour
                 services ecosystem.
               </p>
-              <a
-                href="https://github.com/ShubhamKhale/labourServices"
-                target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
+              <div class="project-links">
+                <a
+                  href="https://github.com/ShubhamKhale/labourServices"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <button class="tags">React Js</button>
+                <button class="tags">Typescript</button>
+                <button class="tags">IONIC</button>
+                <button class="tags">CSS</button>
+              </div>
             </div>
           </div>
         </div>
@@ -200,9 +213,13 @@
                 <span>both</span> patients and healthcare professionals by
                 improving the quality of care.
               </p>
-              <a href="https://github.com/the-shivam-gupta" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
+              <div class="project-links">
+                <a href="https://github.com/the-shivam-gupta" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <button class="tags">Python</button>
+                <button class="tags">Tkinter</button>
+              </div>
             </div>
           </div>
         </div>
@@ -226,9 +243,14 @@
                 educational journey as we <span>bridge</span> the gap between
                 your ambitions and the programming world.
               </p>
-              <a href="https://github.com/the-shivam-gupta" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
+              <div class="project-links">
+                <a href="https://github.com/the-shivam-gupta" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <button class="tags">HTML</button>
+                <button class="tags">CSS</button>
+                <button class="tags">JS</button>
+              </div>
             </div>
           </div>
         </div>
@@ -313,14 +335,6 @@
         cursorChar: "_",
       });
 
-      var typed = new Typed("#splash", {
-        strings: ["Welcome to Shivam's Portfolio"],
-        typeSpeed: 50,
-        backSpeed: 0,
-        fadeOut: true,
-        cursorChar: "",
-      });
-
       // project image section
       function hoverImage1(element) {
         element.src = "public/HSM_registration_img.jpg";
@@ -342,14 +356,14 @@
       document.addEventListener("DOMContentLoaded", function () {
         var splashScreen = document.getElementById("splash-screen");
         if (splashScreen) {
-          var delay = 3000;
+          var delay = 6000;
 
           setTimeout(function () {
             splashScreen.classList.add("hidden");
 
             setTimeout(function () {
               splashScreen.style.display = "none";
-            }, 500);
+            }, 1000);
           }, delay);
         }
       });
