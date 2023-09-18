@@ -894,3 +894,41 @@ h1 span:nth-child(6) {
   animation-delay: 4s;
 }
 /* smoke effect end */
+
+/* footer start */
+.footer-container{
+  position: relative;
+  height: 10vh;
+  background: rgb(9, 9, 23);
+  color: white;
+}
+
+.footer-content{
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 43%;
+  font-weight: bold;
+}
+
+.footer-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  position: absolute;
+  right: 20%;
+  top: 30%;
+}
+
+.footer-icons a i{
+  color: rgb(252, 252, 255);
+  padding: 0 0.2em;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover{
+  filter: drop-shadow(0 0 8px white); 
+  color: white;
+}
+/* footer end */
