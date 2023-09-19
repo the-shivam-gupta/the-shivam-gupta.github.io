@@ -820,11 +820,9 @@ hr {
   height: 100%;
   background-image: linear-gradient(
     to right,
-    #ff0000,
-    #ffff00,
-    #7cfc00,
-    #0000ff,
-    #9400d3
+    rgb(255, 128, 0),
+    #fff,
+    #04fc00
   );
   mix-blend-mode: color;
   pointer-events: none;
@@ -897,38 +895,38 @@ h1 span:nth-child(6) {
 
 /* footer start */
 .footer-container{
-  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   height: 10vh;
-  background: rgb(9, 9, 23);
+  background: rgb(8, 8, 46);
   color: white;
 }
 
 .footer-content{
   color: white;
-  position: absolute;
-  top: 30%;
-  left: 43%;
+  font-size: 1.2em;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .footer-icons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.5em;
-  position: absolute;
-  right: 20%;
-  top: 30%;
 }
 
 .footer-icons a i{
   color: rgb(252, 252, 255);
   padding: 0 0.2em;
+  border-radius: 10%;
+  padding: 0.15em;
+  margin: 0.1em;
   transition: color 0.3s ease;
 }
 
-.footer-icons a:hover{
-  filter: drop-shadow(0 0 8px white); 
+.footer-icons a i:hover{
+  box-shadow: 1px 1px 6px white;
+  border: 1px solid white;
   color: white;
 }
 /* footer end */
