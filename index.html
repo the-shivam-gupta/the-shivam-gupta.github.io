@@ -33,7 +33,7 @@
   <body>
     <div id="splash-screen">
       <section class="splash-content">
-        <video src="public\smoke.mp4" autoplay muted></video>
+        <video src="public\smoke1.mp4" autoplay muted></video>
         <h1>
           <span>S</span>
           <span>H</span>
@@ -41,6 +41,12 @@
           <span>V</span>
           <span>A</span>
           <span>M</span>
+          <br/>
+          <span>G</span>
+          <span>U</span>
+          <span>P</span>
+          <span>T</span>
+          <span>A</span>
         </h1>
       </section>
     </div>
@@ -154,37 +160,36 @@
           <span class="letter">t</span>
           <span class="letter">s</span>
         </div>
-        <div class="text-container">
-          <div class="text-box">
-            <img
-              src="public/labourService_P1.jpg"
-              alt="image"
-              onmouseover="hoverImage2(this)"
-              onmouseout="unhoverImage2(this)"
-            />
-            <div class="project-content">
-              <h1>Labour Service</h1>
-              <p>
-                Labour service is a vital component of countless industries and
-                sectors, serving as the backbone of productivity and progress.
-                The Labor Services app <span>connects</span> job seekers to
-                employers. It offers <span>trustworthy</span> and convenient
-                services, allowing users to recruit labourers and provide
-                <span>feedback</span>. Users can provide and access reviews and
-                ratings, helping build a community of trust within the labour
-                services ecosystem.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/ShubhamKhale/labourServices"
-                  target="_blank"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <button class="tags">React Js</button>
-                <button class="tags">Typescript</button>
-                <button class="tags">IONIC</button>
-                <button class="tags">CSS</button>
-              </div>
+
+        <div class="text-box">
+          <img
+            src="public/labourService_P1.jpg"
+            alt="image"
+            onmouseover="hoverImage2(this)"
+            onmouseout="unhoverImage2(this)"
+          />
+          <div class="project-content">
+            <h1>Labour Service</h1>
+            <p>
+              Labour service is a vital component of countless industries and
+              sectors, serving as the backbone of productivity and progress. The
+              Labor Services app <span>connects</span> job seekers to employers.
+              It offers <span>trustworthy</span> and convenient services,
+              allowing users to recruit labourers and provide
+              <span>feedback</span>. Users can provide and access reviews and
+              ratings, helping build a community of trust within the labour
+              services ecosystem.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/ShubhamKhale/labourServices"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <button class="tags">React Js</button>
+              <button class="tags">Typescript</button>
+              <button class="tags">IONIC</button>
+              <button class="tags">CSS</button>
             </div>
           </div>
         </div>
@@ -314,7 +319,7 @@
             </li>
             <li>
               <img src="./public/java.png" width="80px" alt="JAVASCRIPT" /><span
-                >JAVASCRIPT</span
+                >JS</span
               >
             </li>
           </ul>
@@ -333,9 +338,11 @@
           ><i class="fa-brands fa-square-x-twitter"></i
         ></a>
         <a href="https://www.linkedin.com/in/the-shivam-gupta" target="_blank"
-          ><i class="fa-brands fa-linkedin-in"></i></a>
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
         <a href="mailto:shivamgupta02022002@gmail.com" target="_blank"
-          ><i class="fa-solid fa-envelope"></i></a>
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
       </div>
     </footer>
 
@@ -373,7 +380,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         var splashScreen = document.getElementById("splash-screen");
         if (splashScreen) {
-          var delay = 6000;
+          var delay = 8000;
 
           setTimeout(function () {
             splashScreen.classList.add("hidden");

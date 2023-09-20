@@ -170,23 +170,21 @@ body {
 /* logo animation end */
 
 #about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   height: 100vh;
-  width: 100vw;
 }
 
 .content {
   color: white;
-  position: absolute;
-  left: 16em;
-  top: 14em;
 }
 
 .content h1 {
   font-size: 2.5rem;
 }
 
-.content h1,
-h3 {
+.content h1 {
   margin-bottom: 0.2em;
 }
 
@@ -290,18 +288,12 @@ a {
 
 /* Start of Card Flip animation */
 .card {
-  position: absolute;
-  top: 23rem;
-  left: 57rem;
   width: 300px;
   height: 300px;
-  margin: -150px;
-  float: left;
   perspective: 500px;
 }
 
 .__content {
-  position: absolute;
   width: 100%;
   height: 100%;
   transition: 1s ease-in-out;
@@ -321,18 +313,12 @@ a {
   align-items: center;
   justify-content: center;
   position: absolute;
-  flex-direction: column;
   height: 100%;
   width: 100%;
   border: 2px solid rgb(10, 52, 61);
   box-shadow: 10px 10px 20px rgb(42, 10, 107);
   border-radius: 50%;
   backface-visibility: hidden;
-}
-
-.front img {
-  width: fit-content;
-  border-radius: 50%;
 }
 
 .back {
@@ -356,7 +342,7 @@ a {
 }
 /* wave animation for scroll section */
 .wave-container {
-  width: 100vw;
+  width: 100%;
   background: rgb(9, 9, 23);
 }
 
@@ -403,9 +389,10 @@ a {
 }
 
 /* Scroll animation start */
-section {
+.wave-container {
+  width: 100%;
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,7 +465,7 @@ section h2 {
   font-size: 40px;
 }
 
-section .text-container .text-box {
+section .text-box {
   margin: 20px;
   padding: 20px;
 }
@@ -547,38 +534,27 @@ section .text-container .text-box {
   color: white;
 }
 
-.project-links{
+.project-links {
   position: absolute;
   padding: 0 3rem;
   bottom: 0;
   left: 0;
 }
 
-.project-links .tags{
+.project-links .tags {
   padding: 6px 10px;
   border: 1px solid white;
   border-radius: 6px;
   font-weight: bold;
   background: transparent;
   color: white;
-  cursor: pointer;
   letter-spacing: 0.1em;
   margin: 0 4px;
 }
 
-.project-links .tags:hover{
-  background: linear-gradient(45deg, rgb(0, 0, 255), rgba(255, 0, 0, 0.793));
+.project-links .tags:hover {
+  background: linear-gradient(to top right, #0100EC, #FB36F4);
   color: white;
-}
-
-@media (max-width: 900px) {
-  section h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  section .text-container {
-    flex-direction: column;
-  }
 }
 
 .reveal {
@@ -702,7 +678,7 @@ hr {
 .skills ul li {
   text-decoration: none;
   display: inline-block;
-  margin: 6em 3em;
+  margin: 4em;
   transition: 1s all ease;
   animation: scrollAnimation 20s linear infinite;
 }
@@ -717,7 +693,6 @@ hr {
   font-weight: bold;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.1s, opacity 1s;
@@ -751,25 +726,6 @@ hr {
   100% {
     transform: translateX(-1600px);
   }
-}
-
-@media (max-width: 768px) {
-  /* .content {
-    margin: 5em;
-  } */
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* .content {
-    margin-top: 15rem;
-    font-size: 10px;
-  } */
-}
-
-@media (min-width: 1025px) {
-  /* .content {
-    margin: 15em;
-  } */
 }
 
 *::-webkit-scrollbar {
@@ -818,12 +774,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-    to right,
-    rgb(255, 128, 0),
-    #fff,
-    #04fc00
-  );
+  background-image: linear-gradient(to right, black, blue);
   mix-blend-mode: color;
   pointer-events: none;
 }
@@ -845,6 +796,7 @@ video {
   font-size: 8rem;
   text-transform: uppercase;
   font-family: sans-serif;
+  filter: drop-shadow(0 0 10px white);
 }
 
 .splash-content h1 span {
@@ -889,12 +841,32 @@ h1 span:nth-child(5) {
 }
 
 h1 span:nth-child(6) {
-  animation-delay: 4s;
+  animation-delay: 3.7s;
+}
+
+h1 span:nth-child(8) {
+  animation-delay: 4.3s;
+}
+
+h1 span:nth-child(9) {
+  animation-delay: 4.6s;
+}
+
+h1 span:nth-child(10) {
+  animation-delay: 4.9s;
+}
+
+h1 span:nth-child(11) {
+  animation-delay: 5.3s;
+}
+
+h1 span:nth-child(12) {
+  animation-delay: 5.6s;
 }
 /* smoke effect end */
 
 /* footer start */
-.footer-container{
+.footer-container {
   width: 100vw;
   display: flex;
   align-items: center;
@@ -904,29 +876,51 @@ h1 span:nth-child(6) {
   color: white;
 }
 
-.footer-content{
+.footer-content {
   color: white;
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-.footer-icons{
+.footer-icons {
   font-size: 1.5em;
 }
 
-.footer-icons a i{
-  color: rgb(252, 252, 255);
+.footer-icons a i {
+  color: rgb(169, 169, 169);
   padding: 0 0.2em;
-  border-radius: 10%;
-  padding: 0.15em;
   margin: 0.1em;
   transition: color 0.3s ease;
 }
 
-.footer-icons a i:hover{
-  box-shadow: 1px 1px 6px white;
-  border: 1px solid white;
+.footer-icons a i:hover {
   color: white;
 }
 /* footer end */
+
+/* media query start */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header {
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* media query end */
