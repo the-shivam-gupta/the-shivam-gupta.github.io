@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: inset 0px -10px 20px -10px #7454e9;
+  box-shadow: inset 0px -10px 20px -10px #3700ff;
   position: fixed;
   backdrop-filter: blur(3px);
   transition: backdrop-filter 0.5s ease;
@@ -184,10 +184,6 @@ body {
   font-size: 2.5rem;
 }
 
-.content h1 {
-  margin-bottom: 0.2em;
-}
-
 .content #element {
   font-size: 28px;
   color: rgb(0, 94, 255);
@@ -210,8 +206,9 @@ body {
 .content p {
   width: 25rem;
   margin: 20px 0;
-  font-family: cursive;
   text-align: justify;
+  letter-spacing: 0.02em;
+  line-height: 1.4em;
 }
 
 @media screen and (max-width: 1062px) {
@@ -332,7 +329,6 @@ a {
   position: absolute;
   bottom: 3rem;
   list-style-position: inside;
-  list-style-type: circle;
 }
 
 .back h1 {
@@ -568,7 +564,7 @@ section .text-box {
 }
 
 .project-links .tags:hover {
-  background: linear-gradient(to top right, #0100EC, #FB36F4);
+  background: linear-gradient(to top right, #0100ec, #fb36f4);
   color: white;
 }
 
@@ -789,7 +785,10 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, black, white);
+  background-image: linear-gradient(to right, 
+  black,
+  white
+  );
   mix-blend-mode: color;
   pointer-events: none;
 }
@@ -860,23 +859,23 @@ h1 span:nth-child(6) {
 }
 
 h1 span:nth-child(8) {
-  animation-delay: 4.3s;
+  animation-delay: 1.5s;
 }
 
 h1 span:nth-child(9) {
-  animation-delay: 4.6s;
+  animation-delay: 2.2s;
 }
 
 h1 span:nth-child(10) {
-  animation-delay: 4.9s;
+  animation-delay: 2.5s;
 }
 
 h1 span:nth-child(11) {
-  animation-delay: 5.3s;
+  animation-delay: 3s;
 }
 
 h1 span:nth-child(12) {
-  animation-delay: 5.6s;
+  animation-delay: 3.6s;
 }
 /* smoke effect end */
 
@@ -913,6 +912,50 @@ h1 span:nth-child(12) {
   color: white;
 }
 /* footer end */
+
+/* about start */
+.about-container{
+  position: relative;
+  padding: 0 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(17, 16, 43);
+  color: white;
+}
+
+.about-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 12rem;
+  text-align: justify;
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  letter-spacing: 0.02em;
+}
+
+.about-img img{
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease-in-out;
+  background: linear-gradient(-45deg,blue, rgb(248, 0, 252));
+}
+
+.about-content p{
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+.about-content h2{
+  color: blue;
+}
+
+/* about end */
 
 /* media query start */
 
