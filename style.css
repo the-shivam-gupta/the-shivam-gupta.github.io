@@ -1120,6 +1120,15 @@ textarea:not(:placeholder-shown) ~ label {
   }
 }
 
+.alert {
+  display: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 /* contact end */
 
 /* media query start */

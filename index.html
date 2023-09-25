@@ -362,8 +362,8 @@
             <span class="letter">c</span>
             <span class="letter">t</span>
           </div>
-
-          <form action="" method="" class="form" autocomplete="off">
+          <div class="alert"></div>
+          <form action="" method="" class="form" id="myForm" autocomplete="off">
             <div class="input-group">
               <input
                 type="text"
@@ -409,7 +409,7 @@
             </div>
 
             <div class="submit-btn">
-              <button type="submit">Send</button>
+              <button type="submit" id="showAlert">Send</button>
             </div>
           </form>
         </main>
@@ -479,6 +479,41 @@
             }, 1000);
           }, delay);
         }
+      });
+
+      // Contact form submission
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("myForm");
+        const showAlertButton = document.getElementById("showAlert");
+
+        form.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          const firstName = document.getElementById("first-name").value.trim();
+          const lastName = document.getElementById("last-name").value.trim();
+          const email = document.getElementById("e-mail").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          if (
+            firstName === "" ||
+            lastName === "" ||
+            email === "" ||
+            message === ""
+          ) {
+            const alertDialog = document.querySelector(".alert");
+            alertDialog.style.backgroundColor = "red";
+            alertDialog.style.color = "white";
+            alertDialog.style.display = "flex";
+            alertDialog.innerHTML = "Please ensure that all fields are filled out."
+            return;
+          }
+          const alertDialog = document.querySelector(".alert");
+          alertDialog.style.backgroundColor = "green";
+          alertDialog.style.color = "white";
+          alertDialog.style.display = "flex";
+          alertDialog.innerHTML = "Thanks for your message. I'll reply soon."
+          form.reset();
+        });
       });
     </script>
   </body>
