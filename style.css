@@ -19,6 +19,12 @@ body {
   background: black;
 }
 
+br::selection,
+h1::selection {
+  background: #fff;
+  color: #000;
+}
+
 .container {
   color: white;
 }
@@ -318,7 +324,7 @@ a {
 }
 
 .back {
-  background: linear-gradient(135deg, blue, rgb(1, 179, 255), white);
+  background: linear-gradient(-45deg, blue, rgb(1, 179, 255),  blue);
   color: white;
   transform: rotateY(180deg);
 }
@@ -328,6 +334,7 @@ a {
   position: absolute;
   bottom: 3rem;
   list-style-position: inside;
+  list-style-type: circle;
 }
 
 .back h1 {
@@ -697,6 +704,10 @@ hr {
   overflow: hidden;
 }
 
+.coding-languages ul{
+  background: rgb(10, 10, 15);
+}
+
 .coding-languages ul li span {
   display: flex;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -786,11 +797,9 @@ hr {
   height: 100%;
   background-image: linear-gradient(
     to right,
-    yellow,
-    pink,
-    rgb(0, 255, 242),
     orange,
-    red
+    white,
+    green
   );
   mix-blend-mode: color;
   pointer-events: none;
@@ -969,14 +978,15 @@ main {
   width: 90%;
   height: 100vh;
   margin: auto;
+  margin-bottom: 4.3em;
   background: rgb(17, 16, 43);
 }
 
-.title{
+.title {
   padding: 2% 0;
 }
 
-.title span{
+.title span {
   font-size: 50px;
 }
 

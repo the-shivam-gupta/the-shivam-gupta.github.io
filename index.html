@@ -127,26 +127,28 @@
       </div>
     </div>
 
-    <div class="about-container" id="about">
-      <div class="about-img">
-        <img src="./public/image.png" alt="photo" />
-      </div>
-      <div class="about-content">
-        <h2>Who is Shivam Gupta?</h2>
-        <h1>A Bit About Me</h1>
-        <br />
-        <p>
-          I enjoy tackling complex problems and designing outstanding digital
-          experiences.<br />
-          As a developer, I have collaborated with others to create functional
-          applications and write code that is straightforward to comprehend and
-          maintain. My studies have given me a firm grasp of web development
-          principles, and I've spent a lot of time implementing these concepts
-          in real-world situations and applications.<br />
-          When I'm not busy building, learning, exploring, and brainstorming, I
-          like to use play games 📱or else get in touch with friends and have
-          time with them 😁.
-        </p>
+    <div class="container reveal" id="about">
+      <div class="about-container">
+        <div class="about-img">
+          <img src="./public/image.png" alt="photo" />
+        </div>
+        <div class="about-content">
+          <h2>Who is Shivam Gupta?</h2>
+          <h1>A Bit About Me</h1>
+          <br />
+          <p>
+            I enjoy tackling complex problems and designing outstanding digital
+            experiences.<br />
+            As a developer, I have collaborated with others to create functional
+            applications and write code that is straightforward to comprehend
+            and maintain. My studies have given me a firm grasp of web
+            development principles, and I've spent a lot of time implementing
+            these concepts in real-world situations and applications.<br />
+            When I'm not busy building, learning, exploring, and brainstorming,
+            I like to use play games 📱or else get in touch with friends and
+            have time with them 😁.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -286,66 +288,72 @@
     </section>
     <hr />
     <br />
-    <div class="skills" id="skills">
+    <div class="skills-container" id="skills">
       <div class="container reveal">
-        <div class="skills-header">
-          <span class="letter">S</span>
-          <span class="letter">k</span>
-          <span class="letter">i</span>
-          <span class="letter">l</span>
-          <span class="letter">l</span>
-          <span class="letter">s</span>
-        </div>
-        <div class="coding-languages">
-          <ul>
-            <li>
-              <img src="./public/html.png" width="80px" alt="HTML" /><span
-                >HTML</span
-              >
-            </li>
-            <li>
-              <img src="./public/css-3.png" width="80px" alt="CSS" /><span
-                >CSS</span
-              >
-            </li>
-            <li>
-              <img src="./public/python.png" width="80px" alt="PYTHON" /><span
-                >PYTHON</span
-              >
-            </li>
-            <li>
-              <img src="./public/mysql.png" width="80px" alt="MySQL" /><span
-                >MySQL</span
-              >
-            </li>
-            <li>
-              <img src="./public/github.png" width="80px" alt="GITHUB" /><span
-                >GITHUB</span
-              >
-            </li>
-            <li>
-              <img src="./public/physics.png" width="80px" alt="REACTJS" /><span
-                >REACT JS</span
-              >
-            </li>
-            <li>
-              <img src="./public/c-.png" width="80px" alt="C++" /><span
-                >C++</span
-              >
-            </li>
-            <li>
-              <img
-                src="./public/bootstrap.png"
-                width="80px"
-                alt="BOOTSTRAP"
-              /><span>BOOTSTRAP</span>
-            </li>
-            <li>
-              <img src="./public/java.png" width="80px" alt="JAVASCRIPT" /><span
-                >JS</span
-              >
-            </li>
-          </ul>
+        <div class="skills">
+          <div class="skills-header">
+            <span class="letter">S</span>
+            <span class="letter">k</span>
+            <span class="letter">i</span>
+            <span class="letter">l</span>
+            <span class="letter">l</span>
+            <span class="letter">s</span>
+          </div>
+          <div class="coding-languages">
+            <ul>
+              <li>
+                <img src="./public/html.png" width="80px" alt="HTML" /><span
+                  >HTML</span
+                >
+              </li>
+              <li>
+                <img src="./public/css-3.png" width="80px" alt="CSS" /><span
+                  >CSS</span
+                >
+              </li>
+              <li>
+                <img src="./public/python.png" width="80px" alt="PYTHON" /><span
+                  >PYTHON</span
+                >
+              </li>
+              <li>
+                <img src="./public/mysql.png" width="80px" alt="MySQL" /><span
+                  >MySQL</span
+                >
+              </li>
+              <li>
+                <img src="./public/github.png" width="80px" alt="GITHUB" /><span
+                  >GITHUB</span
+                >
+              </li>
+              <li>
+                <img
+                  src="./public/physics.png"
+                  width="80px"
+                  alt="REACTJS"
+                /><span>REACT JS</span>
+              </li>
+              <li>
+                <img src="./public/c-.png" width="80px" alt="C++" /><span
+                  >C++</span
+                >
+              </li>
+              <li>
+                <img
+                  src="./public/bootstrap.png"
+                  width="80px"
+                  alt="BOOTSTRAP"
+                /><span>BOOTSTRAP</span>
+              </li>
+              <li>
+                <img
+                  src="./public/java.png"
+                  width="80px"
+                  alt="JAVASCRIPT"
+                /><span>JS</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -446,6 +454,7 @@
         typeSpeed: 50,
         backSpeed: 50,
         cursorChar: "_",
+        loop: true,
       });
 
       // project image section
@@ -484,9 +493,9 @@
       // Contact form submission
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("myForm");
-        const showAlertButton = document.getElementById("showAlert");
+        const alertDialog = document.querySelector(".alert");
 
-        form.addEventListener("click", function (event) {
+        form.addEventListener("submit", function (event) {
           event.preventDefault();
 
           const firstName = document.getElementById("first-name").value.trim();
@@ -494,25 +503,31 @@
           const email = document.getElementById("e-mail").value.trim();
           const message = document.getElementById("message").value.trim();
 
-          if (
-            firstName === "" ||
-            lastName === "" ||
-            email === "" ||
-            message === ""
-          ) {
-            const alertDialog = document.querySelector(".alert");
+          // Regular expression for a valid email address format ending with gmail.com
+          const emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+
+          if (firstName === "" || lastName === "" || message === "") {
             alertDialog.style.backgroundColor = "red";
             alertDialog.style.color = "white";
             alertDialog.style.display = "flex";
-            alertDialog.innerHTML = "Please ensure that all fields are filled out."
-            return;
+            alertDialog.innerHTML =
+              "Ensure that all fields are filled out accurately.";
+          } else if (!email.match(emailRegex)) {
+            alertDialog.style.backgroundColor = "red";
+            alertDialog.style.color = "white";
+            alertDialog.style.display = "flex";
+            alertDialog.innerHTML = "The email entered is invalid.";
+          } else {
+            alertDialog.style.backgroundColor = "green";
+            alertDialog.style.color = "white";
+            alertDialog.style.display = "flex";
+            alertDialog.innerHTML = "Thanks for your message. I'll reply soon.";
+            form.reset();
+
+            setTimeout(function () {
+              alertDialog.style.display = "none";
+            }, 3000);
           }
-          const alertDialog = document.querySelector(".alert");
-          alertDialog.style.backgroundColor = "green";
-          alertDialog.style.color = "white";
-          alertDialog.style.display = "flex";
-          alertDialog.innerHTML = "Thanks for your message. I'll reply soon."
-          form.reset();
         });
       });
     </script>
