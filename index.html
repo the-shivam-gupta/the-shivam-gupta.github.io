@@ -244,7 +244,7 @@
                 improving the quality of care.
               </p>
               <div class="project-links">
-                <a href="https://github.com/the-shivam-gupta" target="_blank"
+                <a href="https://github.com/the-shivam-gupta/HMS" target="_blank"
                   ><i class="fa-brands fa-github"></i
                 ></a>
                 <button class="tags">Python</button>
@@ -531,8 +531,14 @@
         });
       });
 
+        // scroll to top when reloaded
       $(document).ready(function () {
-        $(this).scrollTop(0);
+        $("html, body").animate(
+          {
+            scrollTop: 0,
+          },
+          1000
+        );
       });
     </script>
   </body>
