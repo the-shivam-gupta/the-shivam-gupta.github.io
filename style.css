@@ -7,14 +7,22 @@
 }
 
 :root{
-  --purple: #9400FF;
-  --navy: #27005D;
-  --blue: #AED2FF;
-  --lightblue: #E4F1FF;
-  --white: #fff;
-  --black: #000;
-  --gray: #757575;
+  --color1: #0d1321;
+  --color4: #1d2d44;
+  --color3: #3e5c76;
+  --color2: #748cab;
+  --color5: #f0ebd8;
+  --color6: #1e293b;
+  /* --color6: #757575; */
 }
+
+/* :root {
+  
+--british-racing-green: ;
+--cal-poly-green: #;
+--ebony: ;
+--yellow-green: #9fcc2eff;
+} */
 
 html {
   scroll-behavior: smooth;
@@ -22,7 +30,7 @@ html {
 
 body {
   overflow-x: clip;
-  background: var(--white);
+  background: var(--color4);
 }
 
 .header {
@@ -33,7 +41,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: inset 0px -10px 20px -10px var(--navy);
+  box-shadow: inset 0px -1px var(--color2);
   position: fixed;
   backdrop-filter: blur(3px);
   transition: backdrop-filter 0.5s ease;
@@ -63,11 +71,12 @@ body {
   align-items: center;
   justify-content: center;
   letter-spacing: 1.3px;
-  text-shadow: 0 0 15px var(--purple);
+  text-shadow: 0 0 15px var(--color1);
   transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 0 1.5rem;
   font-size: 1.3em;
   cursor: pointer;
+  color: var(--color2);
 }
 
 .menu2 li:after,
@@ -104,7 +113,7 @@ body {
 .menu2 li:hover::after {
   width: 100%;
   height: 100%;
-  border-color: var(--navy);
+  border-color: var(--color2);
 }
 /* navbar animation end */
 
@@ -129,11 +138,11 @@ body {
 
 .logo h2:nth-child(1) {
   color: transparent;
-  -webkit-text-stroke: 1px var(--navy);
+  -webkit-text-stroke: 1px var(--color2);
 }
 
 .logo h2:nth-child(2) {
-  color: var(--navy);
+  color: var(--color2);
   animation: animate 4s ease-in-out infinite;
 }
 
@@ -179,7 +188,7 @@ body {
 }
 
 .content {
-  color: var(--navy);
+  color: var(--color2);
 }
 
 .content h1 {
@@ -188,10 +197,10 @@ body {
 
 .content #element {
   font-size: 28px;
-  color: var(--purple);
+  color: var(--color2);
   line-height: 0.9em;
   letter-spacing: 0.02em;
-  text-shadow: 0px 8px 6px;
+  /* text-shadow: 0px 8px 6px; */
   font-weight: bolder;
 }
 
@@ -202,7 +211,7 @@ body {
   height: 3px;
   border-radius: 20px 0;
   border-width: 0;
-  background-color: var(--navy);
+  background-color: var(--color2);
 }
 
 .content p {
@@ -240,7 +249,7 @@ body {
 }
 
 .social_media .fa-github {
-  color: var(--navy);
+  color: var(--color2);
 }
 
 /* resume button start */
@@ -250,14 +259,14 @@ body {
   display: block;
   padding: 8px;
   border-radius: 5px;
-  background: linear-gradient(to left, var(--navy) 50%, white 50%, var(--purple));
+  background: linear-gradient(to left, var(--color2) 50%, white 50%, var(--color1));
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all 0.5s ease-out;
 }
 
 .resume-container {
-  border: 1px solid var(--navy);
+  border: 1px solid var(--color2);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -273,7 +282,7 @@ a {
 .text {
   text-align: center;
   font-size: 18px;
-  color: var(--navy);
+  color: var(--color2);
   transition: all 0.6s ease-out;
   display: block;
   font-weight: bold;
@@ -281,7 +290,7 @@ a {
 }
 
 .text:hover {
-  color: var(--white);
+  color: var(--color4);
 }
 /* resume button end */
 
@@ -314,14 +323,14 @@ a {
   position: absolute;
   height: 100%;
   width: 100%;
-  box-shadow: 5px 5px 10px var(--navy);
+  box-shadow: 5px 5px 10px var(--color2);
   border-radius: 50%;
   backface-visibility: hidden;
 }
 
 .back {
-  background: linear-gradient(-45deg, var(--purple), var(--lightblue),  var(--purple));
-  color: var(--navy);
+  background: linear-gradient(-45deg, var(--color1), var(--lightblue),  var(--color1));
+  color: var(--color2);
   transform: rotateY(180deg);
 }
 /* End of Card Flip animation */
@@ -351,7 +360,7 @@ a {
 .wave span {
   position: relative;
   display: inline-block;
-  color: var(--navy);
+  color: var(--color1);
   font-size: 1em;
   animation: wave 2s ease-in-out infinite;
   animation-delay: calc(0.1s * var(--i));
@@ -373,7 +382,7 @@ a {
 }
 
 .projects {
-  color: var(--navy);
+  color: var(--color1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,6 +399,7 @@ a {
   text-align: center;
   height: 100vh;
   display: flex;
+  background: var(--color2);
   justify-content: center;
   align-items: center;
 }
@@ -445,8 +455,8 @@ section .container {
   display: block;
   width: 1.5vw;
   height: 1.5vw;
-  border-bottom: 5px solid var(--navy);
-  border-right: 5px solid var(--navy);
+  border-bottom: 5px solid var(--color1);
+  border-right: 5px solid var(--color1);
   transform: rotate(45deg);
   animation: arrow 2s infinite;
 }
@@ -526,7 +536,7 @@ section .text-box {
 }
 
 .project-links i {
-  color: var(--navy);
+  color: var(--color2);
   font-size: 1.8em;
   position: absolute;
   bottom: 0;
@@ -536,13 +546,13 @@ section .text-box {
 
 .project-content p span {
   color: white;
-  background: linear-gradient(45deg, var(--purple), transparent);
+  background: linear-gradient(45deg, var(--color1), transparent);
   text-decoration-line: underline;
   text-underline-offset: 5px;
 }
 
 .project-content i:hover {
-  color: var(--blue);
+  color: var(--color3);
 }
 
 .project-links {
@@ -554,17 +564,17 @@ section .text-box {
 
 .project-links .tags {
   padding: 6px 10px;
-  border: 2px solid var(--navy);
+  border: 2px solid var(--color2);
   border-radius: 6px;
   font-weight: bold;
   background: transparent;
-  color: var(--navy);
+  color: var(--color2);
   letter-spacing: 0.1em;
   margin: 0 4px;
 }
 
 .project-links .tags:hover {
-  background: linear-gradient(to top right, var(--purple), var(--blue));
+  background: linear-gradient(to top right, var(--color1), var(--color3));
 }
 
 .reveal {
@@ -580,7 +590,8 @@ section .text-box {
 }
 
 .container {
-  color: var(--navy);
+  background: var(--color4);
+  color: var(--color2);
 }
 /* Scroll animation ends */
 
@@ -590,7 +601,7 @@ section .text-box {
   background-color: transparent;
   width: 51.5px;
   text-align: center;
-  border: 2px solid var(--purple);
+  border: 2px solid var(--color1);
   border-radius: 50%;
   position: fixed;
   bottom: 30px;
@@ -607,11 +618,11 @@ section .text-box {
   font-style: normal;
   font-size: 1.25em;
   line-height: 50px;
-  color: var(--navy);
+  color: var(--color2);
 }
 #button:hover {
   cursor: pointer;
-  background-color: var(--purple);
+  background-color: var(--color1);
 }
 
 #button.show {
@@ -624,11 +635,11 @@ section .text-box {
   font-family: monospace;
   font-size: 3em;
   font-weight: bolder;
-  text-shadow: 0.03em 0.03em 0.1em var(--navy);
+  text-shadow: 0.03em 0.03em 0.1em var(--color2);
   cursor: default;
   display: inline-block;
   transition: transform 0.2s ease;
-  color: var(--navy);
+  color: var(--color2);
 }
 
 .letter-spacing {
@@ -640,15 +651,13 @@ section .text-box {
 }
 /* project-section effect end */
 hr {
-  width: 60%;  
-  margin: 0 auto;
-  border-color: var(--purple);
+  border-color: var(--color2);
 }
 
 .skills {
   width: 100%;
   height: 100vh;
-  color: var(--navy);
+  color: var(--color2);
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
@@ -670,8 +679,8 @@ hr {
 }
 
 .skills ul {
-  border-top: 2px solid var(--navy);
-  border-bottom: 2px solid var(--navy);
+  border-top: 2px solid var(--color2);
+  border-bottom: 2px solid var(--color2);
   border-radius: 20px;
   margin: 100px 200px;
   overflow-x: auto;
@@ -707,7 +716,7 @@ hr {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.1s, opacity 1s;
-  border-bottom: 2px dotted var(--navy);
+  border-bottom: 2px dotted var(--color2);
 }
 
 .coding-languages ul li img:hover + span {
@@ -717,7 +726,7 @@ hr {
 
 .skills ul li img:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 2px var(--purple));
+  filter: drop-shadow(0 0 2px var(--color1));
   transition: all 0.5s ease;
 }
 
@@ -743,16 +752,16 @@ hr {
 }
 
 *::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 8px var(--navy);
+  -webkit-box-shadow: inset 0 0 8px var(--color2);
   background-color: #f5f5f5;
   border-radius: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--blue);
+  background-color: var(--color3);
   border-radius: 10px;
-  border: 1px solid var(--navy);
-  -webkit-box-shadow: inset 0 0 10px var(--navy);
+  border: 1px solid var(--color2);
+  -webkit-box-shadow: inset 0 0 10px var(--color2);
 }
 
 #splash-screen {
@@ -761,8 +770,8 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--navy);
-  color: var(--white);
+  background-color: var(--color2);
+  color: var(--color4);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -786,8 +795,8 @@ hr {
   height: 100%;
   background-image: linear-gradient(
     to right,
-    var(--black),
-    var(--white)
+    var(--color5),
+    var(--color4)
   );
   mix-blend-mode: color;
   pointer-events: none;
@@ -806,11 +815,11 @@ video {
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
-  color: var(--white);
+  color: var(--color4);
   font-size: 8rem;
   text-transform: uppercase;
   font-family: sans-serif;
-  filter: drop-shadow(1px 1px 5px var(--white));
+  filter: drop-shadow(1px 1px 5px var(--color4));
 }
 
 .splash-content h1 span {
@@ -887,8 +896,8 @@ h1 span:nth-child(12) {
   justify-content: center;
   flex-direction: column-reverse;
   height: 12vh;
-  background: var(--navy);
-  color: var(--white);
+  background: var(--color4);
+  color: var(--color4);
   border: none;
   line-height: 2em;
 }
@@ -904,14 +913,14 @@ h1 span:nth-child(12) {
 }
 
 .footer-icons a i {
-  color: var(--lightblue);
+  color: var(--color5);
   padding: 0 0.2em;
   margin: 0.1em;
   transition: color 0.3s ease;
 }
 
 .footer-icons a i:hover {
-  color: var(--purple);
+  color: var(--color2);
 }
 /* footer end */
 
@@ -923,8 +932,8 @@ h1 span:nth-child(12) {
   justify-content: space-around;
   width: 100%;
   height: 100vh;
-  background: var(--navy);
-  color: var(--white);
+  background: var(--color3);
+  color: var(--color4);
 }
 
 .about-content {
@@ -941,7 +950,7 @@ h1 span:nth-child(12) {
   width: 300px;
   border-radius: 4px;
   transition: box-shadow 0.3s ease-in-out;
-  background: linear-gradient(45deg, var(--navy), var(--lightblue), var(--navy));
+  background: linear-gradient(45deg, var(--color2), var(--lightblue), var(--color2));
 }
 
 .about-content p {
@@ -950,7 +959,7 @@ h1 span:nth-child(12) {
 }
 
 .about-content h2 {
-  color: var(--purple);
+  color: var(--color1);
 }
 
 /* about end */
@@ -965,7 +974,7 @@ main {
   height: 100vh;
   margin: auto;
   margin-bottom: 4.3em;
-  background: var(--blue);
+  background: var(--color6);
 }
 
 .title {
@@ -990,11 +999,11 @@ main {
 
 input,
 textarea {
-  color: var(--white);
+  color: var(--color2);
   width: 100%;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--color2);
   padding: 1.5%;
   font-size: 20px;
 }
@@ -1003,8 +1012,8 @@ input:focus,
 textarea:focus {
   background-color: transparent;
   outline: transparent;
-  border-bottom: 2px solid var(--black);
-  color: var(--navy);
+  border-bottom: 2px solid var(--color2);
+  color: var(--color2);
 }
 
 input::placeholder,
@@ -1013,7 +1022,7 @@ textarea::placeholder {
 }
 
 label {
-  color: var(--gray);
+  color: var(--color2);
   position: relative;
   left: 0.5em;
   top: -2em;
@@ -1024,14 +1033,14 @@ label {
 input:focus ~ label,
 input:not(:placeholder-shown) ~ label {
   top: -4em;
-  color: var(--navy);
+  color: var(--color3);
   font-size: 15px;
 }
 
 textarea:focus ~ label,
 textarea:not(:placeholder-shown) ~ label {
   top: -10.5em;
-  color: var(--navy);
+  color: var(--color3);
   font-size: 15px;
 }
 
@@ -1044,19 +1053,19 @@ textarea:not(:placeholder-shown) ~ label {
 .submit-btn button {
   padding: 2%;
   width: 50%;
-  border: 1px solid var(--white);
+  border: 1px solid var(--color4);
   border-radius: 5px;
   font-family: inherit;
   font-size: 18px;
-  background-color: var(--navy);
-  color: var(--white);
-  box-shadow: 0 0 10px var(--white);
+  background-color: var(--color2);
+  color: var(--color4);
+  box-shadow: 0 0 10px var(--color4);
   transition: background-color 0.2s ease;
 }
 
 .submit-btn button:hover {
-  background-color: var(--white);
-  color: var(--navy);
+  background-color: var(--color4);
+  color: var(--color2);
   cursor: pointer;
 }
 
@@ -1118,12 +1127,12 @@ textarea:not(:placeholder-shown) ~ label {
 
 .alert {
   display: none;
-  color: var(--white);
+  color: var(--color4);
   font-weight: 700;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 2px 3px 3px var(--navy);
+  box-shadow: 2px 3px 3px var(--color2);
 }
 
 /* contact end */
@@ -1132,12 +1141,12 @@ textarea:not(:placeholder-shown) ~ label {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .header {
-  }
+  /* below 600 */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  /* above 600 */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
