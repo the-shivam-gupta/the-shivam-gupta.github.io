@@ -413,7 +413,7 @@ a {
   text-align: center;
   height: 100vh;
   display: flex;
-  background: var(--color2);
+  background: var(--color5);
   justify-content: center;
   align-items: center;
 }
@@ -963,19 +963,25 @@ h1 span:nth-child(12) {
   transition: box-shadow 0.3s ease-in-out;
   background: linear-gradient(
     45deg,
-    var(--color3),
+    var(--color6),
     var(--color2),
-    var(--color3)
+    var(--color6)
   );
 }
 
 .about-content p {
   line-height: 1.5em;
   font-size: 1.2em;
+  color: var(--color2);
+}
+
+.about-content p span {
+  position: relative;
+  right: 1em;
 }
 
 .about-content h1 {
-  color: var(--color2);
+  color: var(--color6);
 }
 
 /* about end */
@@ -1148,7 +1154,7 @@ textarea:not(:placeholder-shown) ~ label {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 2px 3px 3px var(--color1);
+  box-shadow: 4px 6px 6px var(--color1);
 }
 
 /* contact end */

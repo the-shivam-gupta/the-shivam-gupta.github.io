@@ -133,14 +133,17 @@
           <h1>A Bit About Me</h1>
           <br />
           <p>
-            - I really enjoy solving tough problems and creating great digital
-            experiences. <br />
-            - As a developer, I've worked with others to make functional apps
-            and write code that's easy to understand and keep up. I've learned a
-            lot about web development, and I've used that knowledge in real-life
-            projects.<br />
-            - When I'm not busy with work or learning, I like to play mobile
-            games 📱 and spend time with my friends 😁.
+            <span>-|</span>I'm currently in my 4th year, pursuing a Computer
+            Science degree at Atharva College in Mumbai.
+            <br />
+            <span>-|</span>As a developer, I've collaborated with teams to
+            create functional applications and write clean, maintainable code.
+            My experience has been a valuable learning opportunity in web
+            development, and I've successfully applied this knowledge to
+            real-world projects.<br />
+            <span>-|</span>I love contributing in open-source projects.<br />
+            <span>-|</span>In my free time, I enjoy playing or listening to
+            music that helps me relax and uplift my mood.
           </p>
         </div>
       </div>
@@ -194,10 +197,9 @@
               sectors, serving as the backbone of productivity and progress. The
               Labor Services app <span>connects</span> job seekers to employers.
               It offers trustworthy and convenient <span>services</span>,
-              allowing users to recruit labourers and provide
-              feedback. Users can provide and access <span>reviews and
-              ratings</span>, helping build a community of trust within the labour
-              services ecosystem.
+              allowing users to recruit labourers and provide feedback. Users
+              can provide and access <span>reviews and ratings</span>, helping
+              build a community of trust within the labour services ecosystem.
             </p>
             <div class="project-links">
               <a
@@ -209,6 +211,45 @@
               <button class="tags">Typescript</button>
               <button class="tags">IONIC</button>
               <button class="tags">CSS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container reveal">
+        <div class="text-container">
+          <div class="text-box">
+            <img
+              src="public/MedGuide_1 Project.png"
+              alt="image"
+              onmouseover="hoverImage3(this)"
+              onmouseout="unhoverImage3(this)"
+            />
+            <div class="project-content">
+              <h1>MedGuide</h1>
+              <p>
+                Medical diagnosis systems are advanced computer programs that
+                utilize cutting-edge technologies such as
+                <span>machine learning</span> and
+                <span>natural language processing</span> to assist medical
+                practitioners in effectively diagnosing diseases. These
+                innovative systems not only enhance the precision and speed of
+                diagnosis but also offer doctors valuable
+                <span>insights and information</span> to help them make informed
+                decisions regarding patient treatment.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/PriyansuMaurya/MedGuide"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <button class="tags">Python</button>
+                <button class="tags">Flask</button>
+                <button class="tags">Tailwind</button>
+              </div>
             </div>
           </div>
         </div>
@@ -344,7 +385,7 @@
               <li>
                 <img
                   src="./public/javascript.png"
-                  width="80px"
+                  width="75px"
                   alt="JAVASCRIPT"
                 /><span>JS</span>
               </li>
@@ -421,9 +462,7 @@
     </div>
     <hr />
     <footer class="footer-container">
-      <div class="footer-content">
-        Made with ❤️ by Shivam
-      </div>
+      <div class="footer-content">Made with ❤️ by Shivam</div>
       <div class="footer-icons">
         <a href="https://github.com/the-shivam-gupta" target="_blank"
           ><i class="fa-brands fa-github"></i
@@ -468,6 +507,14 @@
 
       function unhoverImage2(element) {
         element.src = "public/labourService_P1.jpg";
+      }
+
+      function hoverImage3(element) {
+        element.src = "public/MedGuide_2 Project.png";
+      }
+
+      function unhoverImage3(element) {
+        element.src = "public/MedGuide_1 Project.png";
       }
 
       // JavaScript to hide the splash screen when the page is fully loaded
@@ -517,7 +564,8 @@
             alertDialog.style.backgroundColor = "green";
             alertDialog.style.color = "white";
             alertDialog.style.display = "flex";
-            alertDialog.innerHTML = "Thanks for your message. I'll reply soon.";
+            alertDialog.innerHTML =
+              "Thanks for your message. I'll respond soon.";
             form.reset();
 
             setTimeout(function () {
