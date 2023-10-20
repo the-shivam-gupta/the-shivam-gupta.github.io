@@ -179,11 +179,11 @@ body {
 
 /* logo animation end */
 
-#about-container {
+#header-container {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 100vh;
 }
 
@@ -220,20 +220,6 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.4em;
   font-size: 1.2em;
-}
-
-@media screen and (max-width: 1062px) {
-  .content p {
-    width: 27rem;
-    font-size: 1.5em;
-  }
-}
-
-@media screen and (max-width: 869px) {
-  .content p {
-    width: 20rem;
-    font-size: 1.4em;
-  }
 }
 
 .social_media {
@@ -306,14 +292,14 @@ a {
 
 /* Start of Card Flip animation */
 .card {
-  width: 300px;
-  height: 300px;
+  width: 17em;
+  height: 17em;
   perspective: 500px;
 }
 
 .__content {
-  width: 100%;
-  height: 100%;
+  width: 17em;
+  height: 17em;
   transition: 1s ease-in-out;
   transform-style: preserve-3d;
 }
@@ -362,9 +348,6 @@ a {
   top: 2rem;
 }
 /* wave animation for scroll section */
-.wave-container {
-  width: 100%;
-}
 
 .wave {
   position: relative;
@@ -636,7 +619,7 @@ section .text-box {
   color: var(--color2);
 }
 
-#button:hover::after{
+#button:hover::after {
   color: var(--color5);
   transition: color 0.5s ease;
 }
@@ -808,7 +791,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, var(--color5), var(--color1));
+  background-image: linear-gradient(to right, var(--color1), var(--color1));
   mix-blend-mode: color;
   pointer-events: none;
 }
@@ -958,7 +941,7 @@ h1 span:nth-child(12) {
 }
 
 .about-img img {
-  width: 300px;
+  width: 15em;
   border-radius: 4px;
   transition: box-shadow 0.3s ease-in-out;
   background: linear-gradient(
@@ -1164,6 +1147,74 @@ textarea:not(:placeholder-shown) ~ label {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* below 600 */
+  /* Navbar responsiveness start */
+  .header {
+    /* display: none; */
+    flex-direction: column;
+    height: 5em;
+  }
+  .logo {
+    font-size: 1em;
+    margin: 0.5em;
+  }
+  .header2 ul li {
+    font-size: 0.8em;
+    padding: 1em;
+  }
+  /* Navbar responsiveness ends */
+
+  /* Homepage responsiveness start */
+  #header-container{
+    margin-top: 10rem;
+    flex-direction: column;
+  }
+  #header-container .content{
+    flex-direction: column;
+    text-align: left;
+  }
+  .content h1{
+    /* margin-top: 0.5em; */
+    font-size: 2em;
+  }
+  .content p{
+    width: 100%;
+  }
+  .content{
+    width: 90%;
+  }
+  .content h1{
+    font-size: 1.8em;
+  }
+  .content #element{
+    font-size: 1.4em;
+  }
+  .content .social_media{
+    justify-content: center;
+  }
+  .card{
+    width: 17em;
+    height: 17em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .__content {
+    width: 17em;
+    height: 17em;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .about-img img{
+    width: 12em;
+  }
+  .about-content{
+    font-size: 0.1em;
+  }
+  /* Homepage responsiveness ends */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
