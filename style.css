@@ -183,7 +183,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 100vh;
 }
 
@@ -432,7 +432,7 @@ a {
 }
 
 section .container {
-  margin: 100px;
+  margin: 100px 0;
 }
 
 .text-box img {
@@ -479,12 +479,10 @@ section .container {
 
 section h1 {
   font-size: 3rem;
-  margin: 20px;
 }
 
 section .text-box {
   margin: 20px;
-  padding: 20px;
 }
 
 .text-box {
@@ -936,10 +934,6 @@ h1 span:nth-child(12) {
   letter-spacing: 0.02em;
 }
 
-.about-img {
-  padding-left: 10%;
-}
-
 .about-img img {
   width: 15em;
   border-radius: 4px;
@@ -1125,12 +1119,14 @@ textarea:not(:placeholder-shown) ~ label {
     left: 0.2em;
   }
 
-  button {
+  .submit-btn button {
     font-size: 15px;
   }
 }
 
 .alert {
+  justify-content: center;
+  align-items: center;
   display: none;
   color: var(--color4);
   font-weight: 700;
@@ -1164,34 +1160,36 @@ textarea:not(:placeholder-shown) ~ label {
   /* Navbar responsiveness ends */
 
   /* Homepage responsiveness start */
-  #header-container{
+  #header-container {
     margin-top: 10rem;
     flex-direction: column;
+    height: 100%;
+    margin-bottom: 1em;
   }
-  #header-container .content{
+  #header-container .content {
     flex-direction: column;
     text-align: left;
   }
-  .content h1{
+  .content h1 {
     /* margin-top: 0.5em; */
     font-size: 2em;
   }
-  .content p{
+  .content p {
     width: 100%;
   }
-  .content{
+  .content {
     width: 90%;
   }
-  .content h1{
+  .content h1 {
     font-size: 1.8em;
   }
-  .content #element{
+  .content #element {
     font-size: 1.4em;
   }
-  .content .social_media{
+  .content .social_media {
     justify-content: center;
   }
-  .card{
+  .card {
     width: 17em;
     height: 17em;
     display: flex;
@@ -1203,20 +1201,125 @@ textarea:not(:placeholder-shown) ~ label {
     height: 17em;
   }
 
+  /* Homepage responsiveness ends */
+
+  /* Aboutpage responsiveness start */
   .about-container {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-  .about-img img{
+  .about-img img {
     width: 12em;
   }
-  .about-content{
-    font-size: 0.1em;
+  .about-content {
+    margin: 0 2.5em;
+    font-size: 0.7em;
   }
-  /* Homepage responsiveness ends */
-}
+  /* Aboutpage responsiveness ends */
 
+  /* scroll-wave-page responsiveness ends */
+  .wave {
+    font-size: 2em;
+  }
+  .arrow {
+    margin-top: 0.5em;
+  }
+  .arrow span {
+    width: 3vw;
+    height: 3vw;
+  }
+  /* scroll-wave-page responsiveness ends */
+
+  /* projectpage responsiveness starts */
+  .text-box {
+    margin: 0;
+    padding: 0;
+  }
+  .text-box img {
+    width: 100%;
+  }
+  .text-box .project-content {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+  .text-box .project-content p {
+    position: relative;
+    letter-spacing: 0.05em;
+  }
+  .project-content h1 {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+  .project-links {
+    position: relative;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .project-links i {
+    position: relative;
+  }
+  .project-links .tags {
+    margin: 0.3em 0;
+  }
+  /* projectpage responsiveness ends */
+
+  /* skillspage responsiveness starts */
+  .skills ul {
+    margin: 0;
+  }
+  .coding-languages {
+    margin: 2em 0;
+  }
+  .coding-languages li img {
+    width: 60px;
+  }
+  .coding-languages ul li {
+    margin: 2.5em;
+  }
+  @keyframes scrollAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-900px);
+    }
+  }
+  /* skillspage responsiveness ends */
+
+  /* alert responsiveness starts */
+  .alert {
+    width: 80%;
+    font-size: 0.9em;
+  }
+  /* alert responsiveness ends */
+
+  /* footerpage responsiveness starts */
+  .footer-container {
+    display: block;
+    text-align: center;
+  }
+  .footer-content {
+    font-size: 1.1em;
+  }
+  hr {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* footerpage responsiveness ends */
+  #button {
+    width: 12vw;
+    height: 12vw;
+  }
+  #button:after {
+    font-size: 1em;
+    line-height: 34px;
+  }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   /* above 600 */
