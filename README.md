@@ -1,4 +1,4 @@
-# the-shivam-gupta.github.io
+# Greetings
 
 As a frontend developer, I am passionate about creating visually appealing designs that capture people's attention.
 
