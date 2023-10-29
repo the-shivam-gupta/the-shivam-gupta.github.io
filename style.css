@@ -698,7 +698,16 @@ hr {
   display: inline-block;
   margin: 4em;
   transition: 1s all ease;
-  animation: scrollAnimation 20s linear infinite;
+  animation: scrollAnimation 40s linear infinite;
+  animation-play-state: running;
+}
+
+.skills ul:hover li {
+  animation-play-state: paused;
+}
+
+.skills ul:not(:hover) li {
+  animation-play-state: running;
 }
 
 .coding-languages {
@@ -741,7 +750,7 @@ hr {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1600px);
+    transform: translateX(-2200px);
   }
 }
 
