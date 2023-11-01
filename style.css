@@ -944,8 +944,8 @@ h1 span:nth-child(12) {
 }
 
 .about-img img {
-  width: 15em;
-  border-radius: 4px;
+  width: 22em;
+  border-radius: 50%;
   transition: box-shadow 0.3s ease-in-out;
   background: linear-gradient(
     45deg,
@@ -953,11 +953,12 @@ h1 span:nth-child(12) {
     var(--color2),
     var(--color6)
   );
+  box-shadow: 20px -30px 1px 6px var(--color4);
 }
 
 .about-content p {
   line-height: 1.5em;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: var(--color2);
 }
 
@@ -1093,7 +1094,6 @@ textarea:not(:placeholder-shown) ~ label {
 
 @media screen and (max-width: 500px) {
   .title {
-    font-size: 40px;
     padding-top: 6%;
   }
 
@@ -1164,7 +1164,7 @@ textarea:not(:placeholder-shown) ~ label {
   }
   .header2 ul li {
     font-size: 0.8em;
-    padding: 1em;
+    padding: 0.6em;
   }
   /* Navbar responsiveness ends */
 
@@ -1320,7 +1320,7 @@ textarea:not(:placeholder-shown) ~ label {
     width: 90%;
     margin: 0 auto;
   }
-  .content hr{
+  .content hr {
     margin: 1em 0;
   }
   /* footerpage responsiveness ends */
@@ -1335,10 +1335,9 @@ textarea:not(:placeholder-shown) ~ label {
     max-width: 100%;
   }
   /* splashscreen responsiveness starts */
-
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media  (min-width: 600px) and (max-width: 850px){
+@media (min-width: 600px) and (max-width: 850px) {
   /* above 600 */
   /* Navbar responsiveness start */
   .header {
@@ -1504,7 +1503,7 @@ textarea:not(:placeholder-shown) ~ label {
     width: 90%;
     margin: 0 auto;
   }
-  .content hr{
+  .content hr {
     margin: 1em 0;
   }
   /* footerpage responsiveness ends */
@@ -1517,19 +1516,173 @@ textarea:not(:placeholder-shown) ~ label {
   #splash-screen {
     background-size: contain;
   }
-  /* splashscreen responsiveness starts */
+  /* splashscreen responsiveness ends */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
+@media (min-width: 851px) and (max-width: 1200px) {
+  /* Navbar responsiveness start */
+  .header {
+    /* display: none; */
+    height: 6em;
+  }
+  .logo {
+    font-size: 1.4em;
+    margin: 1em;
+  }
+  .header2 ul li {
+    font-size: 1.4em;
+    padding: 1em;
+  }
+  /* Navbar responsiveness ends */
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+  /* Homepage responsiveness start */
+  #header-container {
+    margin-top: 9em;
+    flex-direction: column-reverse;
+    height: 100%;
+    margin-bottom: 1em;
+  }
+  .content p {
+    width: 100%;
+    font-size: 1.4em;
+  }
+  .content {
+    width: 90%;
+  }
+  .content h1 {
+    font-size: 2.5em;
+  }
+  .content #element {
+    font-size: 1.6em;
+  }
+  .content .social_media {
+    justify-content: start;
+  }
+  .card {
+    width: 17em;
+    height: 17em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .__content {
+    margin-bottom: 3em;
+    width: 17em;
+    height: 17em;
+  }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
+  /* Homepage responsiveness ends */
 
+  /* Aboutpage responsiveness start */
+  .about-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .about-img img {
+    width: 13em;
+  }
+  .about-content {
+    margin: 0 3em;
+    font-size: 1.1em;
+    letter-spacing: 0.1px;
+  }
+  /* Aboutpage responsiveness ends */
+
+  /* scroll-wave-page responsiveness ends */
+  .wave {
+    font-size: 3em;
+  }
+  .arrow span {
+    width: 2.3vw;
+    height: 2.3vw;
+  }
+  /* scroll-wave-page responsiveness ends */
+
+  /* projectpage responsiveness starts */
+  .text-box {
+    margin: 0;
+    padding: 0;
+  }
+  .text-box img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .text-box .project-content {
+    position: relative;
+    left: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .text-box .project-content p {
+    position: relative;
+    letter-spacing: 0.05em;
+    font-size: 1.3em;
+  }
+  .project-content h1 {
+    margin: 1em 0;
+    font-size: 2.5em;
+  }
+  .project-links {
+    position: relative;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .project-links i {
+    position: relative;
+  }
+  .project-links .tags {
+    margin: 0.3em 0;
+  }
+  /* projectpage responsiveness ends */
+
+  /* skillspage responsiveness starts */
+  .skills ul {
+    margin: 0;
+  }
+  .coding-languages {
+    margin: 3em 0;
+  }
+  .coding-languages li img {
+    width: 80px;
+  }
+  .coding-languages ul li {
+    margin: 4em;
+  }
+  @keyframes scrollAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1100px);
+    }
+  }
+  /* skillspage responsiveness ends */
+
+  /* alert responsiveness starts */
+  .alert {
+    width: 50%;
+    font-size: 1em;
+  }
+  /* alert responsiveness ends */
+
+  /* footerpage responsiveness starts */
+  .footer-content {
+    font-size: 1.5em;
+  }
+  /* footerpage responsiveness ends */
+
+  /* splashscreen responsiveness starts */
+  .splash-content h1 {
+    font-size: 6.5em;
+    line-height: 1.2em;
+  }
+  #splash-screen {
+    background-size: contain;
+  }
+  /* splashscreen responsiveness ends */
+}
 /* media query end */
