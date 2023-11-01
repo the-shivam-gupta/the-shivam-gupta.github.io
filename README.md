@@ -2,6 +2,6 @@
 
 As a frontend developer, I am passionate about creating visually appealing designs that capture people's attention.
 
-![image](https://github.com/the-shivam-gupta/the-shivam-gupta.github.io/assets/109647722/ef4d8dd1-afe3-4f6c-9b47-dc368865dd33)
+![image](https://github.com/the-shivam-gupta/the-shivam-gupta.github.io/assets/109647722/28626570-c9bb-4b16-8b3a-3bbe0f1e59e6)
 
-Feel free to contribute ❤️ and don't forget to give ⭐ if you loved it. Happy coding!!!
+Your feedback is highly valued ❤️. Feel free to suggest any new ideas or report any issues you come across. If you've appreciated my work, I would be grateful if you could leave a ⭐ to show your support. Happy coding!!!
