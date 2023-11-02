@@ -903,7 +903,7 @@ h1 span:nth-child(12) {
 }
 
 .footer-content {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 500;
   letter-spacing: 1px;
   color: var(--color5);
@@ -1215,15 +1215,15 @@ textarea:not(:placeholder-shown) ~ label {
 
   /* Aboutpage responsiveness start */
   .about-container {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 0;
   }
   .about-img img {
-    width: 12em;
+    width: 10em;
   }
   .about-content {
-    margin: 0 2.5em;
+    margin: 1em 2.5em;
     font-size: 0.7em;
   }
   /* Aboutpage responsiveness ends */
@@ -1398,16 +1398,16 @@ textarea:not(:placeholder-shown) ~ label {
 
   /* Aboutpage responsiveness start */
   .about-container {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 0;
   }
   .about-img img {
     width: 12em;
+    margin-top: 4em;
   }
   .about-content {
-    margin: 0 2.5em;
-    font-size: 1em;
+    margin: 2em 2.5em;
   }
   /* Aboutpage responsiveness ends */
 
@@ -1520,7 +1520,7 @@ textarea:not(:placeholder-shown) ~ label {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 851px) and (max-width: 1200px) {
+@media (min-width: 850px) and (max-width: 1200px) {
   /* Navbar responsiveness start */
   .header {
     /* display: none; */
@@ -1577,15 +1577,16 @@ textarea:not(:placeholder-shown) ~ label {
   /* Aboutpage responsiveness start */
   .about-container {
     flex-direction: column;
+    justify-content: center;
     padding: 0;
   }
   .about-img img {
-    width: 13em;
+    width: 14em;
   }
   .about-content {
-    margin: 0 3em;
-    font-size: 1.1em;
+    font-size: 1.05em;
     letter-spacing: 0.1px;
+    line-height: 1em;
   }
   /* Aboutpage responsiveness ends */
 
@@ -1594,8 +1595,8 @@ textarea:not(:placeholder-shown) ~ label {
     font-size: 3em;
   }
   .arrow span {
-    width: 2.3vw;
-    height: 2.3vw;
+    width: 1.8vw;
+    height: 1.8vw;
   }
   /* scroll-wave-page responsiveness ends */
 
@@ -1605,7 +1606,7 @@ textarea:not(:placeholder-shown) ~ label {
     padding: 0;
   }
   .text-box img {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
   .text-box .project-content {
@@ -1618,6 +1619,7 @@ textarea:not(:placeholder-shown) ~ label {
     position: relative;
     letter-spacing: 0.05em;
     font-size: 1.3em;
+    padding: 0 2em;
   }
   .project-content h1 {
     margin: 1em 0;
