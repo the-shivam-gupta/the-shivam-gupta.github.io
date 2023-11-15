@@ -1363,8 +1363,11 @@ textarea:not(:placeholder-shown) ~ label {
     margin-bottom: 1em;
   }
   #header-container .content {
+    display: flex;
+    width: 90%;
     flex-direction: column;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
   }
   .content p {
     width: 100%;
@@ -1548,7 +1551,11 @@ textarea:not(:placeholder-shown) ~ label {
     font-size: 1.4em;
   }
   .content {
+    display: flex;
     width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .content h1 {
     font-size: 2.5em;
