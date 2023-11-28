@@ -25,6 +25,7 @@
   --font1: 'Montserrat', sans-serif;
   --font2: 'Trirong', serif;
   --font3: 'Merriweather', serif;
+  --gradient: linear-gradient(-45deg, #3e5c76, #f0ebd8, #3e5c76);
 }
 
 html {
@@ -238,7 +239,7 @@ body {
 .social_media .fa-github,
 .fa-linkedin {
   width: fit-content;
-  font-size: 27px;
+  font-size: 2em;
   letter-spacing: 1rem;
   color: var(--color2);
 }
@@ -404,7 +405,7 @@ a {
   text-align: center;
   height: 100vh;
   display: flex;
-  background: var(--color5);
+  background: var(--gradient);
   justify-content: center;
   align-items: center;
 }
@@ -915,18 +916,27 @@ h1 span:nth-child(12) {
 }
 
 .footer-icons {
-  font-size: 1.5em;
+  font-size: 1.9em;
 }
 
 .footer-icons a i {
   color: var(--color2);
   padding: 0 0.2em;
-  margin: 0.1em;
+  margin: 0.12em;
   transition: color 0.3s ease;
 }
 
 .footer-icons a i:hover {
   color: var(--color5);
+}
+
+.fa-beat-fade:hover,.fa-bounce:hover,.fa-beat:hover {
+  animation: none;
+}
+
+.typed-cursor {
+  font-weight: bolder;
+  font-size: 2em; 
 }
 /* footer end */
 
