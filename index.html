@@ -288,25 +288,23 @@
       <div class="container reveal">
         <div class="text-container">
           <div class="text-box">
-            <img src="public/OES_P3.jpg" alt="image" />
+            <img
+              src="public/tailwind-clone-1.png"
+              alt="image"
+              onmouseover="hoverImage4(this)"
+              onmouseout="unhoverImage4(this)"
+            />
             <div class="project-content">
-              <h1>Online Education</h1>
+              <h1>Tailwind Clone</h1>
               <p>
-                The Online education platform provides the best programming
-                language tutorials from esteemed <span>YouTubers</span>, making
-                it easily accessible to aspiring programmers and tech
-                enthusiasts. Whether you're a beginner or a seasoned developer,
-                our curated <span>collection</span> of videos offers insights,
-                tips, and guidance to refine your skills. Join us on this
-                educational journey as we <span>bridge</span> the gap between
-                your ambitions and the programming world.
+                Making a replica of a website named as "<span>Tailwind Clone</span>" to get better at designing the front part of websites. It's a <span>practice</span> project where I'm using Tailwind CSS. The site has only one page and doesn't link to any other pages, it's just for practicing and <span>improving</span> my skills.
               </p>
               <div class="project-links">
-                <a href="https://github.com/the-shivam-gupta" target="_blank"
+                <a href="https://github.com/the-shivam-gupta/tailwind-clone" target="_blank"
                   ><i class="fa-brands fa-github fa-beat"></i
                 ></a>
                 <button class="tags">HTML</button>
-                <button class="tags">CSS</button>
+                <button class="tags">Tailwind</button>
                 <button class="tags">JS</button>
               </div>
             </div>
@@ -557,6 +555,14 @@
 
       function unhoverImage3(element) {
         element.src = "public/MedGuide_1 Project.png";
+      }
+
+      function hoverImage4(element) {
+        element.src = "public/tailwind-clone-2.png";
+      }
+
+      function unhoverImage4(element) {
+        element.src = "public/tailwind-clone-1.png";
       }
 
       // JavaScript to hide the splash screen when the page is fully loaded
