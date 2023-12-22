@@ -551,7 +551,7 @@ section .text-box {
 }
 
 .project-content p span {
-  color: white;
+  color: var(--color5);
   background: linear-gradient(45deg, var(--color2), transparent);
   text-decoration-line: underline;
   text-underline-offset: 5px;
