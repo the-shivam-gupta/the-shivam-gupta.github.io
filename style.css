@@ -955,6 +955,19 @@ h1 span:nth-child(12) {
   margin: 0 8em;
   text-align: justify;
   letter-spacing: 0.02em;
+  color: hsl(0 0% 100%/0.2);
+  background-image: linear-gradient(45deg, var(--color5), var(--color5));
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-clip: text;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view(); 
+}
+
+@keyframes scroll-reveal{
+  to {
+    background-size: 100% 100%;
+  }
 }
 
 .about-img img {
@@ -985,9 +998,10 @@ h1 span:nth-child(12) {
 }
 
 .about-content h1 {
-  color: var(--color6);
   font-size: 2.5rem;
   font-family: var(--font1);
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 30vh;
 }
 
 /* about end */
