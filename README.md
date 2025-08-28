@@ -1,64 +1,69 @@
-## Riku Sato — Portfolio
+# React + TypeScript + Vite
 
-A responsive single‑page portfolio website built with HTML, CSS and JavaScript.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Features
+Currently, two official plugins are available:
 
-- Responsive layout with smooth scrolling navigation
-- Intro splash screen with animated name
-- Typed hero tagline using Typed.js
-- Project cards with hover effects
-- Skills section with icons
-- Back‑to‑top button
-- Contact form with inline validation and alerts
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Tech Stack
+## Expanding the ESLint configuration
 
-- HTML5, CSS3
-- JavaScript (vanilla) + jQuery (for small interactions)
-- Typed.js
-- Font Awesome
-- Google Fonts (Merriweather, Poppins)
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-### Getting Started
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-Option A: Open directly
-1. Open `index.html` in your browser.
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
-Option B: Serve locally
-1. Open a terminal in the `portfolio` directory.
-2. Using Node.js:
-```bash
-npx serve -s .
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-   or using Python:
-```bash
-python -m http.server 5500
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-3. Visit `http://localhost:5500` (or the URL shown by your server).
-
-### Project Structure
-
-- `index.html` — markup and inline scripts for the landing page
-- `style.css` — all styles, animations and responsive rules
-- `script.js` — scroll reveal, back‑to‑top, smooth navigation
-- `public/` — icons, images, video, audio, and resume PDF
-
-### Customization
-
-- Name and tagline: update the hero text in `index.html`.
-- Typed text: edit the `strings` array used by Typed.js in `index.html`.
-- Resume link: place your resume at `public/RikuSatoresume.pdf` or change the `href` in `index.html`.
-- Social links: update GitHub/LinkedIn/email URLs in `index.html`.
-- Projects: replace links, titles, and descriptions in the Projects section of `index.html`.
-- Skills: adjust icons and labels in the Skills section and assets in `public/`.
-
-### Deployment
-
-This is a static site. You can deploy it to any static hosting service, such as GitHub Pages, Netlify, or Vercel. Upload the contents of the `portfolio` directory.
-
-### Feedback
-
-Suggestions and improvements are welcome. If you find an issue, please open one or submit a PR. If you like the project, a star is appreciated.
-
-
