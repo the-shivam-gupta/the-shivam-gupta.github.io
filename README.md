@@ -1,20 +1,44 @@
 <div align="center">
-  
-# <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" /> &nbsp; Greetings &nbsp; <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />
+
+# 👋 Greetings  
+
+<img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="60px" />
 
 </div>
 
+---
+
 <p align="center">
-   As a frontend developer, I am passionate about creating visually appealing designs that capture people's attention.
+   I'm <b>Shivam Gupta</b>, a passionate <b>Frontend Developer</b> focused on building  
+   optimized, responsive, and user-friendly web applications.  
 </p>
 
-<div align="center">
-  <p align="left">➡️ Mobile View:</p>
-  <img src="https://github.com/the-shivam-gupta/the-shivam-gupta.github.io/assets/109647722/68bd7a3b-edbf-4381-9eae-e781a262481a" width="200px"/>
-  <p align="left">➡️ Desktop View:</p>
-  <img src="https://github.com/the-shivam-gupta/the-shivam-gupta.github.io/assets/109647722/da8c34c1-7978-44a3-960d-7c1d41180b81" width="800px"/>
-</div>
+---
+
+## 🎨 Portfolio Preview  
+
+<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/aa72a264-7bf9-4bc6-833b-4768c9eb2cd2" />
+
+---
+
+## 🛠 Tech Stack  
 
 <p align="center">
-  Your feedback is highly valued ❤️. Feel free to suggest any new ideas or report any issues you come across. If you've appreciated my work, I would be grateful if you could leave a ⭐ to show your support. Happy     coding!!!
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+</p>
+
+---
+
+## 💡 Feedback & Support  
+
+<p align="center">
+  📝 Have suggestions or ideas? Feel free to share them.  
+  ⭐ If you like my work, please consider leaving a star to show your support.  
+</p>
+
+<p align="center">
+   🚀 Let’s build something amazing together.  
+   ✨ Happy Coding! ✨
 </p>
