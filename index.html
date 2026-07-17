@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,31 +31,11 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="splash-screen">
-      <section class="splash-content">
-        <video src="public/smoke1.mp4" autoplay muted></video>
-        <h1>
-          <span>S</span>
-          <span>H</span>
-          <span>I</span>
-          <span>V</span>
-          <span>A</span>
-          <span>M</span>
-          <br />
-          <span>G</span>
-          <span>U</span>
-          <span>P</span>
-          <span>T</span>
-          <span>A</span>
-        </h1>
-      </section>
-    </div>
     <a id="button"></a>
     <div class="header" id="home">
-      <div class="logo">
-        <h2>Shivam</h2>
-        <h2>Shivam</h2>
-      </div>
+      <button type="button" class="logo" data-section="home" aria-label="Shivam, Software Developer — Home">
+        <span class="logo__name">Shivam</span>
+      </button>
       <div class="__container">
         <div class="navbar2">
           <div class="header2">
@@ -72,76 +52,180 @@
     </div>
 
     <div id="header-container">
-      <div class="content">
-        <h1>Hi, I'm Shivam Gupta</h1>
-        <span id="element"></span>
-        <hr />
-        <p>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="content hero-intro">
+        <h1 class="hero-intro__title">
+          <span class="hero-intro__greeting">Hi, I'm</span>
+          <span class="hero-intro__name">Shivam<br />Gupta</span>
+        </h1>
+        <span id="element" class="hero-intro__typed"></span>
+        <p class="hero-intro__bio">
           I’m enthusiastic about technology and inspired by the ever-evolving
           digital world. I focus on improving my skills, staying dedicated to
           delivering quality work, and being a reliable team player.
         </p>
-        <div class="social_media">
-          <div>
+        <div class="hero-intro__actions">
+          <a
+            class="hero-intro__resume"
+            href="./public/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Resume</a
+          >
+          <div class="hero-intro__socials">
             <a
               href="https://www.linkedin.com/in/the-shivam-gupta"
               target="_blank"
-              ><i class="fa-brands fa-linkedin fa-beat button"></i
-            ></a>
-            <a href="https://github.com/the-shivam-gupta" target="_blank"
-              ><i class="fa-brands fa-github fa-bounce button"></i
-            ></a>
-          </div>
-          <div class="resume-container">
-            <a href="./public/resume.pdf" target="_blank">
-              <div class="resume">
-                <div class="text">Resume</div>
-              </div>
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <img src="./public/link.png" alt="" />
+            </a>
+            <a
+              href="https://github.com/the-shivam-gupta"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <img src="./public/code.png" alt="" />
             </a>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <!-- <div class="card">
+        <div class="orbit-outer"></div>
+        <div class="orbit-inner"></div>
+
+        <div class="planet planet--outer" style="animation-delay: 0s">
+          <img src="public/html.png" alt="HTML" />
+        </div>
+        <div class="planet planet--outer" style="animation-delay: -11.33s">
+          <img src="public/css-3.png" alt="CSS" />
+        </div>
+        <div class="planet planet--outer" style="animation-delay: -22.67s">
+          <img src="public/javascript.png" alt="JavaScript" />
+        </div>
+
+        <div class="planet planet--inner" style="animation-delay: 0s">
+          <img src="public/physics.png" alt="React" />
+        </div>
+        <div class="planet planet--inner" style="animation-delay: -11.33s">
+          <img src="public/github.png" alt="GitHub" />
+        </div>
+        <div class="planet planet--inner" style="animation-delay: -22.67s">
+          <img src="public/mysql.png" alt="MySQL" />
+        </div>
+
         <div class="__content">
           <div class="front">
             <img src="public/shivam_photo.jpg" alt="photo" />
           </div>
-          <div class="back">
-            <h1>HOBBIES</h1>
-            <ul>
-              <li>Fitness</li>
-              <li>Travelling</li>
-              <li>Reading</li>
-              <li>Socializing</li>
-            </ul>
+        </div>
+        <div class="availability-badge">
+          <span class="dot"></span>
+          <div class="badge-text">
+            <small>Available for</small>
+            <strong>New Projects</strong>
+          </div>
+        </div>
+      </div> -->
+      <div class="skill-system" aria-label="Technical skills">
+        <div class="skill-system__glow" aria-hidden="true"></div>
+        <div class="skill-system__hub">
+          <img src="./public/js-transparent.png" alt="JavaScript" />
+        </div>
+
+        <div class="skill-orbit skill-orbit--1">
+          <div class="skill-planet skill-icon--html" style="--orbit-t: 0">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/html.png" alt="HTML" />
+          </div>
+          <div class="skill-planet skill-icon--css" style="--orbit-t: 0.5">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/css-3.png" alt="CSS" />
+          </div>
+        </div>
+
+        <div class="skill-orbit skill-orbit--2">
+          <div class="skill-planet skill-icon--react" style="--orbit-t: 0.25">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/physics.png" alt="React" />
+          </div>
+          <div class="skill-planet skill-icon--github" style="--orbit-t: 0.75">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/github.png" alt="GitHub" />
+          </div>
+        </div>
+
+        <div class="skill-orbit skill-orbit--3">
+          <div class="skill-planet skill-icon--mysql" style="--orbit-t: 0.125">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/mysql.png" alt="MySQL" />
+          </div>
+          <div class="skill-planet skill-icon--python" style="--orbit-t: 0.625">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/python.png" alt="Python" />
+          </div>
+        </div>
+
+        <div class="skill-orbit skill-orbit--4">
+          <div class="skill-planet skill-icon--java" style="--orbit-t: 0.875">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/java.png" alt="Java" />
+          </div>
+          <div class="skill-planet skill-icon--bootstrap" style="--orbit-t: 0.375">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/bootstrap.png" alt="Bootstrap" />
+          </div>
+        </div>
+
+        <div class="skill-orbit skill-orbit--5">
+          <div class="skill-planet skill-icon--c" style="--orbit-t: 0">
+            <span class="skill-planet__body" aria-hidden="true"></span>
+            <img src="./public/c-.png" alt="C" />
           </div>
         </div>
       </div>
     </div>
+
     <div class="container reveal" id="about">
       <div class="about-container">
         <div class="about-img">
-          <img src="./public/shivam_photo.jpg" alt="photo" />
+          <span class="about-img__corner about-img__corner--tl" aria-hidden="true"></span>
+          <span class="about-img__corner about-img__corner--br" aria-hidden="true"></span>
+          <img src="./public/shivam_photo.jpg" alt="Shivam Gupta" />
         </div>
         <div class="about-content">
+          <p class="about-kicker">Discovery</p>
           <h1>A Bit About Me</h1>
-          <br />
-          <div class="about-me">
-            <div class="para-1">
-              I’ve completed my degree in Computer Science with a GPA of <strong>9.06</strong>
-              and gained hands-on experience in web development by working with
-              teams to build functional applications and write clean,
-              maintainable code. I also enjoy contributing to open-source
-              projects.
+          <p class="about-lead">
+            I’ve completed my degree in Computer Science with a GPA of
+            <span class="about-gpa">9.06</span>
+            and gained hands-on experience in web development by working with
+            teams to build functional applications and write clean,
+            maintainable code. I also enjoy contributing to open-source
+            projects.
+          </p>
+          <blockquote class="about-callout">
+            My passion lies in crafting high-performance, responsive, and
+            user-friendly interfaces that blend clean design with technical
+            precision.
+          </blockquote>
+          <p class="about-more">
+            Through my open-source contributions, I’ve helped improve
+            accessibility, UI/UX, and mobile responsiveness across various
+            applications, while continuously learning and growing as a
+            developer.
+          </p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="about-stat__label">Education</span>
+              <span class="about-stat__value">Comp. Science</span>
             </div>
-            <div class="para-2">
-              My passion lies in crafting high-performance, responsive, and
-              user-friendly interfaces that blend clean design with technical
-              precision. Through my open-source contributions, I’ve helped
-              improve accessibility, UI/UX, and mobile responsiveness across
-              various applications, while continuously learning and growing as a
-              developer.
+            <div class="about-stat">
+              <span class="about-stat__label">Academic Stand</span>
+              <span class="about-stat__value">9.06 GPA</span>
             </div>
           </div>
         </div>
@@ -149,7 +233,7 @@
     </div>
 
     <!-- Scroll Content -->
-    <section class="wave-container">
+    <!-- <section class="wave-container">
       <h1 class="wave">
         <span style="--i: 1">S</span>
         <span style="--i: 2">c</span>
@@ -168,29 +252,92 @@
           <span></span>
         </div>
       </h1>
+    </section> -->
+
+    <!-- =================== EXPERIENCE SECTION =================== -->
+    <section id="experience">
+      <div class="exp-inner">
+        <div class="exp-kicker">Journey &amp; Milestones</div>
+        <h2 class="exp-title">Professional Experience</h2>
+        <p class="exp-subtitle">
+          A chronicle of my technical evolution, from academic foundations to
+          real client work and contributions to the open-source ecosystem.
+        </p>
+
+        <div class="exp-timeline">
+          <div class="exp-item" style="--exp-dot-color: #3b82c4">
+            <span class="exp-dot"></span>
+            <div class="exp-card">
+              <div class="exp-badge-row">
+                <span class="exp-badge">Current</span>
+                <span class="exp-date">2025 — Present</span>
+              </div>
+              <h3>Junior Full Stack Developer</h3>
+              <div class="exp-org">Webmaffia</div>
+              <p>
+                Building and maintaining client projects using Next.js, Strapi
+                CMS, React, and Vue.js - covering content modeling, API
+                integration, and responsive UI across multiple production sites.
+              </p>
+            </div>
+          </div>
+
+          <div class="exp-item" style="--exp-dot-color: #6eb3e4">
+            <span class="exp-dot"></span>
+            <div class="exp-card">
+              <div class="exp-badge-row">
+                <span class="exp-badge">Ongoing</span>
+                <span class="exp-date">Continuous</span>
+              </div>
+              <h3>Open Source Contributor</h3>
+              <div class="exp-org">Independent</div>
+              <p>
+                Contributing improvements to accessibility, UI/UX, and mobile
+                responsiveness across community projects while staying hands-on
+                with modern front-end practices.
+              </p>
+            </div>
+          </div>
+
+          <div class="exp-item" style="--exp-dot-color: #2563a8">
+            <span class="exp-dot"></span>
+            <div class="exp-card" style="position: relative">
+              <span class="exp-gpa">9.06 GPA</span>
+              <div class="exp-badge-row">
+                <span class="exp-badge">Degree</span>
+                <span class="exp-date">Graduated</span>
+              </div>
+              <h3>Bachelor of Computer Science</h3>
+              <div class="exp-org">
+                Atharva College of Engineering
+              </div>
+              <p>
+                Built a strong foundation in software engineering, data
+                structures, and web development - the base this career is
+                growing from.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="project">
-      <div class="container reveal">
-        <div class="projects">
-          <span class="letter">P</span>
-          <span class="letter">r</span>
-          <span class="letter">o</span>
-          <span class="letter">j</span>
-          <span class="letter">e</span>
-          <span class="letter">c</span>
-          <span class="letter">t</span>
-          <span class="letter">s</span>
+    <!-- =================== END EXPERIENCE SECTION =================== -->
+
+    <section id="project" class="project-section">
+      <div class="container reveal project-wrap">
+        <div class="project-heading">
+          <p class="project-kicker">Selected Work</p>
+          <h2 class="project-title">
+            <span class="letter">P</span><span class="letter">r</span><span class="letter">o</span><span class="letter">j</span><span class="letter">e</span><span class="letter">c</span><span class="letter">t</span><span class="letter">s</span>
+          </h2>
         </div>
 
-        <div class="text-box">
-          <div>
-            <a
-              target="_blank"
-              href="https://github.com/ShubhamKhale/labourServices"
-            >
+        <article class="text-box project-card">
+          <div class="project-media">
+            <a target="_blank" href="https://github.com/ShubhamKhale/labourServices" rel="noopener noreferrer">
               <img
                 src="public/labourService_P1.jpg"
-                alt="image"
+                alt="Labour Service project"
                 onmouseover="hoverImage2(this)"
                 onmouseout="unhoverImage2(this)"
               />
@@ -208,190 +355,170 @@
               build a community of trust within the labour services ecosystem.
             </p>
             <div class="project-links">
-              <a
-                href="https://github.com/ShubhamKhale/labourServices"
-                target="_blank"
-                ><i class="fa-brands fa-github fa-beat"></i
-              ></a>
-              <button class="tags">React Js</button>
-              <button class="tags">Typescript</button>
-              <button class="tags">Ionic</button>
+              <a href="https://github.com/ShubhamKhale/labourServices" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <span class="tags">React Js</span>
+              <span class="tags">Typescript</span>
+              <span class="tags">Ionic</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section>
-      <div class="container reveal">
-        <div class="text-container">
-          <div class="text-box">
-            <a
-              target="_blank"
-              href="https://github.com/the-shivam-gupta/shopverse"
-            >
+    <section class="project-section">
+      <div class="container reveal project-wrap">
+        <article class="text-box project-card">
+          <div class="project-media">
+            <a target="_blank" href="https://github.com/the-shivam-gupta/shopverse" rel="noopener noreferrer">
               <img
                 src="public/shopverse1.png"
-                alt="image"
+                alt="ShopVerse project"
                 onmouseover="hoverImage5(this)"
                 onmouseout="unhoverImage5(this)"
               />
             </a>
-            <div class="project-content">
-              <h1>ShopVerse</h1>
-              <p>
-                ShopVerse is a modern and responsive
-                <span>eCommerce website</span> that makes online shopping fast,
-                easy, and enjoyable. It is built with
-                <span>React & Vite</span> for speed and smooth performance, and
-                it uses Firebase for secure login, real-time data updates. The
-                website lets users browse products, add them to a cart, and
-                place orders. It also includes features like
-                <span>personalized user profiles</span>, order history, and
-                responsive design so it works perfectly all devices.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/the-shivam-gupta/shopverse"
-                  target="_blank"
-                  ><i class="fa-brands fa-github fa-beat"></i
-                ></a>
-                <button class="tags">React js</button>
-                <button class="tags">Tailwind</button>
-                <button class="tags">Firebase</button>
-              </div>
+          </div>
+          <div class="project-content">
+            <h1>ShopVerse</h1>
+            <p>
+              ShopVerse is a modern and responsive
+              <span>eCommerce website</span> that makes online shopping fast,
+              easy, and enjoyable. It is built with
+              <span>React &amp; Vite</span> for speed and smooth performance, and
+              it uses Firebase for secure login, real-time data updates. The
+              website lets users browse products, add them to a cart, and
+              place orders. It also includes features like
+              <span>personalized user profiles</span>, order history, and
+              responsive design so it works perfectly all devices.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/the-shivam-gupta/shopverse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <span class="tags">React js</span>
+              <span class="tags">Tailwind</span>
+              <span class="tags">Firebase</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section>
-      <div class="container reveal">
-        <div class="text-container">
-          <div class="text-box">
-            <a
-              target="_blank"
-              href="https://github.com/PriyansuMaurya/MedGuide"
-            >
+    <section class="project-section">
+      <div class="container reveal project-wrap">
+        <article class="text-box project-card">
+          <div class="project-media">
+            <a target="_blank" href="https://github.com/PriyansuMaurya/MedGuide" rel="noopener noreferrer">
               <img
                 src="public/MedGuide_1 Project.png"
-                alt="image"
+                alt="MedGuide project"
                 onmouseover="hoverImage3(this)"
                 onmouseout="unhoverImage3(this)"
               />
             </a>
-            <div class="project-content">
-              <h1>MedGuide</h1>
-              <p>
-                Medical diagnosis systems are advanced computer programs that
-                utilize cutting-edge technologies such as
-                <span>machine learning</span> and
-                <span>natural language processing</span> to assist medical
-                practitioners in effectively diagnosing diseases. These
-                innovative systems not only enhance the precision and speed of
-                diagnosis but also offer doctors valuable
-                <span>insights and information</span> to help them make informed
-                decisions regarding patient treatment.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/PriyansuMaurya/MedGuide"
-                  target="_blank"
-                  ><i class="fa-brands fa-github fa-beat"></i
-                ></a>
-                <button class="tags">Python</button>
-                <button class="tags">Flask</button>
-                <button class="tags">Tailwind</button>
-              </div>
+          </div>
+          <div class="project-content">
+            <h1>MedGuide</h1>
+            <p>
+              Medical diagnosis systems are advanced computer programs that
+              utilize cutting-edge technologies such as
+              <span>machine learning</span> and
+              <span>natural language processing</span> to assist medical
+              practitioners in effectively diagnosing diseases. These
+              innovative systems not only enhance the precision and speed of
+              diagnosis but also offer doctors valuable
+              <span>insights and information</span> to help them make informed
+              decisions regarding patient treatment.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/PriyansuMaurya/MedGuide" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <span class="tags">Python</span>
+              <span class="tags">Flask</span>
+              <span class="tags">Tailwind</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section>
-      <div class="container reveal">
-        <div class="text-container">
-          <div class="text-box">
-            <a target="_blank" href="https://github.com/the-shivam-gupta/HMS">
+    <section class="project-section">
+      <div class="container reveal project-wrap">
+        <article class="text-box project-card">
+          <div class="project-media">
+            <a target="_blank" href="https://github.com/the-shivam-gupta/HMS" rel="noopener noreferrer">
               <img
                 src="public/HSM_P2.jpg"
-                alt="image"
+                alt="HMS project"
                 onmouseover="hoverImage1(this)"
                 onmouseout="unhoverImage1(this)"
               />
             </a>
-            <div class="project-content">
-              <h1>HMS</h1>
-              <p>
-                The Hospital Management System is a platform designed to
-                <span>enhance</span>
-                healthcare facilities. This system saves time and improves
-                efficiency by providing healthcare professionals with quick
-                access to <span>patient information</span>, leading to faster
-                diagnoses and treatment. The Hospital Management System benefits
-                <span>both</span> patients and healthcare professionals by
-                improving the quality of care.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/the-shivam-gupta/HMS"
-                  target="_blank"
-                  ><i class="fa-brands fa-github fa-beat"></i
-                ></a>
-                <button class="tags">Python</button>
-                <button class="tags">Tkinter</button>
-              </div>
+          </div>
+          <div class="project-content">
+            <h1>HMS</h1>
+            <p>
+              The Hospital Management System is a platform designed to
+              <span>enhance</span>
+              healthcare facilities. This system saves time and improves
+              efficiency by providing healthcare professionals with quick
+              access to <span>patient information</span>, leading to faster
+              diagnoses and treatment. The Hospital Management System benefits
+              <span>both</span> patients and healthcare professionals by
+              improving the quality of care.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/the-shivam-gupta/HMS" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <span class="tags">Python</span>
+              <span class="tags">Tkinter</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section>
-      <div class="container reveal">
-        <div class="text-container">
-          <div class="text-box">
-            <a
-              target="_blank"
-              href="https://the-shivam-gupta.github.io/tailwind-clone/"
-            >
+    <!-- <section class="project-section">
+      <div class="container reveal project-wrap">
+        <article class="text-box project-card">
+          <div class="project-media">
+            <a target="_blank" href="https://the-shivam-gupta.github.io/tailwind-clone/" rel="noopener noreferrer">
               <img
                 src="public/tailwind-clone-1.png"
-                alt="image"
+                alt="Tailwind Clone project"
                 onmouseover="hoverImage4(this)"
                 onmouseout="unhoverImage4(this)"
               />
             </a>
-            <div class="project-content">
-              <h1>Tailwind Clone</h1>
-              <p>
-                Making a replica of a website named as "<span
-                  >Tailwind Clone</span
-                >" to get better at designing the front part of websites. It's a
-                <span>practice</span> project where I'm using Tailwind CSS. The
-                site has only one page and doesn't link to any other pages, it's
-                just for practicing and <span>improving</span> my skills.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/the-shivam-gupta/tailwind-clone"
-                  target="_blank"
-                  ><i class="fa-brands fa-github fa-beat"></i
-                ></a>
-                <button class="tags">HTML</button>
-                <button class="tags">Tailwind</button>
-                <button class="tags">JS</button>
-              </div>
+          </div>
+          <div class="project-content">
+            <h1>Tailwind Clone</h1>
+            <p>
+              Making a replica of a website named as "<span>Tailwind Clone</span>"
+              to get better at designing the front part of websites. It's a
+              <span>practice</span> project where I'm using Tailwind CSS. The
+              site has only one page and doesn't link to any other pages, it's
+              just for practicing and <span>improving</span> my skills.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/the-shivam-gupta/tailwind-clone" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <span class="tags">HTML</span>
+              <span class="tags">Tailwind</span>
+              <span class="tags">JS</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
-    </section>
-    <hr />
-    <br />
-    <div class="skills-container" id="skills">
+    </section> -->
+ <hr/>
+    <!-- <br />  -->
+    <!-- <div class="skills-container" id="skills">
       <div class="container reveal">
         <div class="skills">
           <div class="skills-header">
@@ -510,21 +637,21 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="contact-container" id="contact">
-      <div class="container reveal">
-        <main>
-          <div class="title">
-            <span class="letter">C</span>
-            <span class="letter">o</span>
-            <span class="letter">n</span>
-            <span class="letter">t</span>
-            <span class="letter">a</span>
-            <span class="letter">c</span>
-            <span class="letter">t</span>
+    <section class="contact-container" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-panel">
+          <div class="contact-heading">
+            <p class="contact-kicker">Get in touch</p>
+            <h2 class="contact-title title">
+              <span class="letter">C</span><span class="letter">o</span><span class="letter">n</span><span class="letter">t</span><span class="letter">a</span><span class="letter">c</span><span class="letter">t</span>
+            </h2>
+            <p class="contact-sub">
+              Drop a note — I’ll get back as soon as I can.
+            </p>
           </div>
-          <div class="alert"></div>
+          <div class="alert" role="status" aria-live="polite"></div>
           <form action="" method="" class="form" id="myForm" autocomplete="off">
             <div class="input-group">
               <input
@@ -570,34 +697,164 @@
               <label for="message">Message</label>
             </div>
 
-            <div class="submit-btn">
-              <button type="submit" id="showAlert">Send</button>
+            <div class="button-area submit-btn">
+              <button type="submit" id="showAlert">Send message</button>
             </div>
           </form>
-        </main>
+        </div>
       </div>
-    </div>
-    <hr />
+    </section>
+
     <footer class="footer-container">
-      <div class="footer-content">Made with ❤️ by Shivam</div>
+      <div class="footer-content">
+        Made with care by <span>Shivam</span>
+      </div>
       <div class="footer-icons">
-        <a href="https://github.com/the-shivam-gupta" target="_blank"
-          ><i class="fa-brands fa-github fa-beat-fade"></i
+        <a
+          href="https://github.com/the-shivam-gupta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          ><i class="fa-brands fa-github"></i
         ></a>
-        <a href="https://twitter.com/ShivamGupt97925" target="_blank"
-          ><i class="fa-brands fa-square-x-twitter fa-beat-fade"></i
+        <a
+          href="https://twitter.com/ShivamGupt97925"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X / Twitter"
+          ><i class="fa-brands fa-square-x-twitter"></i
         ></a>
-        <a href="https://www.linkedin.com/in/the-shivam-gupta" target="_blank"
-          ><i class="fa-brands fa-linkedin-in fa-beat-fade"></i
+        <a
+          href="https://www.linkedin.com/in/the-shivam-gupta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin-in"></i
         ></a>
-        <a href="mailto:shivamgupta02022002@gmail.com" target="_blank"
-          ><i class="fa-solid fa-envelope fa-beat-fade"></i
+        <a
+          href="mailto:shivamgupta02022002@gmail.com"
+          aria-label="Email"
+          ><i class="fa-solid fa-envelope"></i
         ></a>
       </div>
     </footer>
 
+    <script id="vertexShader" type="x-shader/x-vertex">
+attribute vec3 aPosition;
+
+uniform mat4 u_modelMatrix;
+uniform mat4 u_viewMatrix;
+uniform mat4 u_projectionMatrix;
+uniform float u_time;
+
+varying vec3 color;
+//Noise from https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83
+
+vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
+vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+
+float snoise(vec3 v){
+  const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
+  const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+
+// First corner
+  vec3 i  = floor(v + dot(v, C.yyy) );
+  vec3 x0 =   v - i + dot(i, C.xxx) ;
+
+// Other corners
+  vec3 g = step(x0.yzx, x0.xyz);
+  vec3 l = 1.0 - g;
+  vec3 i1 = min( g.xyz, l.zxy );
+  vec3 i2 = max( g.xyz, l.zxy );
+
+  //  x0 = x0 - 0. + 0.0 * C
+  vec3 x1 = x0 - i1 + 1.0 * C.xxx;
+  vec3 x2 = x0 - i2 + 2.0 * C.xxx;
+  vec3 x3 = x0 - 1. + 3.0 * C.xxx;
+
+// Permutations
+  i = mod(i, 289.0 );
+  vec4 p = permute( permute( permute(
+             i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+           + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
+           + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+
+// Gradients
+// ( N*N points uniformly over a square, mapped onto an octahedron.)
+  float n_ = 1.0/7.0; // N=7
+  vec3  ns = n_ * D.wyz - D.xzx;
+
+  vec4 j = p - 49.0 * floor(p * ns.z *ns.z);  //  mod(p,N*N)
+
+  vec4 x_ = floor(j * ns.z);
+  vec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)
+
+  vec4 x = x_ *ns.x + ns.yyyy;
+  vec4 y = y_ *ns.x + ns.yyyy;
+  vec4 h = 1.0 - abs(x) - abs(y);
+
+  vec4 b0 = vec4( x.xy, y.xy );
+  vec4 b1 = vec4( x.zw, y.zw );
+
+  vec4 s0 = floor(b0)*2.0 + 1.0;
+  vec4 s1 = floor(b1)*2.0 + 1.0;
+  vec4 sh = -step(h, vec4(0.0));
+
+  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+
+  vec3 p0 = vec3(a0.xy,h.x);
+  vec3 p1 = vec3(a0.zw,h.y);
+  vec3 p2 = vec3(a1.xy,h.z);
+  vec3 p3 = vec3(a1.zw,h.w);
+
+//Normalise gradients
+  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+  p0 *= norm.x;
+  p1 *= norm.y;
+  p2 *= norm.z;
+  p3 *= norm.w;
+
+// Mix final noise value
+  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+  m = m * m;
+  return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
+                                dot(p2,x2), dot(p3,x3) ) );
+}
+
+void main() {
+  float t = u_time * 0.12;
+  float nx = snoise(aPosition * 1.35 + vec3(t, 0.0, t * 0.35));
+  float ny = snoise(aPosition * 1.35 + vec3(0.0, t, t * 0.25));
+  float nz = snoise(aPosition * 1.15 + vec3(t * 0.45, t * 0.2, t));
+
+  vec3 position = aPosition + vec3(nx, ny, nz) * 0.14;
+  color = aPosition * 0.22 + 0.62;
+
+  gl_Position = u_projectionMatrix * u_viewMatrix * u_modelMatrix * vec4(position, 1.0);
+  gl_PointSize = 1.5;
+}
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+precision mediump float;
+
+varying vec3 color;
+
+void main() {
+  // Soft sky-blue particles for light theme
+  gl_FragColor = vec4(
+    color.x * 0.25 + 0.45,
+    color.y * 0.3 + 0.62,
+    color.y * 0.15 + 0.88,
+    1.0
+  );
+}
+    </script>
+
     <!-- Load library from the CDN -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+    <script src="./hero-gl.js"></script>
 
     <!-- Setup and start animation! -->
     <script>
@@ -649,26 +906,12 @@
         element.src = "public/shopverse1.png";
       }
 
-      // JavaScript to hide the splash screen when the page is fully loaded
-      document.addEventListener("DOMContentLoaded", function () {
-        var splashScreen = document.getElementById("splash-screen");
-        if (splashScreen) {
-          var delay = 8000;
-
-          setTimeout(function () {
-            splashScreen.classList.add("hidden");
-
-            setTimeout(function () {
-              splashScreen.style.display = "none";
-            }, 1000);
-          }, delay);
-        }
-      });
-
       // Contact form submission
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("myForm");
-        const alertDialog = document.querySelector(".alert");
+        const alertDialog = document.querySelector("#contact .alert");
+
+        if (!form || !alertDialog) return;
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
@@ -681,26 +924,24 @@
           // Regular expression for a valid email address format ending with gmail.com
           const emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
+          alertDialog.classList.remove("is-error", "is-success");
+          alertDialog.style.display = "";
+
           if (firstName === "" || lastName === "" || message === "") {
-            alertDialog.style.backgroundColor = "red";
-            alertDialog.style.color = "white";
-            alertDialog.style.display = "flex";
+            alertDialog.classList.add("is-error");
             alertDialog.innerHTML =
               "Ensure that all fields are filled out accurately.";
           } else if (!email.match(emailRegex)) {
-            alertDialog.style.backgroundColor = "red";
-            alertDialog.style.color = "white";
-            alertDialog.style.display = "flex";
+            alertDialog.classList.add("is-error");
             alertDialog.innerHTML = "The email entered is invalid.";
           } else {
-            alertDialog.style.backgroundColor = "green";
-            alertDialog.style.color = "white";
-            alertDialog.style.display = "flex";
+            alertDialog.classList.add("is-success");
             alertDialog.innerHTML =
               "Thanks for your message. I'll respond soon.";
             form.reset();
 
             setTimeout(function () {
+              alertDialog.classList.remove("is-success");
               alertDialog.style.display = "none";
             }, 3000);
           }
@@ -713,7 +954,7 @@
           {
             scrollTop: 0,
           },
-          1000
+          1000,
         );
       });
     </script>
