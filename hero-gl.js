@@ -89,7 +89,7 @@ class HeroGL {
 
     this.fShader = this.gl.createShader(this.gl.FRAGMENT_SHADER);
     this.gl.shaderSource(this.fShader, this.fragment);
-    this.gl.compileShader(this.fShader);
+    this.gl.compileShader(this.fShader);  
 
     if (!this.gl.getShaderParameter(this.vShader, this.gl.COMPILE_STATUS)) {
       console.log(this.gl.getShaderInfoLog(this.vShader));

@@ -33,7 +33,12 @@
   <body>
     <a id="button"></a>
     <div class="header" id="home">
-      <button type="button" class="logo" data-section="home" aria-label="Shivam, Software Developer — Home">
+      <button
+        type="button"
+        class="logo"
+        data-section="home"
+        aria-label="Shivam, Software Developer"
+      >
         <span class="logo__name">Shivam</span>
       </button>
       <div class="__container">
@@ -42,8 +47,8 @@
             <ul class="menu2">
               <li data-section="home">Home</li>
               <li data-section="about">About</li>
+              <li data-section="experience">Experience</li>
               <li data-section="project">Project</li>
-              <li data-section="skills">Skills</li>
               <li data-section="contact">Contact</li>
             </ul>
           </div>
@@ -174,9 +179,9 @@
             <span class="skill-planet__body" aria-hidden="true"></span>
             <img src="./public/java.png" alt="Java" />
           </div>
-          <div class="skill-planet skill-icon--bootstrap" style="--orbit-t: 0.375">
+          <div class="skill-planet skill-icon--nextjs" style="--orbit-t: 0.375">
             <span class="skill-planet__body" aria-hidden="true"></span>
-            <img src="./public/bootstrap.png" alt="Bootstrap" />
+            <img src="./public/nextjs.webp" alt="nextjs" />
           </div>
         </div>
 
@@ -192,8 +197,14 @@
     <div class="container reveal" id="about">
       <div class="about-container">
         <div class="about-img">
-          <span class="about-img__corner about-img__corner--tl" aria-hidden="true"></span>
-          <span class="about-img__corner about-img__corner--br" aria-hidden="true"></span>
+          <span
+            class="about-img__corner about-img__corner--tl"
+            aria-hidden="true"
+          ></span>
+          <span
+            class="about-img__corner about-img__corner--br"
+            aria-hidden="true"
+          ></span>
           <img src="./public/shivam_photo.jpg" alt="Shivam Gupta" />
         </div>
         <div class="about-content">
@@ -203,9 +214,8 @@
             I’ve completed my degree in Computer Science with a GPA of
             <span class="about-gpa">9.06</span>
             and gained hands-on experience in web development by working with
-            teams to build functional applications and write clean,
-            maintainable code. I also enjoy contributing to open-source
-            projects.
+            teams to build functional applications and write clean, maintainable
+            code. I also enjoy contributing to open-source projects.
           </p>
           <blockquote class="about-callout">
             My passion lies in crafting high-performance, responsive, and
@@ -270,7 +280,7 @@
             <div class="exp-card">
               <div class="exp-badge-row">
                 <span class="exp-badge">Current</span>
-                <span class="exp-date">2025 — Present</span>
+                <span class="exp-date">Feb 2026 — Present</span>
               </div>
               <h3>Junior Full Stack Developer</h3>
               <div class="exp-org">Webmaffia</div>
@@ -308,9 +318,7 @@
                 <span class="exp-date">Graduated</span>
               </div>
               <h3>Bachelor of Computer Science</h3>
-              <div class="exp-org">
-                Atharva College of Engineering
-              </div>
+              <div class="exp-org">Atharva College of Engineering</div>
               <p>
                 Built a strong foundation in software engineering, data
                 structures, and web development - the base this career is
@@ -323,162 +331,264 @@
     </section>
     <!-- =================== END EXPERIENCE SECTION =================== -->
 
-    <section id="project" class="project-section">
-      <div class="container reveal project-wrap">
-        <div class="project-heading">
-          <p class="project-kicker">Selected Work</p>
-          <h2 class="project-title">
-            <span class="letter">P</span><span class="letter">r</span><span class="letter">o</span><span class="letter">j</span><span class="letter">e</span><span class="letter">c</span><span class="letter">t</span><span class="letter">s</span>
-          </h2>
+    <section id="project" class="project-section projects-ide">
+      <div class="projects-ide__intro">
+        <p class="projects-ide__eyebrow">Selected Work</p>
+        <h2 class="project-title title">
+          <span class="letter">P</span>
+          <span class="letter">r</span>
+          <span class="letter">o</span>
+          <span class="letter">j</span>
+          <span class="letter">e</span>
+          <span class="letter">c</span>
+          <span class="letter">t</span>
+          <span class="letter">s</span>
+        </h2>
+        <p class="projects-ide__terminal">
+          <span class="projects-ide__prompt">visitor@shivam</span
+          ><span class="projects-ide__prompt-sep">:</span
+          ><span class="projects-ide__prompt-path">~/projects</span
+          ><span class="projects-ide__prompt-sep">$</span> ls
+          <span class="projects-ide__cursor" aria-hidden="true"></span>
+        </p>
+      </div>
+
+      <div class="projects-ide__window">
+        <div class="projects-ide__titlebar">
+          <span class="projects-ide__dot projects-ide__dot--r"></span>
+          <span class="projects-ide__dot projects-ide__dot--y"></span>
+          <span class="projects-ide__dot projects-ide__dot--g"></span>
+          <span class="projects-ide__titlebar-label">projects — portfolio</span>
         </div>
 
-        <article class="text-box project-card">
-          <div class="project-media">
-            <a target="_blank" href="https://github.com/ShubhamKhale/labourServices" rel="noopener noreferrer">
-              <img
-                src="public/labourService_P1.jpg"
-                alt="Labour Service project"
-                onmouseover="hoverImage2(this)"
-                onmouseout="unhoverImage2(this)"
-              />
-            </a>
-          </div>
-          <div class="project-content">
-            <h1>Labour Service</h1>
-            <p>
-              Labour service is a vital component of countless industries and
-              sectors, serving as the backbone of productivity and progress. The
-              Labor Services app <span>connects</span> job seekers to employers.
-              It offers trustworthy and convenient <span>services</span>,
-              allowing users to recruit labourers and provide feedback. Users
-              can provide and access <span>reviews and ratings</span>, helping
-              build a community of trust within the labour services ecosystem.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/ShubhamKhale/labourServices" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <span class="tags">React Js</span>
-              <span class="tags">Typescript</span>
-              <span class="tags">Ionic</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+        <div class="projects-ide__body">
+          <!-- SIDEBAR -->
+          <nav class="projects-ide__sidebar" aria-label="Project files">
+            <p class="projects-ide__sidebar-label">Explorer</p>
+            <p class="projects-ide__folder">▾ projects</p>
+            <ul class="projects-ide__filelist">
+              <li class="projects-ide__file is-active">
+                <button
+                  class="projects-ide__file-btn"
+                  data-target="panel-labour"
+                  type="button"
+                >
+                  <span class="projects-ide__ext" data-ext="tsx">TSX</span>
+                  <span class="projects-ide__file-name">LabourService.tsx</span>
+                </button>
+              </li>
+              <li class="projects-ide__file">
+                <button
+                  class="projects-ide__file-btn"
+                  data-target="panel-shopverse"
+                  type="button"
+                >
+                  <span class="projects-ide__ext" data-ext="jsx">JSX</span>
+                  <span class="projects-ide__file-name">ShopVerse.jsx</span>
+                </button>
+              </li>
+              <li class="projects-ide__file">
+                <button
+                  class="projects-ide__file-btn"
+                  data-target="panel-medguide"
+                  type="button"
+                >
+                  <span class="projects-ide__ext" data-ext="py">PY</span>
+                  <span class="projects-ide__file-name">MedGuide.py</span>
+                </button>
+              </li>
+              <li class="projects-ide__file">
+                <button
+                  class="projects-ide__file-btn"
+                  data-target="panel-hms"
+                  type="button"
+                >
+                  <span class="projects-ide__ext" data-ext="py">PY</span>
+                  <span class="projects-ide__file-name">HMS.py</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
 
-    <section class="project-section">
-      <div class="container reveal project-wrap">
-        <article class="text-box project-card">
-          <div class="project-media">
-            <a target="_blank" href="https://github.com/the-shivam-gupta/shopverse" rel="noopener noreferrer">
-              <img
-                src="public/shopverse1.png"
-                alt="ShopVerse project"
-                onmouseover="hoverImage5(this)"
-                onmouseout="unhoverImage5(this)"
-              />
-            </a>
-          </div>
-          <div class="project-content">
-            <h1>ShopVerse</h1>
-            <p>
-              ShopVerse is a modern and responsive
-              <span>eCommerce website</span> that makes online shopping fast,
-              easy, and enjoyable. It is built with
-              <span>React &amp; Vite</span> for speed and smooth performance, and
-              it uses Firebase for secure login, real-time data updates. The
-              website lets users browse products, add them to a cart, and
-              place orders. It also includes features like
-              <span>personalized user profiles</span>, order history, and
-              responsive design so it works perfectly all devices.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/the-shivam-gupta/shopverse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <span class="tags">React js</span>
-              <span class="tags">Tailwind</span>
-              <span class="tags">Firebase</span>
+          <!-- MAIN PANE -->
+          <div class="projects-ide__main">
+            <div class="projects-ide__tabbar">
+              <div class="projects-ide__tab is-active" data-target="panel-labour">
+                <span class="projects-ide__tab-label">LabourService.tsx</span>
+                <button type="button" class="projects-ide__tab-close" aria-label="Close file">
+                  <img src="./public/close.png" alt="" class="projects-ide__tab-close-icon" />
+                </button>
+              </div>
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <section class="project-section">
-      <div class="container reveal project-wrap">
-        <article class="text-box project-card">
-          <div class="project-media">
-            <a target="_blank" href="https://github.com/PriyansuMaurya/MedGuide" rel="noopener noreferrer">
-              <img
-                src="public/MedGuide_1 Project.png"
-                alt="MedGuide project"
-                onmouseover="hoverImage3(this)"
-                onmouseout="unhoverImage3(this)"
-              />
-            </a>
-          </div>
-          <div class="project-content">
-            <h1>MedGuide</h1>
-            <p>
-              Medical diagnosis systems are advanced computer programs that
-              utilize cutting-edge technologies such as
-              <span>machine learning</span> and
-              <span>natural language processing</span> to assist medical
-              practitioners in effectively diagnosing diseases. These
-              innovative systems not only enhance the precision and speed of
-              diagnosis but also offer doctors valuable
-              <span>insights and information</span> to help them make informed
-              decisions regarding patient treatment.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/PriyansuMaurya/MedGuide" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
+            <div class="projects-ide__crumbbar">
+              <span
+                >projects /
+                <span class="projects-ide__crumb-file"
+                  >LabourService.tsx</span
+                ></span
+              >
+              <a
+                class="projects-ide__gh-link"
+                href="https://github.com/ShubhamKhale/labourServices"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.4-5.26 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"
+                  />
+                </svg>
+                View source
               </a>
-              <span class="tags">Python</span>
-              <span class="tags">Flask</span>
-              <span class="tags">Tailwind</span>
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <section class="project-section">
-      <div class="container reveal project-wrap">
-        <article class="text-box project-card">
-          <div class="project-media">
-            <a target="_blank" href="https://github.com/the-shivam-gupta/HMS" rel="noopener noreferrer">
-              <img
-                src="public/HSM_P2.jpg"
-                alt="HMS project"
-                onmouseover="hoverImage1(this)"
-                onmouseout="unhoverImage1(this)"
-              />
-            </a>
-          </div>
-          <div class="project-content">
-            <h1>HMS</h1>
-            <p>
-              The Hospital Management System is a platform designed to
-              <span>enhance</span>
-              healthcare facilities. This system saves time and improves
-              efficiency by providing healthcare professionals with quick
-              access to <span>patient information</span>, leading to faster
-              diagnoses and treatment. The Hospital Management System benefits
-              <span>both</span> patients and healthcare professionals by
-              improving the quality of care.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/the-shivam-gupta/HMS" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <span class="tags">Python</span>
-              <span class="tags">Tkinter</span>
+            <div class="projects-ide__panels">
+              <!-- Panel: Labour Service -->
+              <article
+                class="projects-ide__panel is-active"
+                id="panel-labour"
+                data-repo="https://github.com/ShubhamKhale/labourServices"
+              >
+                <div class="projects-ide__preview">
+                  <img
+                    src="public/labourService_P1.jpg"
+                    alt="Labour Service project preview"
+                  />
+                </div>
+                <p class="projects-ide__comment">
+                  // connecting job seekers with employers
+                </p>
+                <p class="projects-ide__desc">
+                  Labour Service connects job seekers to employers with
+                  trustworthy, convenient hiring tools. Users can recruit
+                  labourers, leave <strong>reviews and ratings</strong>, and
+                  build a community of trust across the labour services
+                  ecosystem.
+                </p>
+                <div class="projects-ide__tags">
+                  <span class="projects-ide__tag" style="--dot: #0891b2"
+                    >React Js</span
+                  >
+                  <span class="projects-ide__tag" style="--dot: #3178c6"
+                    >TypeScript</span
+                  >
+                  <span class="projects-ide__tag" style="--dot: #3880ff"
+                    >Ionic</span
+                  >
+                </div>
+              </article>
+
+              <!-- Panel: ShopVerse -->
+              <article
+                class="projects-ide__panel"
+                id="panel-shopverse"
+                data-repo="https://github.com/the-shivam-gupta/shopverse"
+              >
+                <div class="projects-ide__preview">
+                  <img
+                    src="public/shopverse1.png"
+                    alt="ShopVerse project preview"
+                  />
+                </div>
+                <p class="projects-ide__comment">
+                  // modern eCommerce storefront
+                </p>
+                <p class="projects-ide__desc">
+                  A responsive eCommerce site built with
+                  <strong>React &amp; Vite</strong>, using Firebase for secure
+                  login and real-time data. Includes personalized user profiles,
+                  order history, and a cart-to-checkout flow that works cleanly
+                  on every screen size.
+                </p>
+                <div class="projects-ide__tags">
+                  <span class="projects-ide__tag" style="--dot: #0891b2"
+                    >React Js</span
+                  >
+                  <span class="projects-ide__tag" style="--dot: #38bdf8"
+                    >Tailwind</span
+                  >
+                  <span class="projects-ide__tag" style="--dot: #f5a623"
+                    >Firebase</span
+                  >
+                </div>
+              </article>
+
+              <!-- Panel: MedGuide -->
+              <article
+                class="projects-ide__panel"
+                id="panel-medguide"
+                data-repo="https://github.com/PriyansuMaurya/MedGuide"
+              >
+                <div class="projects-ide__preview">
+                  <img
+                    src="public/MedGuide_1 Project.png"
+                    alt="MedGuide project preview"
+                  />
+                </div>
+                <p class="projects-ide__comment">
+                  // ML-assisted diagnosis support
+                </p>
+                <p class="projects-ide__desc">
+                  MedGuide uses <strong>machine learning</strong> and natural
+                  language processing to help practitioners diagnose faster and
+                  with more confidence, surfacing insights that support informed
+                  treatment decisions.
+                </p>
+                <div class="projects-ide__tags">
+                  <span class="projects-ide__tag" style="--dot: #3776ab"
+                    >Python</span
+                  >
+                  <span class="projects-ide__tag" style="--dot: #4b5563"
+                    >Flask</span
+                  >
+                  <span class="projects-ide__tag" style="--dot: #38bdf8"
+                    >Tailwind</span
+                  >
+                </div>
+              </article>
+
+              <!-- Panel: HMS -->
+              <article
+                class="projects-ide__panel"
+                id="panel-hms"
+                data-repo="https://github.com/the-shivam-gupta/HMS"
+              >
+                <div class="projects-ide__preview">
+                  <img
+                    src="public/HSM_P2.jpg"
+                    alt="Hospital Management System preview"
+                  />
+                </div>
+                <p class="projects-ide__comment">
+                  // desktop hospital records tool
+                </p>
+                <p class="projects-ide__desc">
+                  A Hospital Management System giving healthcare staff quick
+                  access to <strong>patient information</strong>, cutting the
+                  time between intake and treatment and improving the quality of
+                  care on both sides.
+                </p>
+                <div class="projects-ide__tags">
+                  <span class="projects-ide__tag" style="--dot: #3776ab"
+                    >Python</span
+                  >
+                  <span class="projects-ide__tag" style="--dot: #4b5563"
+                    >Tkinter</span
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="projects-ide__empty" id="ide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" />
+              </svg>
+              <p class="projects-ide__empty-title">No file open</p>
+              <p class="projects-ide__empty-sub">Pick a project from the sidebar to preview it here.</p>
             </div>
           </div>
-        </article>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -516,7 +626,7 @@
         </article>
       </div>
     </section> -->
- <hr/>
+    <hr />
     <!-- <br />  -->
     <!-- <div class="skills-container" id="skills">
       <div class="container reveal">
@@ -645,7 +755,10 @@
           <div class="contact-heading">
             <p class="contact-kicker">Get in touch</p>
             <h2 class="contact-title title">
-              <span class="letter">C</span><span class="letter">o</span><span class="letter">n</span><span class="letter">t</span><span class="letter">a</span><span class="letter">c</span><span class="letter">t</span>
+              <span class="letter">C</span><span class="letter">o</span
+              ><span class="letter">n</span><span class="letter">t</span
+              ><span class="letter">a</span><span class="letter">c</span
+              ><span class="letter">t</span>
             </h2>
             <p class="contact-sub">
               Drop a note — I’ll get back as soon as I can.
@@ -706,9 +819,7 @@
     </section>
 
     <footer class="footer-container">
-      <div class="footer-content">
-        Made with care by <span>Shivam</span>
-      </div>
+      <div class="footer-content">Made with care by <span>Shivam</span></div>
       <div class="footer-icons">
         <a
           href="https://github.com/the-shivam-gupta"
@@ -731,124 +842,120 @@
           aria-label="LinkedIn"
           ><i class="fa-brands fa-linkedin-in"></i
         ></a>
-        <a
-          href="mailto:shivamgupta02022002@gmail.com"
-          aria-label="Email"
+        <a href="mailto:shivamgupta02022002@gmail.com" aria-label="Email"
           ><i class="fa-solid fa-envelope"></i
         ></a>
       </div>
     </footer>
 
     <script id="vertexShader" type="x-shader/x-vertex">
-attribute vec3 aPosition;
+      attribute vec3 aPosition;
 
-uniform mat4 u_modelMatrix;
-uniform mat4 u_viewMatrix;
-uniform mat4 u_projectionMatrix;
-uniform float u_time;
+      uniform mat4 u_modelMatrix;
+      uniform mat4 u_viewMatrix;
+      uniform mat4 u_projectionMatrix;
+      uniform float u_time;
 
-varying vec3 color;
-//Noise from https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83
+      varying vec3 color;
+      //Noise from https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83
 
-vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
-vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+      vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
+      vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
 
-float snoise(vec3 v){
-  const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
-  const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+      float snoise(vec3 v){
+        const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
+        const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
 
-// First corner
-  vec3 i  = floor(v + dot(v, C.yyy) );
-  vec3 x0 =   v - i + dot(i, C.xxx) ;
+      // First corner
+        vec3 i  = floor(v + dot(v, C.yyy) );
+        vec3 x0 =   v - i + dot(i, C.xxx) ;
 
-// Other corners
-  vec3 g = step(x0.yzx, x0.xyz);
-  vec3 l = 1.0 - g;
-  vec3 i1 = min( g.xyz, l.zxy );
-  vec3 i2 = max( g.xyz, l.zxy );
+      // Other corners
+        vec3 g = step(x0.yzx, x0.xyz);
+        vec3 l = 1.0 - g;
+        vec3 i1 = min( g.xyz, l.zxy );
+        vec3 i2 = max( g.xyz, l.zxy );
 
-  //  x0 = x0 - 0. + 0.0 * C
-  vec3 x1 = x0 - i1 + 1.0 * C.xxx;
-  vec3 x2 = x0 - i2 + 2.0 * C.xxx;
-  vec3 x3 = x0 - 1. + 3.0 * C.xxx;
+        //  x0 = x0 - 0. + 0.0 * C
+        vec3 x1 = x0 - i1 + 1.0 * C.xxx;
+        vec3 x2 = x0 - i2 + 2.0 * C.xxx;
+        vec3 x3 = x0 - 1. + 3.0 * C.xxx;
 
-// Permutations
-  i = mod(i, 289.0 );
-  vec4 p = permute( permute( permute(
-             i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
-           + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
-           + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+      // Permutations
+        i = mod(i, 289.0 );
+        vec4 p = permute( permute( permute(
+                   i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+                 + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
+                 + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
 
-// Gradients
-// ( N*N points uniformly over a square, mapped onto an octahedron.)
-  float n_ = 1.0/7.0; // N=7
-  vec3  ns = n_ * D.wyz - D.xzx;
+      // Gradients
+      // ( N*N points uniformly over a square, mapped onto an octahedron.)
+        float n_ = 1.0/7.0; // N=7
+        vec3  ns = n_ * D.wyz - D.xzx;
 
-  vec4 j = p - 49.0 * floor(p * ns.z *ns.z);  //  mod(p,N*N)
+        vec4 j = p - 49.0 * floor(p * ns.z *ns.z);  //  mod(p,N*N)
 
-  vec4 x_ = floor(j * ns.z);
-  vec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)
+        vec4 x_ = floor(j * ns.z);
+        vec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)
 
-  vec4 x = x_ *ns.x + ns.yyyy;
-  vec4 y = y_ *ns.x + ns.yyyy;
-  vec4 h = 1.0 - abs(x) - abs(y);
+        vec4 x = x_ *ns.x + ns.yyyy;
+        vec4 y = y_ *ns.x + ns.yyyy;
+        vec4 h = 1.0 - abs(x) - abs(y);
 
-  vec4 b0 = vec4( x.xy, y.xy );
-  vec4 b1 = vec4( x.zw, y.zw );
+        vec4 b0 = vec4( x.xy, y.xy );
+        vec4 b1 = vec4( x.zw, y.zw );
 
-  vec4 s0 = floor(b0)*2.0 + 1.0;
-  vec4 s1 = floor(b1)*2.0 + 1.0;
-  vec4 sh = -step(h, vec4(0.0));
+        vec4 s0 = floor(b0)*2.0 + 1.0;
+        vec4 s1 = floor(b1)*2.0 + 1.0;
+        vec4 sh = -step(h, vec4(0.0));
 
-  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
-  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+        vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+        vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
 
-  vec3 p0 = vec3(a0.xy,h.x);
-  vec3 p1 = vec3(a0.zw,h.y);
-  vec3 p2 = vec3(a1.xy,h.z);
-  vec3 p3 = vec3(a1.zw,h.w);
+        vec3 p0 = vec3(a0.xy,h.x);
+        vec3 p1 = vec3(a0.zw,h.y);
+        vec3 p2 = vec3(a1.xy,h.z);
+        vec3 p3 = vec3(a1.zw,h.w);
 
-//Normalise gradients
-  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
-  p0 *= norm.x;
-  p1 *= norm.y;
-  p2 *= norm.z;
-  p3 *= norm.w;
+      //Normalise gradients
+        vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+        p0 *= norm.x;
+        p1 *= norm.y;
+        p2 *= norm.z;
+        p3 *= norm.w;
 
-// Mix final noise value
-  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
-  m = m * m;
-  return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
-                                dot(p2,x2), dot(p3,x3) ) );
-}
+      // Mix final noise value
+        vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+        m = m * m;
+        return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
+                                      dot(p2,x2), dot(p3,x3) ) );
+      }
 
-void main() {
-  float t = u_time * 0.12;
-  float nx = snoise(aPosition * 1.35 + vec3(t, 0.0, t * 0.35));
-  float ny = snoise(aPosition * 1.35 + vec3(0.0, t, t * 0.25));
-  float nz = snoise(aPosition * 1.15 + vec3(t * 0.45, t * 0.2, t));
+      void main() {
+        float t = u_time * 0.12;
+        float nx = snoise(aPosition * 1.35 + vec3(t, 0.0, t * 0.35));
+        float ny = snoise(aPosition * 1.35 + vec3(0.0, t, t * 0.25));
+        float nz = snoise(aPosition * 1.15 + vec3(t * 0.45, t * 0.2, t));
 
-  vec3 position = aPosition + vec3(nx, ny, nz) * 0.14;
-  color = aPosition * 0.22 + 0.62;
+        vec3 position = aPosition + vec3(nx, ny, nz) * 0.14;
+        color = aPosition * 0.22 + 0.62;
 
-  gl_Position = u_projectionMatrix * u_viewMatrix * u_modelMatrix * vec4(position, 1.0);
-  gl_PointSize = 1.5;
-}
+        gl_Position = u_projectionMatrix * u_viewMatrix * u_modelMatrix * vec4(position, 1.0);
+        gl_PointSize = 1.8;
+      }
     </script>
     <script id="fragmentShader" type="x-shader/x-fragment">
-precision mediump float;
+      precision mediump float;
 
-varying vec3 color;
+      varying vec3 color;
 
-void main() {
-  // Soft sky-blue particles for light theme
-  gl_FragColor = vec4(
-    color.x * 0.25 + 0.45,
-    color.y * 0.3 + 0.62,
-    color.y * 0.15 + 0.88,
-    1.0
-  );
-}
+      void main() {
+        // Deeper accent-blue particles, visible on the light background
+        vec3 base = vec3(0.231, 0.510, 0.769);   // --color2
+        vec3 tint = vec3(0.431, 0.702, 0.894);   // --color3
+        vec3 finalColor = mix(base, tint, color.x * 0.5 + 0.3);
+        gl_FragColor = vec4(finalColor, 1.0);
+      }
     </script>
 
     <!-- Load library from the CDN -->

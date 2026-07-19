@@ -25,7 +25,7 @@ window.addEventListener(
       revealTicking = false;
     });
   },
-  { passive: true }
+  { passive: true },
 );
 
 /* arrow onclick scroll down */
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
     );
 
     expItems.forEach(function (item) {
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.25, rootMargin: "0px 0px -6% 0px" }
+      { threshold: 0.25, rootMargin: "0px 0px -6% 0px" },
     );
 
     projectCards.forEach(function (card) {
@@ -151,11 +151,132 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -5% 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -5% 0px" },
     );
 
     contactObserver.observe(contactPanel);
   } else {
     contactPanel.classList.add("contact-in-view");
   }
+});
+
+// Projects: tab switching
+document.addEventListener("DOMContentLoaded", function () {
+  var main = document.querySelector(".projects-ide__main");
+  var sidebarItems = document.querySelectorAll(".projects-ide__file");
+  var sidebarButtons = document.querySelectorAll(".projects-ide__file-btn");
+  var panels = document.querySelectorAll(".projects-ide__panel");
+  var tabbar = document.querySelector(".projects-ide__tabbar");
+  var crumbFile = document.querySelector(".projects-ide__crumb-file");
+  var ghLink = document.querySelector(".projects-ide__gh-link");
+
+  if (!main || !sidebarButtons.length || !tabbar) return;
+
+  function setActivePanel(targetId) {
+    panels.forEach(function (p) {
+      p.classList.toggle("is-active", p.id === targetId);
+    });
+
+    sidebarItems.forEach(function (item) {
+      var btn = item.querySelector(".projects-ide__file-btn");
+      item.classList.toggle(
+        "is-active",
+        btn && btn.getAttribute("data-target") === targetId,
+      );
+    });
+
+    tabbar.querySelectorAll(".projects-ide__tab").forEach(function (tab) {
+      tab.classList.toggle(
+        "is-active",
+        tab.getAttribute("data-target") === targetId,
+      );
+    });
+
+    var panel = document.getElementById(targetId);
+    var sourceBtn = document.querySelector(
+      '.projects-ide__file-btn[data-target="' + targetId + '"]',
+    );
+    if (panel && sourceBtn) {
+      crumbFile.textContent = sourceBtn.querySelector(
+        ".projects-ide__file-name",
+      ).textContent;
+      if (ghLink) ghLink.setAttribute("href", panel.getAttribute("data-repo"));
+    }
+  }
+
+  function openTab(btn) {
+    var targetId = btn.getAttribute("data-target");
+    var tab = tabbar.querySelector(
+      '.projects-ide__tab[data-target="' + targetId + '"]',
+    );
+
+    if (!tab) {
+      var fileName = btn.querySelector(".projects-ide__file-name").textContent;
+
+      tab = document.createElement("div");
+      tab.className = "projects-ide__tab";
+      tab.setAttribute("data-target", targetId);
+
+      var label = document.createElement("span");
+      label.className = "projects-ide__tab-label";
+      label.textContent = fileName;
+
+      var close = document.createElement("button");
+      close.type = "button";
+      close.className = "projects-ide__tab-close";
+      close.setAttribute("aria-label", "Close " + fileName);
+
+      var closeIcon = document.createElement("img");
+      closeIcon.src = "./public/close.png";
+      closeIcon.alt = "";
+      closeIcon.className = "projects-ide__tab-close-icon";
+      close.appendChild(closeIcon);
+
+      tab.appendChild(label);
+      tab.appendChild(close);
+      tabbar.appendChild(tab);
+    }
+
+    main.classList.remove("is-empty");
+    setActivePanel(targetId);
+    tab.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }
+
+  function closeTab(tab) {
+    var wasActive = tab.classList.contains("is-active");
+    tab.remove();
+
+    if (!wasActive) return;
+
+    var remaining = tabbar.querySelectorAll(".projects-ide__tab");
+    if (remaining.length) {
+      setActivePanel(
+        remaining[remaining.length - 1].getAttribute("data-target"),
+      );
+    } else {
+      panels.forEach(function (p) {
+        p.classList.remove("is-active");
+      });
+      sidebarItems.forEach(function (item) {
+        item.classList.remove("is-active");
+      });
+      main.classList.add("is-empty");
+    }
+  }
+
+  sidebarButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      openTab(btn);
+    });
+  });
+
+  tabbar.addEventListener("click", function (event) {
+    var closeBtn = event.target.closest(".projects-ide__tab-close");
+    if (closeBtn) {
+      closeTab(closeBtn.closest(".projects-ide__tab"));
+      return;
+    }
+    var tab = event.target.closest(".projects-ide__tab");
+    if (tab) setActivePanel(tab.getAttribute("data-target"));
+  });
 });
