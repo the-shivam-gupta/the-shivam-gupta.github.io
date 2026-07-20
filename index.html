@@ -60,14 +60,23 @@
       <canvas id="hero-canvas" aria-hidden="true"></canvas>
       <div class="content hero-intro">
         <h1 class="hero-intro__title">
-          <span class="hero-intro__greeting">Hi, I'm</span>
+          <span class="hero-intro__greeting">Hey, I'm</span>
           <span class="hero-intro__name">Shivam<br />Gupta</span>
         </h1>
         <span id="element" class="hero-intro__typed"></span>
         <p class="hero-intro__bio">
-          I’m enthusiastic about technology and inspired by the ever-evolving
-          digital world. I focus on improving my skills, staying dedicated to
-          delivering quality work, and being a reliable team player.
+          I build fast, scalable web experiences with Next.js, Strapi, React,
+          and a bit of obsession over performance.
+        </p>
+        <p class="hero-intro__bio">
+          Right now I'm working as a Full Stack Developer at Webmaffia, building
+          enterprise web applications, designing reusable components, and
+          turning Figma files into production-ready products.
+        </p>
+        <p class="hero-intro__bio">
+          Outside work you'll usually find me contributing to open source,
+          optimizing Core Web Vitals, or trying to make the web a little
+          smoother than yesterday.
         </p>
         <div class="hero-intro__actions">
           <a
@@ -209,7 +218,7 @@
         </div>
         <div class="about-content">
           <p class="about-kicker">Discovery</p>
-          <h1>A Bit About Me</h1>
+          <h1>A little about me</h1>
           <p class="about-lead">
             I’ve completed my degree in Computer Science with a GPA of
             <span class="about-gpa">9.06</span>
@@ -283,12 +292,14 @@
                 <span class="exp-date">Feb 2026 — Present</span>
               </div>
               <h3>Junior Full Stack Developer</h3>
-              <div class="exp-org">Webmaffia</div>
-              <p>
-                Building and maintaining client projects using Next.js, Strapi
-                CMS, React, and Vue.js - covering content modeling, API
-                integration, and responsive UI across multiple production sites.
-              </p>
+              <div class="exp-org">Webmaffia (Pixtop Media Solutions)</div>
+              <ul class="exp-list">
+                <li>Building large investor relation platforms</li>
+                <li>Creating reusable UI components</li>
+                <li>Developing dynamic CMS solutions using Strapi</li>
+                <li>Shipping features from Figma all the way to production</li>
+                <li>Making websites responsive, smooth and fast</li>
+              </ul>
             </div>
           </div>
 
@@ -302,9 +313,23 @@
               <h3>Open Source Contributor</h3>
               <div class="exp-org">Independent</div>
               <p>
-                Contributing improvements to accessibility, UI/UX, and mobile
-                responsiveness across community projects while staying hands-on
-                with modern front-end practices.
+                I enjoy contributing to open source. Over the years I've
+                contributed to projects focused on accessibility, UI
+                improvements, developer experience, and documentation.
+              </p>
+              <p class="exp-oss-sub">
+                Some of the communities I've contributed to:
+              </p>
+              <ul class="exp-list">
+                <li>LinksHub</li>
+                <li>AI Fusion</li>
+                <li>Namespace</li>
+                <li>React Native Auth Kit</li>
+              </ul>
+              <p>
+                Whether it's fixing bugs, improving accessibility, or writing
+                better documentation, I enjoy contributing to projects that help
+                other developers.
               </p>
             </div>
           </div>
@@ -413,10 +438,21 @@
           <!-- MAIN PANE -->
           <div class="projects-ide__main">
             <div class="projects-ide__tabbar">
-              <div class="projects-ide__tab is-active" data-target="panel-labour">
+              <div
+                class="projects-ide__tab is-active"
+                data-target="panel-labour"
+              >
                 <span class="projects-ide__tab-label">LabourService.tsx</span>
-                <button type="button" class="projects-ide__tab-close" aria-label="Close file">
-                  <img src="./public/close.png" alt="" class="projects-ide__tab-close-icon" />
+                <button
+                  type="button"
+                  class="projects-ide__tab-close"
+                  aria-label="Close file"
+                >
+                  <img
+                    src="./public/close.png"
+                    alt=""
+                    class="projects-ide__tab-close-icon"
+                  />
                 </button>
               </div>
             </div>
@@ -459,13 +495,19 @@
                 <p class="projects-ide__comment">
                   // connecting job seekers with employers
                 </p>
-                <p class="projects-ide__desc">
-                  Labour Service connects job seekers to employers with
-                  trustworthy, convenient hiring tools. Users can recruit
-                  labourers, leave <strong>reviews and ratings</strong>, and
-                  build a community of trust across the labour services
-                  ecosystem.
-                </p>
+                <div class="projects-ide__row">
+                  <p class="projects-ide__desc">
+                    Labour Service connects job seekers to employers with
+                    trustworthy, convenient hiring tools. Users can recruit
+                    labourers, leave <strong>reviews and ratings</strong>, and
+                    build a community of trust across the labour services
+                    ecosystem.
+                  </p>
+                  <div class="projects-ide__highlights">
+                    <span class="projects-ide__hl">Ratings</span>
+                    <span class="projects-ide__hl">Real-time feedback</span>
+                  </div>
+                </div>
                 <div class="projects-ide__tags">
                   <span class="projects-ide__tag" style="--dot: #0891b2"
                     >React Js</span
@@ -494,13 +536,23 @@
                 <p class="projects-ide__comment">
                   // modern eCommerce storefront
                 </p>
-                <p class="projects-ide__desc">
-                  A responsive eCommerce site built with
-                  <strong>React &amp; Vite</strong>, using Firebase for secure
-                  login and real-time data. Includes personalized user profiles,
-                  order history, and a cart-to-checkout flow that works cleanly
-                  on every screen size.
-                </p>
+                <div class="projects-ide__row">
+                  <p class="projects-ide__desc">
+                    A responsive eCommerce site built with
+                    <strong>React &amp; Vite</strong>, using Firebase for secure
+                    login and real-time data. Includes personalized user
+                    profiles, order history, and a cart-to-checkout flow that
+                    works cleanly on every screen size.
+                  </p>
+                  <div class="projects-ide__highlights">
+                    <span class="projects-ide__hl">Google Authentication</span>
+                    <span class="projects-ide__hl">Wallet System</span>
+                    <span class="projects-ide__hl">Orders</span>
+                    <span class="projects-ide__hl"
+                      >Improved LCP from 3.8s → 2.1s</span
+                    >
+                  </div>
+                </div>
                 <div class="projects-ide__tags">
                   <span class="projects-ide__tag" style="--dot: #0891b2"
                     >React Js</span
@@ -529,12 +581,20 @@
                 <p class="projects-ide__comment">
                   // ML-assisted diagnosis support
                 </p>
-                <p class="projects-ide__desc">
-                  MedGuide uses <strong>machine learning</strong> and natural
-                  language processing to help practitioners diagnose faster and
-                  with more confidence, surfacing insights that support informed
-                  treatment decisions.
-                </p>
+                <div class="projects-ide__row">
+                  <p class="projects-ide__desc">
+                    MedGuide uses <strong>machine learning</strong> and natural
+                    language processing to help practitioners diagnose faster
+                    and with more confidence, surfacing insights that support
+                    informed treatment decisions.
+                  </p>
+                  <div class="projects-ide__highlights">
+                    <span class="projects-ide__hl">ML Integration</span>
+                    <span class="projects-ide__hl"
+                      >Real-time diagnosis input</span
+                    >
+                  </div>
+                </div>
                 <div class="projects-ide__tags">
                   <span class="projects-ide__tag" style="--dot: #3776ab"
                     >Python</span
@@ -580,13 +640,22 @@
               </article>
             </div>
             <div class="projects-ide__empty" id="ide-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" />
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"
+                />
               </svg>
               <p class="projects-ide__empty-title">No file open</p>
-              <p class="projects-ide__empty-sub">Pick a project from the sidebar to preview it here.</p>
+              <p class="projects-ide__empty-sub">
+                Pick a project from the sidebar to preview it here.
+              </p>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -755,10 +824,13 @@
           <div class="contact-heading">
             <p class="contact-kicker">Get in touch</p>
             <h2 class="contact-title title">
-              <span class="letter">C</span><span class="letter">o</span
-              ><span class="letter">n</span><span class="letter">t</span
-              ><span class="letter">a</span><span class="letter">c</span
-              ><span class="letter">t</span>
+              <span class="letter">C</span>
+              <span class="letter">o</span>
+              <span class="letter">n</span>
+              <span class="letter">t</span>
+              <span class="letter">a</span>
+              <span class="letter">c</span>
+              <span class="letter">t</span>
             </h2>
             <p class="contact-sub">
               Drop a note — I’ll get back as soon as I can.
