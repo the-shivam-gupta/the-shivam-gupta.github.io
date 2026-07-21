@@ -94,7 +94,7 @@ body {
   font-size: 1.3em;
   cursor: pointer;
   color: #3b82c4;
-  font-family: var(--font3);
+  font-family: var(--font2);
   transition: color 0.15s ease;
 }
 
@@ -3909,14 +3909,12 @@ h1 span:nth-child(11) {
   border: 1px solid var(--ide-border);
   box-shadow: 0 10px 26px rgba(59, 130, 196, 0.14);
   margin-bottom: 1.2rem;
-  aspect-ratio: 16 / 9;
   background: linear-gradient(135deg, #e5f2fb, #c5e2f5);
 }
 
 .projects-ide__preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -4091,9 +4089,6 @@ h1 span:nth-child(11) {
   }
   .projects-ide__panels {
     padding: 0.85rem 0.65rem 1.1rem;
-  }
-  .projects-ide__preview {
-    max-height: 140px;
   }
   .projects-ide__preview img {
     max-height: 140px;
