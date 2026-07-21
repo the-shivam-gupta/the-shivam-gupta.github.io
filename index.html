@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shivam's Portfolio</title>
-    <link href="public\icon.png" rel="icon" type="image/gif" />
+    <link href="public/Shivam.png" rel="icon" type="image/gif" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +31,18 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <a id="button"></a>
+    <a id="button">
+      <svg class="progress-ring" viewBox="0 0 48 48" aria-hidden="true">
+        <circle class="progress-ring__bg" cx="24" cy="24" r="18.5"/>
+        <circle class="progress-ring__track" cx="24" cy="24" r="20"/>
+        <circle class="progress-ring__fill" cx="24" cy="24" r="20"/>
+        <g class="progress-ring__arrows">
+          <path d="M 19,18 L 24,14 L 29,18" opacity="1"/>
+          <path d="M 19,24 L 24,20 L 29,24" opacity=".8"/>
+          <path d="M 19,30 L 24,26 L 29,30" opacity=".5"/>
+        </g>
+      </svg>
+    </a>
     <div class="header" id="home">
       <button
         type="button"
@@ -238,7 +249,7 @@
             developer.
           </p>
           <div class="about-stats">
-            <div class="about-stat">
+            <div class="about-stat active">
               <span class="about-stat__label">Education</span>
               <span class="about-stat__value">Comp. Science</span>
             </div>

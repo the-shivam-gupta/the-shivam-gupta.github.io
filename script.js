@@ -40,17 +40,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// bottom to top button script
+// bottom to top button with scroll progress ring
 $(document).ready(function () {
   var btn = $("#button");
+  var fill = document.querySelector(".progress-ring__fill");
+  var circumference = 125.66;
 
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
+  function updateProgress() {
+    var scrollTop = $(window).scrollTop();
+    var docHeight = $(document).height() - $(window).height();
+    var progress = docHeight > 0 ? scrollTop / docHeight : 0;
+    var offset = circumference * (1 - progress);
+    if (fill) fill.style.strokeDashoffset = offset;
+
+    if (scrollTop > 300) {
       btn.addClass("show");
     } else {
       btn.removeClass("show");
     }
-  });
+  }
+
+  $(window).on("scroll", updateProgress);
+  updateProgress();
 
   btn.on("click", function (e) {
     e.preventDefault();
@@ -278,5 +289,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     var tab = event.target.closest(".projects-ide__tab");
     if (tab) setActivePanel(tab.getAttribute("data-target"));
+  });
+});
+
+/* About stats — progress bar sticks to 1st card unless another is hovered */
+document.addEventListener("DOMContentLoaded", function () {
+  var stats = document.querySelectorAll(".about-stat");
+  if (stats.length < 2) return;
+
+  stats.forEach(function (stat) {
+    stat.addEventListener("mouseenter", function () {
+      stats.forEach(function (s) { s.classList.remove("active"); });
+      this.classList.add("active");
+    });
+
+    stat.addEventListener("mouseleave", function () {
+      this.classList.remove("active");
+      stats[0].classList.add("active");
+    });
   });
 });
