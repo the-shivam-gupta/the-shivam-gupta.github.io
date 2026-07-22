@@ -292,20 +292,49 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/* About stats — progress bar sticks to 1st card unless another is hovered */
+/* ── Scroll Storytelling ── */
+
+var storyTyped = false;
+
+function runStory(entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+    var el = entry.target;
+    var step = el.getAttribute("data-story");
+
+    if (step === "3") {
+      el.classList.add("story-visible");
+    }
+
+    if (step === "4" && !storyTyped) {
+      storyTyped = true;
+      var text = "visitor@shivam:~/projects$ ls";
+      var i = 0;
+      (function typeChar() {
+        if (i < text.length) {
+          el.insertBefore(
+            document.createTextNode(text.charAt(i)),
+            el.querySelector(".projects-ide__cursor")
+          );
+          i++;
+          setTimeout(typeChar, 60);
+        }
+      })();
+    }
+
+    if (step === "5") {
+      el.classList.add("story-visible");
+    }
+  });
+}
+
+var storyObserver = new IntersectionObserver(runStory, {
+  threshold: 0.35,
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-  var stats = document.querySelectorAll(".about-stat");
-  if (stats.length < 2) return;
-
-  stats.forEach(function (stat) {
-    stat.addEventListener("mouseenter", function () {
-      stats.forEach(function (s) { s.classList.remove("active"); });
-      this.classList.add("active");
-    });
-
-    stat.addEventListener("mouseleave", function () {
-      this.classList.remove("active");
-      stats[0].classList.add("active");
-    });
+  document.querySelectorAll("[data-story]").forEach(function (el) {
+    storyObserver.observe(el);
   });
 });
+

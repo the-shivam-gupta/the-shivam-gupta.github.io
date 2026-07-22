@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Macondo&family=Merriweather:wght@300&family=Montserrat&family=Poppins:wght@700&family=Trirong:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Macondo&family=Merriweather:ital,wght@0,300;0,400;1,400&family=Montserrat&family=Poppins:wght@700&family=Trirong:wght@100&display=swap");
 
 @font-face {
   font-family: "Agustina";
@@ -173,7 +173,6 @@ body {
 }
 
 .logo:hover .logo__name {
-  color: #1a2b3c;
   transform: translateY(-1px);
 }
 
@@ -1557,7 +1556,7 @@ section h1 {
 
 #button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 196, 0.35);
+  box-shadow: 0 12px 20px rgba(59, 130, 196, 0.35);
 }
 
 #button:hover .progress-ring__arrows path {
@@ -2079,19 +2078,7 @@ h1 span:nth-child(11) {
   font-family: var(--font3);
 }
 
-.about-gpa {
-  display: inline-block;
-  padding: 0.08em 0.4em;
-  margin: 0 0.1em;
-  border-radius: 4px;
-  color: #2563a8;
-  font-weight: 700;
-  background: rgba(110, 179, 228, 0.28);
-  box-shadow: none;
-}
-
 .about-callout {
-  margin: 0 0 1.25rem;
   padding: 1rem 1.15rem 1rem 1.25rem;
   border-radius: 8px;
   border: 1px solid var(--about-border);
@@ -2101,68 +2088,9 @@ h1 span:nth-child(11) {
   font-family: var(--font3);
   font-size: 1.02rem;
   font-style: italic;
-  line-height: 1.65;
+  font-weight: 400;
+  line-height: 1.25;
   box-shadow: 0 8px 24px rgba(59, 130, 196, 0.08);
-}
-
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
-  margin-top: 1.5rem;
-}
-
-.about-stat {
-  position: relative;
-  overflow: hidden;
-  padding: 1rem 1.1rem;
-  border-radius: 10px;
-  border: 1px solid var(--about-border);
-  background: var(--about-card);
-  box-shadow: 0 8px 22px rgba(59, 130, 196, 0.08);
-  transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.about-stat::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--about-accent), #6eb3e4);
-  transition: width 1.5s ease;
-}
-
-.about-stat.active::before,
-.about-stat:hover::before {
-  width: 100%;
-}
-
-.about-stat:hover {
-  border-color: rgba(59, 130, 196, 0.45);
-  box-shadow: 0 10px 26px rgba(59, 130, 196, 0.14);
-}
-
-.about-stat__label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-family: var(--font1);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--about-accent);
-}
-
-.about-stat__value {
-  display: block;
-  font-family: var(--font1);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #1a2b3c;
 }
 
 .para-1 {
@@ -3114,7 +3042,7 @@ h1 span:nth-child(11) {
   --exp-muted: #5a738a;
 
   background: transparent;
-  padding: 100px 24px 120px;
+  padding: 100px 24px 60px;
   position: relative;
 }
 
@@ -4123,4 +4051,31 @@ h1 span:nth-child(11) {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+}
+
+/* ── Scroll Storytelling ── */
+
+/* Step 3 — Projects title slides upward */
+[data-story="3"] {
+  transition: opacity 0.7s ease,
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+[data-story="3"]:not(.story-visible) {
+  opacity: 0.3;
+  transform: translateY(12px);
+}
+
+/* Step 4 — Terminal typing */
+[data-story="4"] {
+  min-height: 1.4em;
+}
+
+/* Step 5 — VS Code window fades in */
+[data-story="5"] {
+  transition: opacity 0.8s ease,
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+[data-story="5"]:not(.story-visible) {
+  opacity: 0.6;
+  transform: translateY(8px);
 }

@@ -33,13 +33,11 @@
   <body>
     <a id="button">
       <svg class="progress-ring" viewBox="0 0 48 48" aria-hidden="true">
-        <circle class="progress-ring__bg" cx="24" cy="24" r="18.5"/>
-        <circle class="progress-ring__track" cx="24" cy="24" r="20"/>
-        <circle class="progress-ring__fill" cx="24" cy="24" r="20"/>
+        <circle class="progress-ring__bg" cx="24" cy="24" r="18.5" />
+        <circle class="progress-ring__track" cx="24" cy="24" r="20" />
+        <circle class="progress-ring__fill" cx="24" cy="24" r="20" />
         <g class="progress-ring__arrows">
-          <path d="M 19,18 L 24,14 L 29,18" opacity="1"/>
-          <path d="M 19,24 L 24,20 L 29,24" opacity=".8"/>
-          <path d="M 19,30 L 24,26 L 29,30" opacity=".5"/>
+          <path d="M 19,26 L 24,21 L 29,26" />
         </g>
       </svg>
     </a>
@@ -76,18 +74,14 @@
         </h1>
         <span id="element" class="hero-intro__typed"></span>
         <p class="hero-intro__bio">
-          I build fast, scalable web experiences with Next.js, Strapi, React,
-          and a bit of obsession over performance.
+          I build modern web applications that are fast, scalable, and built to
+          last. From interactive frontends to CMS-powered platforms, I enjoy
+          turning ideas into polished digital experiences.
         </p>
         <p class="hero-intro__bio">
-          Right now I'm working as a Full Stack Developer at Webmaffia, building
-          enterprise web applications, designing reusable components, and
-          turning Figma files into production-ready products.
-        </p>
-        <p class="hero-intro__bio">
-          Outside work you'll usually find me contributing to open source,
-          optimizing Core Web Vitals, or trying to make the web a little
-          smoother than yesterday.
+          Currently building enterprise applications at Webmaffia while
+          continuously exploring new technologies and contributing to open
+          source.
         </p>
         <div class="hero-intro__actions">
           <a
@@ -225,39 +219,30 @@
             class="about-img__corner about-img__corner--br"
             aria-hidden="true"
           ></span>
-          <img src="./public/shivam_photo.jpg" alt="Shivam Gupta" />
+          <img src="public/transparent-image.png" alt="Shivam Gupta" />
         </div>
         <div class="about-content">
-          <p class="about-kicker">Discovery</p>
+          <p class="about-kicker">WHO I AM</p>
           <h1>A little about me</h1>
           <p class="about-lead">
-            I’ve completed my degree in Computer Science with a GPA of
-            <span class="about-gpa">9.06</span>
-            and gained hands-on experience in web development by working with
-            teams to build functional applications and write clean, maintainable
-            code. I also enjoy contributing to open-source projects.
+            I'm not the kind of developer who started coding because I knew
+            exactly where it would take me. I started because I was curious,
+            and somewhere along the way that curiosity turned into a career.
+          </p>
+          <p class="about-lead">
+            These days I spend my time building web applications, solving
+            interesting problems, and making sure the little details don't get
+            overlooked. I enjoy clean interfaces, smooth interactions, and the
+            kind of user experience people don't have to think about.
+          </p>
+          <p class="about-more">
+            And when I'm away from work? I'm usually learning something new,
+            contributing to open source, or tweaking a side project that
+            definitely started as "just a quick experiment."
           </p>
           <blockquote class="about-callout">
-            My passion lies in crafting high-performance, responsive, and
-            user-friendly interfaces that blend clean design with technical
-            precision.
+            "The best interfaces are the ones users never have to think about."
           </blockquote>
-          <p class="about-more">
-            Through my open-source contributions, I’ve helped improve
-            accessibility, UI/UX, and mobile responsiveness across various
-            applications, while continuously learning and growing as a
-            developer.
-          </p>
-          <div class="about-stats">
-            <div class="about-stat active">
-              <span class="about-stat__label">Education</span>
-              <span class="about-stat__value">Comp. Science</span>
-            </div>
-            <div class="about-stat">
-              <span class="about-stat__label">Academic Stand</span>
-              <span class="about-stat__value">9.06 GPA</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -369,8 +354,8 @@
 
     <section id="project" class="project-section projects-ide">
       <div class="projects-ide__intro">
-        <p class="projects-ide__eyebrow">Selected Work</p>
-        <h2 class="project-title title">
+        <p class="projects-ide__eyebrow" data-story="3">Selected Work</p>
+        <h2 class="project-title title" data-story="3">
           <span class="letter">P</span>
           <span class="letter">r</span>
           <span class="letter">o</span>
@@ -380,16 +365,12 @@
           <span class="letter">t</span>
           <span class="letter">s</span>
         </h2>
-        <p class="projects-ide__terminal">
-          <span class="projects-ide__prompt">visitor@shivam</span
-          ><span class="projects-ide__prompt-sep">:</span
-          ><span class="projects-ide__prompt-path">~/projects</span
-          ><span class="projects-ide__prompt-sep">$</span> ls
+        <p class="projects-ide__terminal" data-story="4">
           <span class="projects-ide__cursor" aria-hidden="true"></span>
         </p>
       </div>
 
-      <div class="projects-ide__window">
+      <div class="projects-ide__window" data-story="5">
         <div class="projects-ide__titlebar">
           <span class="projects-ide__dot projects-ide__dot--r"></span>
           <span class="projects-ide__dot projects-ide__dot--y"></span>
@@ -608,7 +589,6 @@
                   >
                 </div>
               </article>
-
             </div>
             <div class="projects-ide__empty" id="ide-empty">
               <svg
