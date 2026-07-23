@@ -1,3 +1,19 @@
+// Splash screen: hide after the intro animation finishes
+document.addEventListener("DOMContentLoaded", function () {
+  var splashScreen = document.getElementById("splash-screen");
+  if (!splashScreen) return;
+
+  var delay = 4500;
+
+  setTimeout(function () {
+    splashScreen.classList.add("hidden");
+
+    setTimeout(function () {
+      splashScreen.style.display = "none";
+    }, 1000);
+  }, delay);
+});
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -88,6 +104,76 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Nav pill: sliding active indicator, scroll elevation, active-section tracking
+document.addEventListener("DOMContentLoaded", function () {
+  var headerEl = document.querySelector(".header");
+  var navPillItems = document.querySelectorAll(".nav-pill__item");
+  var navIndicator = document.querySelector(".nav-pill__indicator");
+
+  if (!headerEl || !navPillItems.length || !navIndicator) return;
+
+  function moveNavIndicator(item) {
+    navIndicator.style.width = item.offsetWidth + "px";
+    navIndicator.style.transform = "translateX(" + item.offsetLeft + "px)";
+  }
+
+  function setActiveNavItem(targetId) {
+    navPillItems.forEach(function (item) {
+      var isActive = item.getAttribute("data-section") === targetId;
+      item.classList.toggle("is-active", isActive);
+      if (isActive) moveNavIndicator(item);
+    });
+  }
+
+  navPillItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      setActiveNavItem(item.getAttribute("data-section"));
+    });
+  });
+
+  var sections = ["home", "about", "experience", "project", "contact"]
+    .map(function (id) {
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+
+  function updateOnScroll() {
+    headerEl.classList.toggle("is-scrolled", window.scrollY > 12);
+
+    var scrollPos = window.scrollY + window.innerHeight * 0.35;
+    var current = "home";
+
+    sections.forEach(function (section) {
+      if (section.id !== "home" && section.offsetTop <= scrollPos) {
+        current = section.id;
+      }
+    });
+
+    setActiveNavItem(current);
+  }
+
+  var navTicking = false;
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (navTicking) return;
+      navTicking = true;
+      requestAnimationFrame(function () {
+        updateOnScroll();
+        navTicking = false;
+      });
+    },
+    { passive: true },
+  );
+
+  window.addEventListener("resize", function () {
+    var active = document.querySelector(".nav-pill__item.is-active");
+    if (active) moveNavIndicator(active);
+  });
+
+  updateOnScroll();
+});
+
 // Reveal experience timeline dots/cards on scroll down; hide on scroll up
 document.addEventListener("DOMContentLoaded", function () {
   const expItems = document.querySelectorAll("#experience .exp-item");
@@ -169,6 +255,50 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     contactPanel.classList.add("contact-in-view");
   }
+});
+
+// About: tab switching
+document.addEventListener("DOMContentLoaded", function () {
+  var aboutTabs = document.querySelectorAll(".about-tab");
+  var aboutPanels = document.querySelectorAll(".about-panel");
+  var aboutIndicator = document.querySelector(".about-tab-indicator");
+
+  if (!aboutTabs.length || !aboutIndicator) return;
+
+  function moveAboutIndicator(tab) {
+    aboutIndicator.style.width = tab.offsetWidth + "px";
+    aboutIndicator.style.transform = "translateX(" + tab.offsetLeft + "px)";
+  }
+
+  aboutTabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      if (tab.classList.contains("is-active")) return;
+
+      aboutTabs.forEach(function (t) {
+        t.classList.remove("is-active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("is-active");
+      tab.setAttribute("aria-selected", "true");
+
+      aboutPanels.forEach(function (panel) {
+        panel.classList.toggle(
+          "is-active",
+          panel.id === tab.getAttribute("data-target"),
+        );
+      });
+
+      moveAboutIndicator(tab);
+    });
+  });
+
+  var initialAboutTab = document.querySelector(".about-tab.is-active");
+  if (initialAboutTab) moveAboutIndicator(initialAboutTab);
+
+  window.addEventListener("resize", function () {
+    var activeTab = document.querySelector(".about-tab.is-active");
+    if (activeTab) moveAboutIndicator(activeTab);
+  });
 });
 
 // Projects: tab switching
@@ -280,6 +410,16 @@ document.addEventListener("DOMContentLoaded", function () {
       openTab(btn);
     });
   });
+
+  var folderToggle = document.querySelector(".projects-ide__folder");
+  var fileList = document.getElementById("ide-filelist");
+  if (folderToggle && fileList) {
+    folderToggle.addEventListener("click", function () {
+      var isOpen = folderToggle.getAttribute("aria-expanded") === "true";
+      folderToggle.setAttribute("aria-expanded", String(!isOpen));
+      fileList.classList.toggle("is-collapsed", isOpen);
+    });
+  }
 
   tabbar.addEventListener("click", function (event) {
     var closeBtn = event.target.closest(".projects-ide__tab-close");

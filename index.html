@@ -31,6 +31,22 @@
     <script src="script.js"></script>
   </head>
   <body>
+    <div id="splash-screen">
+      <section class="splash-content">
+        <video src="public/smoke1.mp4" autoplay muted></video>
+        <h1 class="splash-terminal">
+          <span class="splash-terminal__line splash-terminal__line--1"
+            >Hello</span
+          >
+          <span class="splash-terminal__row">
+            <span class="splash-terminal__line splash-terminal__line--2"
+              >World</span
+            >
+            <span class="splash-terminal__cursor" aria-hidden="true"></span>
+          </span>
+        </h1>
+      </section>
+    </div>
     <a id="button">
       <svg class="progress-ring" viewBox="0 0 48 48" aria-hidden="true">
         <circle class="progress-ring__bg" cx="24" cy="24" r="18.5" />
@@ -41,7 +57,7 @@
         </g>
       </svg>
     </a>
-    <div class="header" id="home">
+    <header class="header" id="home">
       <button
         type="button"
         class="logo"
@@ -50,20 +66,19 @@
       >
         <span class="logo__name">Shivam</span>
       </button>
-      <div class="__container">
-        <div class="navbar2">
-          <div class="header2">
-            <ul class="menu2">
-              <li data-section="home">Home</li>
-              <li data-section="about">About</li>
-              <li data-section="experience">Experience</li>
-              <li data-section="project">Project</li>
-              <li data-section="contact">Contact</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+      <nav class="nav-pill" aria-label="Primary">
+        <ul class="nav-pill__list">
+          <li class="nav-pill__item is-active" data-section="home">Home</li>
+          <li class="nav-pill__item" data-section="about">About</li>
+          <li class="nav-pill__item" data-section="experience">
+            Experience
+          </li>
+          <li class="nav-pill__item" data-section="project">Project</li>
+          <li class="nav-pill__item" data-section="contact">Contact</li>
+        </ul>
+        <span class="nav-pill__indicator" aria-hidden="true"></span>
+      </nav>
+    </header>
 
     <div id="header-container">
       <canvas id="hero-canvas" aria-hidden="true"></canvas>
@@ -86,7 +101,7 @@
         <div class="hero-intro__actions">
           <a
             class="hero-intro__resume"
-            href="./public/resume.pdf"
+            href="./public/resume-1.pdf"
             target="_blank"
             rel="noopener noreferrer"
             >Resume</a
@@ -224,22 +239,65 @@
         <div class="about-content">
           <p class="about-kicker">WHO I AM</p>
           <h1>A little about me</h1>
-          <p class="about-lead">
-            I'm not the kind of developer who started coding because I knew
-            exactly where it would take me. I started because I was curious,
-            and somewhere along the way that curiosity turned into a career.
-          </p>
-          <p class="about-lead">
-            These days I spend my time building web applications, solving
-            interesting problems, and making sure the little details don't get
-            overlooked. I enjoy clean interfaces, smooth interactions, and the
-            kind of user experience people don't have to think about.
-          </p>
-          <p class="about-more">
-            And when I'm away from work? I'm usually learning something new,
-            contributing to open source, or tweaking a side project that
-            definitely started as "just a quick experiment."
-          </p>
+
+          <div class="about-tabs" role="tablist" aria-label="About sections">
+            <button
+              class="about-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-target="about-panel-story"
+            >
+              My Story
+            </button>
+            <button
+              class="about-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-target="about-panel-work"
+            >
+              How I Work
+            </button>
+            <button
+              class="about-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-target="about-panel-life"
+            >
+              Beyond Code
+            </button>
+            <span class="about-tab-indicator" aria-hidden="true"></span>
+          </div>
+
+          <div class="about-panels">
+            <div class="about-panel is-active" id="about-panel-story" role="tabpanel">
+              <p class="about-lead">
+                I'm not the kind of developer who started coding because I
+                knew exactly where it would take me. I started because I was
+                curious, and somewhere along the way that curiosity turned
+                into a career.
+              </p>
+            </div>
+            <div class="about-panel" id="about-panel-work" role="tabpanel">
+              <p class="about-lead">
+                These days I spend my time building web applications, solving
+                interesting problems, and making sure the little details
+                don't get overlooked. I enjoy clean interfaces, smooth
+                interactions, and the kind of user experience people don't
+                have to think about.
+              </p>
+            </div>
+            <div class="about-panel" id="about-panel-life" role="tabpanel">
+              <p class="about-more">
+                And when I'm away from work? I'm usually learning something
+                new, contributing to open source, or tweaking a side project
+                that definitely started as "just a quick experiment."
+              </p>
+            </div>
+          </div>
+
           <blockquote class="about-callout">
             "The best interfaces are the ones users never have to think about."
           </blockquote>
@@ -382,7 +440,18 @@
           <!-- SIDEBAR -->
           <nav class="projects-ide__sidebar" aria-label="Project files">
             <p class="projects-ide__sidebar-label">Explorer</p>
-            <p class="projects-ide__folder">▾ projects</p>
+            <button
+              class="projects-ide__folder"
+              type="button"
+              aria-expanded="true"
+              aria-controls="ide-filelist"
+            >
+              <span class="projects-ide__folder-chevron" aria-hidden="true"
+                >▾</span
+              >
+              <span>projects</span>
+            </button>
+            <div class="projects-ide__filelist-wrap" id="ide-filelist">
             <ul class="projects-ide__filelist">
               <li class="projects-ide__file is-active">
                 <button
@@ -415,6 +484,7 @@
                 </button>
               </li>
             </ul>
+            </div>
           </nav>
 
           <!-- MAIN PANE -->
