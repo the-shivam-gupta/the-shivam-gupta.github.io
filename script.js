@@ -44,18 +44,6 @@ window.addEventListener(
   { passive: true },
 );
 
-/* arrow onclick scroll down */
-document.addEventListener("DOMContentLoaded", function () {
-  const arrow = document.querySelector(".arrow");
-
-  if (arrow) {
-    arrow.addEventListener("click", () => {
-      const scrollDistance = window.innerHeight;
-      window.scrollBy(0, scrollDistance);
-    });
-  }
-});
-
 // bottom to top button with scroll progress ring
 $(document).ready(function () {
   var btn = $("#button");
