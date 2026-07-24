@@ -4135,9 +4135,6 @@ video {
   .projects-ide__panels {
     padding: 0.85rem 0.65rem 1.1rem;
   }
-  .projects-ide__preview img {
-    max-height: 140px;
-  }
   .projects-ide__terminal {
     font-size: 0.7rem;
   }
