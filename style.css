@@ -1,12 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,400&family=Montserrat&family=Trirong:wght@100&display=swap");
-
-@font-face {
-  font-family: "Agustina";
-  src: url("./public/fonts/Agustina-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap");
 
 * {
   margin: 0;
@@ -22,9 +14,9 @@
   --color2: #3b82c4;
   --color5: #1a2b3c;
   --color6: #f3f9fd;
-  --font1: "Montserrat", sans-serif;
-  --font2: "Trirong", serif;
-  --font3: "Merriweather", serif;
+  --font1: "Cause", sans-serif;
+  --font2: "Cause", sans-serif;
+  --font3: "Cause", sans-serif;
   --gradient: radial-gradient(circle at top, #ffffff, #e5f2fb, #c5e2f5);
 }
 
@@ -135,7 +127,7 @@ body {
 /* Nav pill end */
 
 .logo {
-  --logo-script: "Agustina", cursive;
+  --logo-script: "Cause", sans-serif;
   position: relative;
   display: inline-flex;
   flex-direction: column;
@@ -998,7 +990,7 @@ video {
   text-align: center;
   color: #eaf6ff;
   font-size: 8em;
-  font-family: "Consolas", "SFMono-Regular", Menlo, monospace;
+  font-family: "Cause", sans-serif;
   text-shadow:
     0 0 14px rgba(110, 179, 228, 0.7),
     0 0 30px rgba(59, 130, 196, 0.45);
@@ -1340,18 +1332,15 @@ video {
 }
 
 .about-callout {
-  padding: 1rem 1.15rem 1rem 1.25rem;
-  border-radius: 8px;
-  border: 1px solid var(--about-border);
-  border-left: 3px solid var(--about-accent);
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--about-star);
+  margin: 0;
+  padding: 0.35rem 0 0.35rem 1.25rem;
+  border-left: 2px solid var(--about-accent);
+  color: var(--about-muted);
   font-family: var(--font3);
-  font-size: 1.02rem;
+  font-size: 1.08rem;
   font-style: italic;
-  font-weight: 400;
-  line-height: 1.25;
-  box-shadow: 0 8px 24px rgba(59, 130, 196, 0.08);
+  font-weight: 500;
+  line-height: 1.55;
 }
 
 /* about end */
@@ -2142,7 +2131,7 @@ video {
 }
 
 #experience h2.exp-title {
-  font-family: "Poppins", sans-serif;
+  font-family: "Cause", sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 3.2vw, 42px);
   color: #1a2b3c;
@@ -2150,7 +2139,7 @@ video {
 }
 
 #experience .exp-subtitle {
-  font-family: "Merriweather", serif;
+  font-family: "Cause", sans-serif;
   font-weight: 300;
   color: var(--exp-muted);
   max-width: 560px;
@@ -2244,7 +2233,7 @@ video {
 }
 
 #experience .exp-badge {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cause", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -2256,15 +2245,14 @@ video {
 }
 
 #experience .exp-date {
-  font-family: "Trirong", serif;
-  font-weight: 100;
+  font-family: "Cause", sans-serif;
   font-size: 14px;
   letter-spacing: 0.5px;
   color: var(--exp-muted);
 }
 
 #experience .exp-card h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Cause", sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 1.8vw, 24px);
   color: #1a2b3c;
@@ -2272,7 +2260,7 @@ video {
 }
 
 #experience .exp-card .exp-org {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cause", sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: var(--exp-dot-color, var(--exp-primary));
@@ -2280,7 +2268,7 @@ video {
 }
 
 #experience .exp-card p {
-  font-family: "Merriweather", serif;
+  font-family: "Cause", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
@@ -2298,7 +2286,7 @@ video {
 }
 
 #experience .exp-oss-sub {
-  font-family: "Merriweather", serif;
+  font-family: "Cause", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
@@ -2309,7 +2297,7 @@ video {
 #experience .exp-list li {
   position: relative;
   padding-left: 1.15rem;
-  font-family: "Merriweather", serif;
+  font-family: "Cause", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 1.6;
@@ -2353,7 +2341,7 @@ video {
   right: 24px;
   background: var(--exp-tertiary);
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cause", sans-serif;
   font-weight: 500;
   font-size: 13px;
   padding: 6px 12px;
