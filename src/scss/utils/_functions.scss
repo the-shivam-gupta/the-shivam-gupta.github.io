@@ -1,0 +1,10 @@
+// VW Functions for responsive design
+// Desktop VW calculation (base on 1920px)
+@function vw($pixels, $base: 1920) {
+  @return calc($pixels / $base * 100vw);
+}
+
+// Mobile VW calculation (base on 414px by default, customizable)
+@function vw-mobile($pixels, $base: 414) {
+  @return calc($pixels / $base * 100vw);
+}

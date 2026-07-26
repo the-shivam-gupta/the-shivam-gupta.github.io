@@ -1,0 +1,511 @@
+@import "../utils/mixins.scss";
+
+/* Breakpoints from utils/mixins.scss — @include media("name"):
+   - tablet: max-width 768px → use vw($px, 768) inside these blocks
+   - mobile-sm: max-width 414px → use vw($px, 414) inside these blocks
+   Desktop: vw($px, 1920) (matches default design width). */
+
+/* Page shell — same horizontal rhythm as header container */
+.resume-page {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: calc(vw(28, 1920) + 5.5rem) vw(90, 1920) vw(100, 1920);
+
+  @include media("tablet") {
+    padding: calc(vw(22, 768) + 6.5rem) vw(60, 768) vw(44, 768);
+  }
+
+  @include media("mobile-sm") {
+    padding: calc(vw(18, 414) + 6.5rem) vw(20, 414) vw(36, 414);
+  }
+}
+
+.resume-doc {
+  --resume-accent: #3b82c4;
+  --resume-accent-dark: #2563a8;
+  --resume-ink: #1a2b3c;
+  --resume-muted: #5a738a;
+  --resume-border: rgba(59, 130, 196, 0.22);
+
+  width: 100%;
+  max-width: vw(1200, 1920);
+  margin-inline: auto;
+  font-family: "Cause", sans-serif;
+  font-size: vw(19, 1920);
+  font-weight: 500;
+  line-height: vw(30, 1920);
+  color: var(--resume-ink);
+
+  @include media("tablet") {
+    max-width: 100%;
+    font-size: vw(14, 768);
+    line-height: vw(28, 768);
+  }
+
+  @include media("mobile-sm") {
+    font-size: 0.9375rem;
+    line-height: 1.4375rem;
+  }
+}
+
+.resume-doc__masthead {
+  text-align: center;
+  margin-bottom: vw(28, 1920);
+  padding-bottom: vw(22, 1920);
+  border-bottom: 1px solid var(--resume-border);
+
+  @include media("tablet") {
+    margin-bottom: vw(22, 768);
+    padding-bottom: vw(18, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin-bottom: vw(18, 414);
+    padding-bottom: vw(16, 414);
+  }
+}
+
+.resume-doc__name {
+  margin: 0 0 vw(8, 1920);
+  font-family: "Cause", sans-serif;
+  font-size: vw(48, 1920);
+  font-weight: 900;
+  line-height: vw(52, 1920);
+  letter-spacing: vw(0.9, 1920);
+  text-transform: none;
+  color: var(--resume-ink);
+
+  @include media("tablet") {
+    font-size: vw(34, 768);
+    line-height: vw(38, 768);
+    letter-spacing: vw(0.7, 768);
+  }
+
+  @include media("mobile-sm") {
+    font-size: vw(28, 414);
+    line-height: vw(32, 414);
+    letter-spacing: vw(0.5, 414);
+  }
+}
+
+.resume-doc__headline {
+  margin: 0 0 vw(10, 1920);
+  font-size: vw(24, 1920);
+  font-weight: 700;
+  line-height: vw(28, 1920);
+  color: var(--resume-accent-dark);
+
+  @include media("tablet") {
+    font-size: vw(16, 768);
+    line-height: vw(24, 768);
+  }
+
+  @include media("mobile-sm") {
+    font-size: vw(16, 414);
+    line-height: vw(22, 414);
+  }
+}
+
+.resume-doc__links {
+  margin: 0 0 vw(16, 1920);
+  font-size: vw(16, 1920);
+  font-weight: 700;
+  letter-spacing: vw(0.9, 1920);
+
+  @include media("tablet") {
+    margin: 0 0 vw(8, 768);
+    font-size: vw(13, 768);
+    letter-spacing: vw(0.8, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin: 0 0 vw(12, 414);
+    font-size: vw(14, 414);
+    letter-spacing: vw(0.6, 414);
+    line-height: vw(22, 414);
+  }
+}
+
+.resume-doc__links a {
+  position: relative;
+  display: inline-block;
+  color: var(--resume-accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: vw(1, 1920);
+    background-color: var(--resume-accent);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @include media("tablet") {
+    &::after {
+      height: vw(1, 768);
+    }
+  }
+
+  @include media("mobile-sm") {
+    &::after {
+      height: vw(1, 414);
+    }
+  }
+}
+
+.resume-doc__links a:hover,
+.resume-doc__links a:focus-visible {
+  color: var(--resume-accent-dark);
+
+  &::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-doc__links a::after {
+    transition: none;
+  }
+}
+
+.resume-doc__pipe {
+  color: var(--resume-muted);
+  font-weight: 600;
+}
+
+.resume-doc__contact {
+  margin: 0;
+  font-size: vw(16, 1920);
+  font-weight: 600;
+  letter-spacing: vw(0.9, 1920);
+  color: var(--resume-muted);
+
+  @include media("tablet") {
+    font-size: vw(13, 768);
+    letter-spacing: vw(0.8, 768);
+  }
+
+  @include media("mobile-sm") {
+    font-size: vw(13, 414);
+    letter-spacing: vw(0.5, 414);
+  }
+}
+
+.resume-doc__contact a {
+  color: var(--resume-accent);
+  font-weight: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.resume-doc__contact a:hover,
+.resume-doc__contact a:focus-visible {
+  color: var(--resume-accent-dark);
+}
+
+.resume-doc__section {
+  margin-top: vw(32, 1920);
+
+  @include media("tablet") {
+    margin-top: vw(26, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin-top: vw(22, 414);
+  }
+}
+
+.resume-doc__section:first-of-type {
+  margin-top: 0;
+}
+
+.resume-doc__section-title {
+  margin: 0 0 vw(10, 1920);
+  font-family: "Cause", sans-serif;
+  font-size: vw(18, 1920);
+  font-weight: 900;
+  line-height: vw(20, 1920);
+  letter-spacing: vw(1.6, 1920);
+  text-transform: uppercase;
+  color: var(--resume-accent-dark);
+  border-bottom: 1px solid var(--resume-border);
+  padding-bottom: vw(6, 1920);
+
+  @include media("tablet") {
+    font-size: vw(14, 768);
+    line-height: vw(16, 768);
+    letter-spacing: vw(1.2, 768);
+    padding-bottom: vw(5, 768);
+  }
+
+  @include media("mobile-sm") {
+    font-size: vw(13, 414);
+    line-height: vw(16, 414);
+    letter-spacing: vw(1, 414);
+    padding-bottom: vw(4, 414);
+  }
+}
+
+.resume-doc__paragraph {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+
+  @include media("mobile-sm") {
+    hyphens: manual;
+  }
+}
+
+.resume-doc__paragraph--tight {
+  text-align: left;
+  hyphens: none;
+}
+
+.resume-doc__paragraph + .resume-doc__paragraph--tight {
+  margin-top: vw(4, 1920);
+
+  @include media("tablet") {
+    margin-top: vw(4, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin-top: vw(6, 414);
+  }
+}
+
+.resume-doc__education-head + .resume-doc__paragraph--tight {
+  margin-top: vw(4, 1920);
+
+  @include media("tablet") {
+    margin-top: vw(4, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin-top: vw(6, 414);
+  }
+}
+
+.resume-doc__indent {
+  padding-left: vw(18, 1920);
+
+  @include media("tablet") {
+    padding-left: vw(16, 768);
+  }
+
+  @include media("mobile-sm") {
+    padding-left: vw(14, 414);
+  }
+}
+
+.resume-doc__entry {
+  margin: 0 0 vw(28, 1920);
+
+  @include media("tablet") {
+    margin: 0 0 vw(22, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin: 0 0 vw(18, 414);
+  }
+}
+
+/* Title + date on one row; date aligns to top line (not subheading below) */
+.resume-doc__entry-head,
+.resume-doc__education-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: vw(8, 1920) vw(20, 1920);
+  margin: 0 0 vw(6, 1920);
+
+  @include media("tablet") {
+    gap: vw(6, 768) vw(16, 768);
+    margin: 0 0 vw(6, 768);
+  }
+
+  @include media("mobile-sm") {
+    gap: vw(4, 414) vw(12, 414);
+    margin: 0 0 vw(8, 414);
+  }
+}
+
+.resume-doc__entry-head .resume-doc__role-line,
+.resume-doc__education-head .resume-doc__paragraph--tight {
+  flex: 1 1 auto;
+  min-width: min(100%, 12rem);
+  margin: 0;
+
+  @include media("mobile-sm") {
+    min-width: 100%;
+  }
+}
+
+.resume-doc__education-head .resume-doc__paragraph--tight {
+  font-size: vw(18, 1920);
+  font-weight: 500;
+  line-height: vw(28, 1920);
+
+  @include media("tablet") {
+    font-size: vw(16, 768);
+    line-height: vw(24, 768);
+  }
+
+  @include media("mobile-sm") {
+    font-size: vw(16, 414);
+    line-height: vw(23, 414);
+  }
+}
+
+.resume-doc__education-head .resume-doc__paragraph--tight strong {
+  font-weight: 800;
+}
+
+.resume-doc__entry-head .resume-doc__muted,
+.resume-doc__education-head .resume-doc__muted {
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+  font-size: vw(16, 1920);
+  font-weight: 700;
+  letter-spacing: vw(0.9, 1920);
+  white-space: nowrap;
+
+  @include media("tablet") {
+    font-size: vw(14, 768);
+    letter-spacing: vw(0.7, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin-left: vw(16, 414);
+    text-align: right;
+    white-space: normal;
+    font-size: vw(13, 414);
+    letter-spacing: vw(0.5, 414);
+  }
+}
+
+.resume-doc__role-line {
+  font-weight: 800;
+  font-size: vw(18, 1920);
+  line-height: vw(28, 1920);
+  padding-left: vw(18, 1920);
+  text-indent: vw(-18, 1920);
+  color: var(--resume-ink);
+
+  @include media("tablet") {
+    font-size: vw(16, 768);
+    line-height: vw(24, 768);
+    padding-left: vw(16, 768);
+    text-indent: vw(-16, 768);
+  }
+
+  @include media("mobile-sm") {
+    font-size: vw(16, 414);
+    line-height: vw(23, 414);
+    padding-left: vw(14, 414);
+    text-indent: vw(-14, 414);
+  }
+}
+
+.resume-doc__bullet-char {
+  font-weight: 800;
+}
+
+.resume-doc__role-sub {
+  margin: 0 0 vw(10, 1920);
+  padding-left: vw(18, 1920);
+  font-size: vw(14.5, 1920);
+  font-weight: 700;
+  letter-spacing: vw(0.9, 1920);
+  line-height: 1.45;
+  color: var(--resume-muted);
+
+  @include media("tablet") {
+    padding-left: vw(16, 768);
+    font-size: vw(13.5, 768);
+    letter-spacing: vw(0.8, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin-bottom: vw(10, 414);
+    padding-left: vw(14, 414);
+    font-size: vw(13, 414);
+    letter-spacing: vw(0.6, 414);
+  }
+}
+
+.resume-doc__bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume-doc__bullets-1 {
+  margin-left: vw(28, 1920);
+  padding: 0;
+  list-style: none;
+
+  @include media("tablet") {
+    margin-left: vw(16, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin-left: vw(20, 414);
+  }
+}
+
+.resume-doc__bullets > li, .resume-doc__bullets-1 > li {
+  position: relative;
+  margin: 0 0 vw(18, 1920);
+  padding-left: vw(18, 1920);
+  text-align: left;
+  hyphens: auto;
+
+  @include media("tablet") {
+    margin: 0 0 vw(8, 768);
+    padding-left: vw(16, 768);
+  }
+
+  @include media("mobile-sm") {
+    margin: 0 0 vw(10, 414);
+    padding-left: vw(14, 414);
+    text-align: left;
+    hyphens: manual;
+  }
+}
+
+.resume-doc__bullets > li:last-child, .resume-doc__bullets-1 > li:last-child {
+  margin-bottom: 0;
+}
+
+.resume-doc__bullets > li::before, .resume-doc__bullets-1 > li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 800;
+  color: var(--resume-accent);
+}
+
+.resume-doc__muted {
+  font-weight: 600;
+  font-size: inherit;
+  color: var(--resume-muted);
+}
+
+[data-theme="dark"] .resume-doc {
+  --resume-accent: #6eb3e4;
+  --resume-accent-dark: #7fc1ee;
+  --resume-ink: #e7eef5;
+  --resume-muted: #9fb3c8;
+  --resume-border: rgba(110, 179, 228, 0.25);
+}

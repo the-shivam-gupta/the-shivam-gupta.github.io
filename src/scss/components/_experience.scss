@@ -1,0 +1,374 @@
+#experience {
+  background: transparent;
+  padding: 100px 24px 60px;
+  position: relative;
+}
+
+#experience .exp-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+#experience .exp-kicker {
+  margin: 0 0 0.65rem;
+  font-family: var(--font1);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--about-accent);
+}
+
+#experience h2.exp-title {
+  font-family: "Cause", sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.2vw, 42px);
+  color: #1a2b3c;
+  margin: 0 0 12px;
+}
+
+#experience .exp-subtitle {
+  font-family: "Cause", sans-serif;
+  font-weight: 500;
+  color: var(--exp-muted);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 64px;
+}
+
+#experience .exp-timeline {
+  position: relative;
+}
+
+#experience .exp-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--exp-primary),
+    var(--exp-secondary),
+    var(--exp-tertiary)
+  );
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
+#experience .exp-item {
+  position: relative;
+  width: 50%;
+  padding: 0 42px 72px;
+  box-sizing: border-box;
+}
+
+#experience .exp-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+#experience .exp-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+#experience .exp-dot {
+  position: absolute;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid var(--exp-bg);
+  box-shadow: 0 0 0 2px var(--exp-dot-color, var(--exp-primary));
+  background: var(--exp-dot-color, var(--exp-primary));
+}
+
+#experience .exp-item:nth-child(odd) .exp-dot {
+  right: -8px;
+}
+
+#experience .exp-item:nth-child(even) .exp-dot {
+  left: -8px;
+}
+
+#experience .exp-card {
+  background: var(--exp-card);
+  border: 1px solid var(--exp-border);
+  border-radius: 16px;
+  padding: 32px 34px;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 200px;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+#experience .exp-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--exp-dot-color, var(--exp-primary));
+}
+
+#experience .exp-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+#experience .exp-badge {
+  font-family: "Cause", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: #ffffff;
+  background: var(--exp-dot-color, var(--exp-primary));
+}
+
+#experience .exp-date {
+  font-family: "Cause", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--exp-muted);
+}
+
+#experience .exp-card h3 {
+  font-family: "Cause", sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 1.8vw, 24px);
+  color: #1a2b3c;
+  margin: 0 0 6px;
+}
+
+#experience .exp-card .exp-org {
+  font-family: "Cause", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--exp-dot-color, var(--exp-primary));
+  margin-bottom: 16px;
+}
+
+#experience .exp-card p {
+  font-family: "Cause", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--exp-muted);
+  margin: 0;
+}
+
+#experience .exp-list {
+  list-style: none;
+  margin: 0.8rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+#experience .exp-oss-sub {
+  font-family: "Cause", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--exp-muted);
+  margin: 0 0 0.4rem;
+}
+
+#experience .exp-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-family: "Cause", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--exp-muted);
+  opacity: 0;
+  transform: translateX(-18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#experience .exp-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--exp-dot-color, var(--exp-primary));
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+#experience .exp-item.exp-in-view .exp-list li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#experience .exp-item.exp-in-view .exp-list li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+#experience .exp-item.exp-in-view .exp-list li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#experience .exp-item.exp-in-view .exp-list li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+#experience .exp-item.exp-in-view .exp-list li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+#experience .exp-item.exp-in-view .exp-list li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+#experience .exp-item.exp-in-view .exp-list li::before {
+  opacity: 1;
+}
+
+#experience .exp-gpa {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: var(--exp-tertiary);
+  color: #ffffff;
+  font-family: "Cause", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+#experience .exp-item .exp-card {
+  opacity: 0 !important;
+  transform: translateY(50px) !important;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: transform, opacity;
+}
+
+#experience .exp-item:nth-child(odd) .exp-card {
+  transform: translateY(50px) translateX(30px) !important;
+}
+
+#experience .exp-item:nth-child(even) .exp-card {
+  transform: translateY(50px) translateX(-30px) !important;
+}
+
+#experience .exp-item.exp-in-view .exp-card {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) !important;
+}
+
+#experience .exp-item.exp-in-view .exp-card:hover {
+  transform: translateY(-4px) translateX(0) !important;
+}
+
+#experience .exp-dot {
+  opacity: 0 !important;
+  transform: scale(0.2) !important;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#experience .exp-item.exp-in-view .exp-dot {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  animation: exp-dot-pulse 1.8s ease-out 0.4s;
+}
+
+#experience .exp-item:hover .exp-dot {
+  animation: exp-dot-pulse 1.2s ease-out infinite;
+}
+
+[data-theme="dark"] #experience h2.exp-title,
+[data-theme="dark"] #experience .exp-card h3 {
+  color: #e7eef5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #experience .exp-item .exp-card,
+  #experience .exp-dot {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  #experience .exp-item:hover .exp-dot {
+    animation: none !important;
+  }
+  #experience .exp-list li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #experience .exp-timeline::before {
+    left: 12px;
+  }
+  #experience .exp-item,
+  #experience .exp-item:nth-child(odd),
+  #experience .exp-item:nth-child(even) {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding: 0 0 48px 40px;
+  }
+  #experience .exp-item:nth-child(odd) .exp-dot,
+  #experience .exp-item:nth-child(even) .exp-dot {
+    left: 4px;
+    right: auto;
+  }
+  #experience .exp-item:nth-child(odd) .exp-card,
+  #experience .exp-item:nth-child(even) .exp-card {
+    transform: translateY(50px) !important;
+  }
+  #experience .exp-item.exp-in-view .exp-card {
+    transform: translateY(0) !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #experience h2.exp-title {
+    font-size: 28px;
+  }
+  #experience .exp-card {
+    padding: 20px 18px;
+  }
+  #experience .exp-card h3 {
+    font-size: 18px;
+  }
+  #experience .exp-item {
+    padding: 0 0 36px 32px;
+  }
+  #experience .exp-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  #experience .exp-date {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 850px) {
+  #experience h2.exp-title {
+    font-size: 32px;
+  }
+  #experience .exp-card {
+    padding: 26px 24px;
+  }
+}

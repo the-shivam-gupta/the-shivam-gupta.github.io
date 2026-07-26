@@ -1,0 +1,379 @@
+.contact-container {
+  --contact-accent: #3b82c4;
+  --contact-star: #1a2b3c;
+  --contact-muted: #5a738a;
+  --contact-border: rgba(59, 130, 196, 0.22);
+  width: 100%;
+  background: transparent;
+}
+
+.contact-container .container.contact-wrap,
+.contact-wrap {
+  margin: 0;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 6.25rem;
+  width: 100%;
+  max-width: none;
+  background: transparent;
+  color: var(--contact-star);
+  box-sizing: border-box;
+}
+
+.contact-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(42rem, 100%);
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--contact-border);
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(59, 130, 196, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+  will-change: opacity, transform;
+}
+
+.contact-panel.contact-in-view {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+.contact-panel::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% -20%;
+  height: 70%;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(110, 179, 228, 0.16),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-heading,
+.contact-panel .alert,
+.contact-panel .form {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact-kicker {
+  margin: 0 0 0.55rem;
+  font-family: var(--font1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--contact-accent);
+}
+
+.contact-title {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.contact-title .letter,
+.contact-container .title .letter {
+  font-family: var(--font1);
+  font-size: clamp(2.2rem, 5vw, 3.1rem);
+  font-weight: 700;
+  color: var(--contact-star);
+  text-shadow: none;
+  cursor: default;
+  display: inline-block;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-title .letter:hover {
+  transform: translateY(-3px);
+  color: var(--contact-accent);
+}
+
+.contact-sub {
+  margin: 0.85rem 0 0;
+  font-family: var(--font3);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--contact-muted);
+}
+
+.contact-container .form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.25rem 0 0;
+  gap: 0.15rem;
+}
+
+.contact-container .input-group,
+.contact-container .textarea-group {
+  position: relative;
+  padding: 1.35rem 0 0.35rem;
+}
+
+.contact-container input,
+.contact-container textarea {
+  color: var(--contact-star);
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(59, 130, 196, 0.35);
+  padding: 0.65rem 0.35rem 0.5rem;
+  font-size: 1rem;
+  font-family: var(--font1);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+  resize: vertical;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-container textarea {
+  min-height: 7.5rem;
+  line-height: 1.5;
+  display: block;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  background-color: transparent;
+  outline: none;
+  border-bottom: 1px solid var(--contact-accent);
+  box-shadow: 0 6px 18px -12px rgba(59, 130, 196, 0.45);
+  color: var(--contact-star);
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+  color: transparent;
+}
+
+.contact-container label {
+  color: var(--contact-muted);
+  position: absolute;
+  left: 0.35rem;
+  top: 2rem;
+  margin: 0;
+  cursor: auto;
+  transition:
+    top 0.15s ease,
+    color 0.15s ease,
+    font-size 0.15s ease,
+    letter-spacing 0.15s ease;
+  font-family: var(--font1);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  z-index: 2;
+  background: transparent;
+}
+
+.contact-container .textarea-group label {
+  top: 2.05rem;
+}
+
+.contact-container input:focus ~ label,
+.contact-container input:not(:placeholder-shown) ~ label,
+.contact-container textarea:focus ~ label,
+.contact-container textarea:not(:placeholder-shown) ~ label {
+  top: 0.15rem;
+  color: var(--contact-accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-container .submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.25rem;
+}
+
+.contact-container .submit-btn button {
+  padding: 0.85rem 1.75rem;
+  width: auto;
+  min-width: 10.5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: var(--font1);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #6eb3e4 0%, #3b82c4 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(59, 130, 196, 0.28);
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.contact-container .submit-btn button:hover {
+  background: transparent;
+  color: var(--contact-accent);
+  border-color: rgba(59, 130, 196, 0.5);
+  box-shadow: 0 8px 22px rgba(59, 130, 196, 0.18);
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
+.contact-container .alert {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0.75rem auto 0;
+  color: var(--contact-star);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(59, 130, 196, 0.12);
+  font-family: var(--font1);
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+.contact-container .alert.is-error {
+  display: flex;
+  background: rgba(254, 226, 226, 0.95);
+  border-color: rgba(220, 120, 130, 0.45);
+  color: #9b1c1c;
+}
+
+.contact-container .alert.is-success {
+  display: flex;
+  background: rgba(220, 252, 231, 0.95);
+  border-color: rgba(74, 168, 120, 0.45);
+  color: #166534;
+}
+
+[data-theme="dark"] .contact-container {
+  --contact-star: #e7eef5;
+  --contact-muted: #9fb3c8;
+  --contact-border: rgba(110, 179, 228, 0.25);
+}
+
+[data-theme="dark"] .contact-panel {
+  background: #101c2c;
+}
+
+[data-theme="dark"] .contact-container .alert.is-error {
+  background: rgba(80, 30, 34, 0.85);
+  border-color: rgba(220, 120, 130, 0.4);
+  color: #f3b4b4;
+}
+
+[data-theme="dark"] .contact-container .alert.is-success {
+  background: rgba(20, 60, 40, 0.85);
+  border-color: rgba(74, 168, 120, 0.4);
+  color: #a8e6bf;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-panel {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-container .container.contact-wrap,
+  .contact-wrap {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .contact-container .container.contact-wrap,
+  .contact-wrap {
+    padding: clamp(2.5rem, 8vw, 4rem) 2.5rem;
+  }
+  .contact-panel {
+    padding: 1.5rem 1.15rem;
+  }
+  .contact-container .form {
+    max-width: none;
+  }
+  .contact-container input,
+  .contact-container textarea {
+    font-size: 0.95rem;
+  }
+  .contact-container input:focus ~ label,
+  .contact-container input:not(:placeholder-shown) ~ label,
+  .contact-container textarea:focus ~ label,
+  .contact-container textarea:not(:placeholder-shown) ~ label {
+    top: 0.15rem;
+  }
+  .contact-container .submit-btn button {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-container .container.contact-wrap,
+  .contact-wrap {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .alert {
+    width: 80%;
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 850px) {
+  .alert {
+    width: 50%;
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+  .alert {
+    width: 50%;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .contact-container .container.contact-wrap {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .contact-panel {
+    padding: 1.25rem 1rem;
+  }
+}

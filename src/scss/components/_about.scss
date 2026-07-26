@@ -1,0 +1,309 @@
+.about-container {
+  --about-accent: #3b82c4;
+  --about-star: #1a2b3c;
+  --about-muted: #5a738a;
+  --about-card: #ffffff;
+  --about-border: rgba(59, 130, 196, 0.22);
+  --about-bg: #f3f9fd;
+
+  padding: clamp(3.5rem, 7vw, 6rem) 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  background: transparent;
+  color: var(--about-star);
+}
+
+#about.container {
+  background-color: rgba(243, 249, 253, 0.85);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: var(--page-grid-size) var(--page-grid-size);
+  background-repeat: repeat;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  backdrop-filter: none;
+}
+
+.about-img {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(20rem, 42vw);
+  aspect-ratio: 1 / 1.08;
+}
+
+.about-img img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: 4px;
+  margin: 0;
+  background: none;
+  box-shadow: 0 14px 32px rgba(59, 130, 196, 0.15);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.about-img:hover img {
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 40px rgba(59, 130, 196, 0.2),
+    0 0 24px rgba(110, 179, 228, 0.2);
+}
+
+.about-img__corner {
+  position: absolute;
+  width: 3.4rem;
+  height: 3.4rem;
+  border: 1.5px solid rgba(59, 130, 196, 0.65);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.about-img__corner--tl {
+  top: -0.7rem;
+  left: -0.7rem;
+  border-right: none;
+  border-bottom: none;
+}
+
+.about-img__corner--br {
+  right: -0.7rem;
+  bottom: -0.7rem;
+  border-left: none;
+  border-top: none;
+}
+
+.about-content {
+  flex: 0 0 50%;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+  letter-spacing: normal;
+  color: var(--about-star);
+  background: none;
+  background-image: none;
+  animation: none;
+}
+
+.about-kicker {
+  margin: 0 0 0.65rem;
+  font-family: var(--font1);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--about-accent);
+}
+
+.about-content h1 {
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.9rem, 3.4vw, 2.55rem);
+  font-family: var(--font1);
+  font-weight: 700;
+  color: #1a2b3c;
+  animation: none;
+}
+
+.about-tabs {
+  position: relative;
+  display: inline-flex;
+  gap: 0.2rem;
+  margin: 0 0 1.35rem;
+  padding: 0.3rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 196, 0.08);
+  border: 1px solid var(--about-border);
+}
+
+.about-tab {
+  position: relative;
+  z-index: 2;
+  padding: 0.55rem 1.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font-family: var(--font1);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--about-muted);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.about-tab.is-active {
+  color: #fff;
+}
+
+.about-tab-indicator {
+  position: absolute;
+  z-index: 1;
+  top: 0.3rem;
+  left: 0;
+  height: calc(100% - 0.6rem);
+  border-radius: 999px;
+  background: var(--about-accent);
+  box-shadow: 0 4px 12px rgba(59, 130, 196, 0.35);
+  transition:
+    transform 0.35s cubic-bezier(0.65, 0, 0.35, 1),
+    width 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.about-panels {
+  position: relative;
+}
+
+.about-panel {
+  display: none;
+}
+
+.about-panel.is-active {
+  display: block;
+  animation: aboutPanelIn 0.4s ease;
+}
+
+.about-lead,
+.about-more {
+  margin: 0 0 1.15rem;
+  color: var(--about-muted);
+  text-align: left;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-family: var(--font3);
+}
+
+.about-callout {
+  margin: 0;
+  padding: 0.35rem 0 0.35rem 1.25rem;
+  border-left: 2px solid var(--about-accent);
+  color: var(--about-muted);
+  font-family: var(--font3);
+  font-size: 1.08rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+[data-theme="dark"] .about-container {
+  --about-star: #e7eef5;
+  --about-muted: #9fb3c8;
+  --about-card: #101c2c;
+  --about-bg: #0f1b2c;
+}
+
+[data-theme="dark"] #about.container {
+  background-color: rgba(16, 28, 44, 0.85);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: var(--page-grid-size) var(--page-grid-size);
+  background-repeat: repeat;
+}
+
+[data-theme="dark"] .about-content h1 {
+  color: #e7eef5;
+}
+
+[data-theme="dark"] .about-tabs {
+  background: rgba(110, 179, 228, 0.1);
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2.5rem 3.5rem;
+    gap: 2rem;
+  }
+  .about-img {
+    width: min(14rem, 70vw);
+  }
+  .about-content {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .about-content h1,
+  .about-kicker {
+    text-align: center;
+  }
+  .about-lead,
+  .about-more,
+  .about-callout {
+    text-align: left;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 850px) {
+  .about-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem 3.75rem 4rem;
+    gap: 2.25rem;
+  }
+  .about-img {
+    width: min(16rem, 55vw);
+  }
+  .about-content {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .about-content h1,
+  .about-kicker {
+    text-align: center;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 3.75rem 4.5rem;
+    gap: 2.5rem;
+  }
+  .about-img {
+    width: min(17rem, 34vw);
+  }
+  .about-content {
+    margin: 0;
+    max-width: none;
+    flex: 1 1 auto;
+  }
+  .about-content h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .about-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

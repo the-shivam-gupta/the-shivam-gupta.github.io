@@ -12,6 +12,17 @@ class HeroGL {
     this.running = true;
     this.rafId = null;
     this.aspect = 1;
+    this.dark = document.documentElement.getAttribute("data-theme") === "dark";
+
+    if ("MutationObserver" in window) {
+      const themeObserver = new MutationObserver(() => {
+        this.dark = document.documentElement.getAttribute("data-theme") === "dark";
+      });
+      themeObserver.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["data-theme"],
+      });
+    }
 
     this.fragment = document.getElementById("fragmentShader").textContent;
     this.vertex = document.getElementById("vertexShader").textContent;
@@ -89,7 +100,7 @@ class HeroGL {
 
     this.fShader = this.gl.createShader(this.gl.FRAGMENT_SHADER);
     this.gl.shaderSource(this.fShader, this.fragment);
-    this.gl.compileShader(this.fShader);  
+    this.gl.compileShader(this.fShader);
 
     if (!this.gl.getShaderParameter(this.vShader, this.gl.COMPILE_STATUS)) {
       console.log(this.gl.getShaderInfoLog(this.vShader));
@@ -134,7 +145,6 @@ class HeroGL {
     }
   }
 
-  /* Fill the camera frustum with overscan so edges never go empty */
   createField(count, aspect) {
     const fov = 72 * (Math.PI / 180);
     const distance = 2.05;
@@ -157,7 +167,11 @@ class HeroGL {
   render() {
     if (!this.gl) return;
 
-    this.gl.clearColor(0.96, 0.98, 1.0, 1);
+    if (this.dark) {
+      this.gl.clearColor(0.043, 0.071, 0.125, 1);
+    } else {
+      this.gl.clearColor(0.96, 0.98, 1.0, 1);
+    }
     this.gl.clear(this.gl.COLOR_BUFFER_BIT);
     this.gl.viewport(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT);
     this.gl.useProgram(this.program);
@@ -173,7 +187,6 @@ class HeroGL {
       0
     );
 
-    // Continuous drift — no reset/collapse to center
     this.time += 0.016;
     this.gl.uniform1f(this.u_time, this.time);
 
@@ -208,8 +221,4 @@ class HeroGL {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const canvas = document.getElementById("hero-canvas");
-  if (!canvas || typeof mat4 === "undefined") return;
-  new HeroGL(canvas);
-});
+export default HeroGL;

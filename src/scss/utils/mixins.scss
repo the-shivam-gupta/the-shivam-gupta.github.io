@@ -1,0 +1,120 @@
+@forward "./functions";
+@use "sass:map";
+@use "sass:math";
+@use "./functions" as *;
+
+// Media query mixins
+// Usage: @include media('mobile') { ... }
+
+$breakpoints: (
+  "mobile": 414px,
+  "mobile-sm": 426px,
+  /* max-width tablet: use 769px so 768px viewports still match (avoids edge where
+     layout viewport can report >768px due to rounding / scrollbar / devtools). */
+  "tablet": 769px,
+  "ultra-wide": 1920px,
+);
+
+// Media query mixin
+@mixin media($breakpoint, $type: "max") {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+
+    @if $type == "max" {
+      @media (max-width: $value) {
+        @content;
+      }
+    } @else if $type == "min" {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in $breakpoints";
+  }
+}
+
+// Between breakpoints
+@mixin media-between($min-breakpoint, $max-breakpoint) {
+  $min-value: map.get($breakpoints, $min-breakpoint);
+  $max-value: map.get($breakpoints, $max-breakpoint);
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+// Custom media query
+@mixin media-custom($min: null, $max: null) {
+  @if $min and $max {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+// Responsive font size using VW
+@mixin responsive-font(
+  $desktop-size,
+  $mobile-size: null,
+  $mobile-base: 414,
+  $desktop-base: 1920
+) {
+  @if $mobile-size {
+    font-size: vw-mobile($mobile-size, $mobile-base);
+
+    @include media("tablet", "min") {
+      font-size: vw($desktop-size, $desktop-base);
+    }
+  } @else {
+    font-size: vw($desktop-size, $desktop-base);
+  }
+}
+
+// Flexbox mixins
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Grid mixin
+@mixin grid($columns: 1, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Aspect ratio
+@mixin aspect-ratio($width, $height) {
+  aspect-ratio: math.div($width, $height);
+}
+
+// Truncate text
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

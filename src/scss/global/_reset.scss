@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  overflow-x: clip;
+  color: #5a738a;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(125, 186, 232, 0.18) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 10% 60%,
+      rgba(186, 220, 245, 0.28) 0%,
+      transparent 42%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f3f9fd 50%, #eaf4fb 100%);
+  background-size:
+    var(--page-grid-size) var(--page-grid-size),
+    var(--page-grid-size) var(--page-grid-size),
+    auto,
+    auto,
+    auto;
+  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+[data-theme="dark"] body {
+  color: #9fb3c8;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(95, 168, 221, 0.14) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 10% 60%,
+      rgba(63, 120, 170, 0.16) 0%,
+      transparent 42%
+    ),
+    linear-gradient(180deg, #0b1220 0%, #0f1b2c 50%, #101c2c 100%);
+  background-size:
+    var(--page-grid-size) var(--page-grid-size),
+    var(--page-grid-size) var(--page-grid-size),
+    auto,
+    auto,
+    auto;
+  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
+}

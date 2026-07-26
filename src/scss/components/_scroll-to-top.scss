@@ -1,0 +1,84 @@
+#button {
+  display: inline-block;
+  width: 51.5px;
+  height: 51.5px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s,
+    transform 0.15s;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(59, 130, 196, 0.35);
+}
+
+#button:hover .progress-ring__arrows path {
+  stroke: #2a6a9e;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+
+.progress-ring__track {
+  fill: none;
+  stroke: rgba(59, 130, 196, 0.12);
+  stroke-width: 3;
+}
+
+.progress-ring__bg {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+.progress-ring__fill {
+  fill: none;
+  stroke: #3b82c4;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 125.66;
+  stroke-dashoffset: 125.66;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.progress-ring__arrows {
+  pointer-events: none;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.progress-ring__arrows path {
+  fill: none;
+  stroke: #3b82c4;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-theme="dark"] .progress-ring__bg {
+  fill: #101c2c;
+}
+
+[data-theme="dark"] #button:hover .progress-ring__arrows path {
+  stroke: #7fc1ee;
+}
