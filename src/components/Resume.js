@@ -178,7 +178,7 @@ export default function Resume() {
           <div className="resume-doc__entry">
             <div className="resume-doc__education-head">
               <p className="resume-doc__paragraph resume-doc__paragraph--tight">
-                <strong>Atharva College of Engineering</strong> Mumbai, India
+                <strong>Atharva College of Engineering –</strong> Mumbai, India
               </p>
               <span className="resume-doc__muted">Jan 2021 – May 2024</span>
             </div>

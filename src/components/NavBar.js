@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
-const SECTION_IDS = ["home", "about", "experience", "project", "contact"];
+const SECTION_IDS = ["home", "about", "experience", "project", "github"];
+const SECTION_LABELS = { github: "GitHub" };
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -143,7 +144,7 @@ export default function NavBar() {
                 data-section={id}
                 onClick={() => scrollToSection(id)}
               >
-                {id.charAt(0).toUpperCase() + id.slice(1)}
+                {SECTION_LABELS[id] || id.charAt(0).toUpperCase() + id.slice(1)}
               </li>
             ))}
           </ul>

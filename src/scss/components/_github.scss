@@ -1,0 +1,326 @@
+.github-container {
+  --github-accent: #3b82c4;
+  --github-star: #1a2b3c;
+  --github-muted: #5a738a;
+  --github-border: rgba(59, 130, 196, 0.22);
+  width: 100%;
+  background: transparent;
+}
+
+.github-container .container.github-wrap,
+.github-wrap {
+  margin: 0;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 6.25rem;
+  width: 100%;
+  max-width: none;
+  background: transparent;
+  color: var(--github-star);
+  box-sizing: border-box;
+}
+
+.github-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(72rem, 100%);
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(59, 130, 196, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+  will-change: opacity, transform;
+}
+
+.github-panel.github-in-view {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+.github-panel::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% -20%;
+  height: 70%;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(110, 179, 228, 0.16),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.github-heading,
+.github-toolbar,
+.github-calendar {
+  position: relative;
+  z-index: 1;
+}
+
+.github-heading {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.github-kicker {
+  margin: 0 0 0.55rem;
+  font-family: var(--font1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--github-accent);
+}
+
+.github-title {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.github-title .letter {
+  font-family: var(--font1);
+  font-size: clamp(2.2rem, 5vw, 3.1rem);
+  font-weight: 700;
+  color: var(--github-star);
+  text-shadow: none;
+  cursor: default;
+  display: inline-block;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.github-title .letter:hover {
+  transform: translateY(-3px);
+  color: var(--github-accent);
+}
+
+.github-sub {
+  margin: 0.85rem 0 0;
+  font-family: var(--font3);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--github-muted);
+}
+
+.github-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+  margin: 1.4rem 0 1.1rem;
+}
+
+.github-years {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.25rem;
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+  background: transparent;
+}
+
+.github-years__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--github-accent);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.github-years__btn:hover:not(:disabled) {
+  background: rgba(59, 130, 196, 0.12);
+  transform: translateY(-1px);
+}
+
+.github-years__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.github-years__label {
+  min-width: 7.5rem;
+  padding: 0 0.5rem;
+  text-align: center;
+  font-family: var(--font1);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--github-star);
+}
+
+.github-calendar {
+  width: 100%;
+  padding-right: 0.25rem;
+}
+
+.github-calendar .react-activity-calendar {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0;
+  font-family: var(--font1);
+}
+
+.github-calendar .react-activity-calendar__scroll-container {
+  overflow: visible !important;
+  max-width: 100% !important;
+  min-width: 0;
+}
+
+.github-calendar .react-activity-calendar__calendar {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.github-calendar .react-activity-calendar__calendar text {
+  fill: currentColor;
+  color: var(--github-muted);
+}
+
+.github-calendar .react-activity-calendar__count,
+.github-calendar .react-activity-calendar__legend-colors {
+  color: var(--github-muted);
+}
+
+.github-cell {
+  display: block;
+  outline: none;
+}
+
+.github-cell rect {
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.github-cell:hover rect {
+  transform: scale(1.2);
+  filter: brightness(1.15);
+}
+
+.github-cell:focus-visible rect {
+  transform: scale(1.2);
+  filter: brightness(1.15);
+}
+
+.react-activity-calendar__tooltip {
+  background-color: #3b82c4 !important;
+  color: #ffffff !important;
+  padding: 4px 10px !important;
+  border-radius: 4px !important;
+  font-family: var(--font1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(59, 130, 196, 0.3);
+}
+
+.react-activity-calendar__tooltip[data-color-scheme="dark"] {
+  background-color: #3b82c4 !important;
+  color: #ffffff !important;
+}
+
+.react-activity-calendar__tooltip-arrow {
+  fill: #3b82c4 !important;
+}
+
+[data-theme="dark"] .github-container {
+  --github-star: #e7eef5;
+  --github-muted: #9fb3c8;
+  --github-border: rgba(110, 179, 228, 0.25);
+}
+
+[data-theme="dark"] .github-panel {
+  background: #101c2c;
+}
+
+[data-theme="dark"] .github-years__btn:hover:not(:disabled) {
+  background: rgba(110, 179, 228, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .github-panel {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .github-cell rect {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .github-container .container.github-wrap,
+  .github-wrap {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .github-container .container.github-wrap,
+  .github-wrap {
+    padding: clamp(2.5rem, 8vw, 4rem) 2.5rem;
+  }
+
+  .github-panel {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .github-toolbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .github-years__label {
+    min-width: 6rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .github-container .container.github-wrap,
+  .github-wrap {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .github-container .container.github-wrap {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .github-panel {
+    padding: 1.25rem 1rem;
+  }
+}

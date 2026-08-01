@@ -185,7 +185,7 @@
   letter-spacing: 0.01em;
   line-height: 1.7;
   font-size: 1.02rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: var(--font3);
 }
 
@@ -256,6 +256,18 @@
   .about-more,
   .about-callout {
     text-align: left;
+  }
+  .about-tabs {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+  }
+  .about-tab {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.5rem 0.55rem;
+    font-size: 0.75rem;
   }
 }
 

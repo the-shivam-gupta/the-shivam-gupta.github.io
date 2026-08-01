@@ -20,7 +20,7 @@
 }
 
 #experience h2.exp-title {
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 3.2vw, 42px);
   color: #1a2b3c;
@@ -28,8 +28,8 @@
 }
 
 #experience .exp-subtitle {
-  font-family: "Cause", sans-serif;
-  font-weight: 500;
+  font-family: "Google Sans Flex", sans-serif;
+  font-weight: 400;
   color: var(--exp-muted);
   max-width: 560px;
   line-height: 1.6;
@@ -49,9 +49,10 @@
   width: 2px;
   background: linear-gradient(
     to bottom,
-    var(--exp-primary),
-    var(--exp-secondary),
-    var(--exp-tertiary)
+    var(--exp-primary) 0%,
+    var(--exp-secondary) 45%,
+    var(--exp-tertiary) 78%,
+    transparent 100%
   );
   transform: translateX(-50%);
   opacity: 0.5;
@@ -83,6 +84,10 @@
   border: 3px solid var(--exp-bg);
   box-shadow: 0 0 0 2px var(--exp-dot-color, var(--exp-primary));
   background: var(--exp-dot-color, var(--exp-primary));
+}
+
+#experience .exp-item:first-child .exp-dot {
+  top: 0;
 }
 
 #experience .exp-item:nth-child(odd) .exp-dot {
@@ -122,7 +127,7 @@
 }
 
 #experience .exp-badge {
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -133,15 +138,22 @@
   background: var(--exp-dot-color, var(--exp-primary));
 }
 
+#experience .exp-badge--current {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.18),
+    0 0 1px rgba(34, 197, 94, 0.35);
+}
+
 #experience .exp-date {
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-size: 14px;
   letter-spacing: 0.5px;
   color: var(--exp-muted);
 }
 
 #experience .exp-card h3 {
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 1.8vw, 24px);
   color: #1a2b3c;
@@ -149,7 +161,7 @@
 }
 
 #experience .exp-card .exp-org {
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: var(--exp-dot-color, var(--exp-primary));
@@ -157,7 +169,7 @@
 }
 
 #experience .exp-card p {
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 1.7;
@@ -175,7 +187,7 @@
 }
 
 #experience .exp-oss-sub {
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
@@ -186,7 +198,7 @@
 #experience .exp-list li {
   position: relative;
   padding-left: 1.15rem;
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 1.6;
@@ -240,7 +252,7 @@
   right: 24px;
   background: var(--exp-tertiary);
   color: #ffffff;
-  font-family: "Cause", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   font-weight: 500;
   font-size: 13px;
   padding: 6px 12px;

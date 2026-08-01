@@ -7,9 +7,9 @@
   --color2: #3b82c4;
   --color5: #1a2b3c;
   --color6: #f3f9fd;
-  --font1: "Cause", sans-serif;
-  --font2: "Cause", sans-serif;
-  --font3: "Cause", sans-serif;
+  --font1: "Google Sans Flex", sans-serif;
+  --font2: "Google Sans Flex", sans-serif;
+  --font3: "Google Sans Flex", sans-serif;
   --gradient: radial-gradient(circle at top, #ffffff, #e5f2fb, #c5e2f5);
 }
 
@@ -32,7 +32,7 @@
   --ide-border: rgba(59, 130, 196, 0.22);
   --ide-panel: #ffffff;
   --ide-sidebar: #eaf4fb;
-  --ide-mono: var(--font1);
+  --ide-mono: "Cascadia Code", "SF Mono", Consolas, "Liberation Mono", "Courier New", monospace;
   --ide-sans: var(--font1);
   --ide-serif: var(--font3);
 }

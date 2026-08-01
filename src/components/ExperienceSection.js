@@ -39,7 +39,7 @@ export default function ExperienceSection() {
             <span className="exp-dot"></span>
             <div className="exp-card">
               <div className="exp-badge-row">
-                <span className="exp-badge">Current</span>
+                <span className="exp-badge exp-badge--current">Current</span>
                 <span className="exp-date">Feb 2026 — Present</span>
               </div>
               <h3>Junior Full Stack Developer</h3>
@@ -54,7 +54,7 @@ export default function ExperienceSection() {
             </div>
           </div>
 
-          <div className="exp-item" style={{ "--exp-dot-color": "#6eb3e4" }}>
+          <div className="exp-item" style={{ "--exp-dot-color": "#2563a8" }}>
             <span className="exp-dot"></span>
             <div className="exp-card">
               <div className="exp-badge-row">

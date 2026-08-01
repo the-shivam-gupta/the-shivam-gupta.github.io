@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectSection from "@/components/ProjectSection";
-import ContactForm from "@/components/ContactForm";
+import GitHubSection from "@/components/GitHubSection";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -15,7 +15,7 @@ export default function HomePage() {
       <ExperienceSection />
       <ProjectSection />
       <hr />
-      <ContactForm />
+      <GitHubSection />
 
       <Footer />
 

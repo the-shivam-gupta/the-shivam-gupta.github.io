@@ -7,16 +7,30 @@ export default function HeroSection() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    const strings = [
+      "Full Stack Developer",
+      "Performance Optimizer",
+      "Open Source Contributor",
+      "Learning by Building",
+    ];
+
+    const typedEl = document.getElementById("element");
+    const lineEl = typedEl.closest(".hero-intro__typed-line");
+    const longest = strings.reduce((a, b) => (a.length >= b.length ? a : b));
+    typedEl.textContent = longest;
+    const cursor = document.createElement("span");
+    cursor.className = "typed-cursor";
+    cursor.textContent = " />";
+    typedEl.insertAdjacentElement("afterend", cursor);
+    lineEl.style.minWidth = lineEl.offsetWidth + "px";
+    typedEl.textContent = "";
+    cursor.remove();
+
     const typed = new Typed("#element", {
-      strings: [
-        "Full Stack Developer",
-        "Performance Optimizer",
-        "Open Source Contributor",
-        "Learning by Building",
-      ],
+      strings,
       typeSpeed: 50,
       backSpeed: 50,
-      cursorChar: "|",
+      cursorChar: " />",
       loop: true,
     });
 
@@ -33,14 +47,17 @@ export default function HeroSection() {
       <canvas id="hero-canvas" aria-hidden="true" ref={canvasRef}></canvas>
       <div className="content hero-intro">
         <h1 className="hero-intro__title">
-          <span className="hero-intro__greeting">Hey, I&apos;m</span>
+          <span className="hero-intro__greeting">Hey, I'm</span>
           <span className="hero-intro__name">
             Shivam
             <br />
             Gupta
           </span>
         </h1>
-        <span id="element" className="hero-intro__typed"></span>
+        <span className="hero-intro__typed-line">
+          <span className="hero-intro__tag-open">&lt;</span>
+          <span id="element" className="hero-intro__typed"></span>
+        </span>
         <p className="hero-intro__bio">
           I build modern web applications that are fast, scalable, and built to
           last. From interactive frontends to CMS-powered platforms, I enjoy

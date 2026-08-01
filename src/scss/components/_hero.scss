@@ -61,15 +61,6 @@
   font-family: var(--font1);
 }
 
-.content #element {
-  font-size: 20px;
-  color: var(--color2);
-  line-height: 0.9em;
-  letter-spacing: 0.02em;
-  font-weight: bolder;
-  font-family: var(--font2);
-}
-
 .content hr {
   margin-top: 15px;
   width: 7%;
@@ -123,21 +114,41 @@
   letter-spacing: -0.02em;
 }
 
-.hero-intro__typed,
-.content #element.hero-intro__typed {
-  display: inline-block;
+.hero-intro__typed-line {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
   min-height: 1.35em;
   font-size: clamp(1rem, 1.8vw, 1.2rem);
-  color: var(--hero-accent-2);
   line-height: 1.3;
-  letter-spacing: 0.02em;
-  font-weight: 600;
-  font-family: var(--font2);
   margin-bottom: 0.9rem;
 }
 
-.hero-intro .typed-cursor {
+.hero-intro__tag-open,
+.hero-intro__typed,
+.content #element.hero-intro__typed {
+  display: inline-block;
+  font-size: inherit;
   color: var(--hero-accent-2);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  font-family: var(--font2);
+}
+
+.hero-intro .typed-cursor,
+.hero-intro .typed-cursor.typed-cursor--blink {
+  color: var(--hero-accent-2);
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 1.3;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.hero-intro__tag-open {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.3;
 }
 
 .hero-intro__bio,
@@ -149,7 +160,7 @@
   letter-spacing: 0.01em;
   line-height: 1.6;
   font-size: 0.98rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: var(--font3);
   color: var(--hero-muted);
 }
@@ -310,6 +321,8 @@
 }
 
 [data-theme="dark"] .hero-intro {
+  --hero-accent: #5fa8dd;
+  --hero-accent-2: #7fc1ee;
   --hero-text: #e7eef5;
   --hero-muted: #9fb3c8;
 }
@@ -360,8 +373,7 @@
   .hero-intro__greeting {
     font-size: 1.5rem;
   }
-  .content #element,
-  .hero-intro__typed {
+  .hero-intro__typed-line {
     font-size: 1.15rem;
   }
   .content.hero-intro .hero-intro__bio {
@@ -396,8 +408,7 @@
   .hero-intro__name {
     font-size: 2.55rem;
   }
-  .content #element,
-  .hero-intro__typed {
+  .hero-intro__typed-line {
     font-size: 1.25rem;
   }
   .content.hero-intro .hero-intro__bio {
@@ -431,8 +442,7 @@
   .hero-intro__name {
     font-size: 2.8rem;
   }
-  .content #element,
-  .hero-intro__typed {
+  .hero-intro__typed-line {
     font-size: 1.35rem;
   }
   .content.hero-intro .hero-intro__bio {
