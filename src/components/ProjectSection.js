@@ -7,7 +7,7 @@ const PROJECTS = [
     repo: "https://github.com/ShubhamKhale/labourServices",
     fileName: "LabourService.tsx",
     ext: "tsx",
-    img: "/labor-v2.png",
+    img: "/labor-v2.webp",
     comment: "// connecting job seekers with employers",
     desc: 'Labour Service connects job seekers to employers with trustworthy, convenient hiring tools. Users can recruit labourers, leave <strong>reviews and ratings</strong>, and build a community of trust across the labour services ecosystem.',
     highlights: ["Ratings", "Real-time feedback"],
@@ -22,7 +22,7 @@ const PROJECTS = [
     repo: "https://github.com/the-shivam-gupta/shopverse",
     fileName: "ShopVerse.jsx",
     ext: "jsx",
-    img: "/shopverse-v2.png",
+    img: "/shopverse-v2.webp",
     comment: "// modern eCommerce storefront",
     desc: 'A responsive eCommerce site built with <strong>React &amp; Vite</strong>, using Firebase for secure login and real-time data. Includes personalized user profiles, order history, and a cart-to-checkout flow that works cleanly on every screen size.',
     highlights: [
@@ -42,7 +42,7 @@ const PROJECTS = [
     repo: "https://github.com/PriyansuMaurya/MedGuide",
     fileName: "MedGuide.py",
     ext: "py",
-    img: "/medguide-v2.png",
+    img: "/medguide-v2.webp",
     comment: "// ML-assisted diagnosis support",
     desc: 'MedGuide uses <strong>machine learning</strong> and natural language processing to help practitioners diagnose faster and with more confidence, surfacing insights that support informed treatment decisions.',
     highlights: ["ML Integration", "Real-time diagnosis input"],
@@ -274,7 +274,7 @@ export default function ProjectSection() {
                       }}
                     >
                       <img
-                        src="/close.png"
+                        src="/close.webp"
                         alt=""
                         className="projects-ide__tab-close-icon"
                       />

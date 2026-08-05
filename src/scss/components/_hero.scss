@@ -117,11 +117,13 @@
 .hero-intro__typed-line {
   display: inline-flex;
   align-items: center;
+  gap: 0.55em;
   white-space: nowrap;
   min-height: 1.35em;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(0.85rem, 1.4vw, 0.98rem);
   line-height: 1.3;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.1rem;
+  font-family: var(--ide-mono, "Cascadia Code", "SF Mono", Consolas, "Liberation Mono", "Courier New", monospace);
 }
 
 .hero-intro__tag-open,
@@ -129,26 +131,30 @@
 .content #element.hero-intro__typed {
   display: inline-block;
   font-size: inherit;
-  color: var(--hero-accent-2);
-  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+
+.hero-intro__tag-open {
+  color: var(--hero-muted);
   font-weight: 600;
-  font-family: var(--font2);
+}
+
+.hero-intro__typed,
+.content #element.hero-intro__typed {
+  color: var(--hero-accent-2);
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .hero-intro .typed-cursor,
 .hero-intro .typed-cursor.typed-cursor--blink {
-  color: var(--hero-accent-2);
-  font-size: 1.2em;
-  font-weight: 700;
+  color: var(--hero-muted);
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
   line-height: 1.3;
   animation: none !important;
   -webkit-animation: none !important;
-}
-
-.hero-intro__tag-open {
-  font-size: 1.5em;
-  font-weight: 300;
-  line-height: 1.3;
 }
 
 .hero-intro__bio,

@@ -129,7 +129,7 @@ export default function NavBar() {
         aria-label="Shivam, Software Developer"
         onClick={() => scrollToSection("home")}
       >
-        <img src="/shivam-logo.png" alt="S" className="logo__img" />
+        <img src="/shivam-logo.webp" alt="S" className="logo__img" />
         <span className="logo__name">hivam</span>
       </button>
       <div className="header__actions">

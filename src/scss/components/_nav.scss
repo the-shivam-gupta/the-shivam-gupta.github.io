@@ -109,6 +109,7 @@
   height: 4.3em;
   width: auto;
   display: block;
+  filter: invert(1);
 }
 
 .logo__name {
@@ -357,7 +358,7 @@
 }
 
 [data-theme="dark"] .nav-pill__item {
-  color: #a9c1d6;
+  color: #fff;
 }
 
 [data-theme="dark"] .nav-pill__item:hover:not(.is-active) {
@@ -366,6 +367,10 @@
 
 [data-theme="dark"] .logo__name {
   color: #6eb3e4;
+}
+
+[data-theme="dark"] .logo__img {
+  filter: none;
 }
 
 [data-theme="dark"] .header__theme-track {
