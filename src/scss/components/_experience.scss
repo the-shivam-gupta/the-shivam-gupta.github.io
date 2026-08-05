@@ -99,7 +99,7 @@
 }
 
 #experience .exp-card {
-  background: var(--exp-card);
+  background: var(--exp-bg);
   border: 1px solid var(--exp-border);
   border-radius: 16px;
   padding: 32px 34px;
@@ -170,7 +170,7 @@
 
 #experience .exp-card p {
   font-family: "Google Sans Flex", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.7;
   color: var(--exp-muted);
@@ -199,7 +199,7 @@
   position: relative;
   padding-left: 1.15rem;
   font-family: "Google Sans Flex", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
   color: var(--exp-muted);
