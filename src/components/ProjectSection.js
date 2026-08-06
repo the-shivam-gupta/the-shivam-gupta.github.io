@@ -8,6 +8,8 @@ const PROJECTS = [
     fileName: "LabourService.tsx",
     ext: "tsx",
     img: "/labor-v2.webp",
+    imgW: 1308,
+    imgH: 981,
     comment: "// connecting job seekers with employers",
     desc: 'Labour Service connects job seekers to employers with trustworthy, convenient hiring tools. Users can recruit labourers, leave <strong>reviews and ratings</strong>, and build a community of trust across the labour services ecosystem.',
     highlights: ["Ratings", "Real-time feedback"],
@@ -23,6 +25,8 @@ const PROJECTS = [
     fileName: "ShopVerse.jsx",
     ext: "jsx",
     img: "/shopverse-v2.webp",
+    imgW: 1920,
+    imgH: 1440,
     comment: "// modern eCommerce storefront",
     desc: 'A responsive eCommerce site built with <strong>React &amp; Vite</strong>, using Firebase for secure login and real-time data. Includes personalized user profiles, order history, and a cart-to-checkout flow that works cleanly on every screen size.',
     highlights: [
@@ -43,6 +47,8 @@ const PROJECTS = [
     fileName: "MedGuide.py",
     ext: "py",
     img: "/medguide-v2.webp",
+    imgW: 1308,
+    imgH: 981,
     comment: "// ML-assisted diagnosis support",
     desc: 'MedGuide uses <strong>machine learning</strong> and natural language processing to help practitioners diagnose faster and with more confidence, surfacing insights that support informed treatment decisions.',
     highlights: ["ML Integration", "Real-time diagnosis input"],
@@ -277,6 +283,10 @@ export default function ProjectSection() {
                         src="/close.webp"
                         alt=""
                         className="projects-ide__tab-close-icon"
+                        width="512"
+                        height="512"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </button>
                   </div>
@@ -317,6 +327,10 @@ export default function ProjectSection() {
                       <img
                         src={activeProject.img}
                         alt={activeProject.fileName + " preview"}
+                        width={activeProject.imgW}
+                        height={activeProject.imgH}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="projects-ide__comment">

@@ -16,10 +16,6 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-        />
-        <link
           href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
           rel="stylesheet"
         />
@@ -54,18 +50,6 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <ScrollToTop />
-        <Script
-          src="https://code.jquery.com/jquery-3.6.0.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
-          strategy="beforeInteractive"
-        />
         <Script
           src="https://kit.fontawesome.com/9fa51d37bd.js"
           strategy="afterInteractive"

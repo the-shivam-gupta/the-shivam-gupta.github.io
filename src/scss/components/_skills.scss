@@ -61,8 +61,27 @@
   padding: 0.65em;
   box-sizing: border-box;
   overflow: hidden;
-  animation: skill-hub-pulse 3.2s ease-in-out infinite;
   pointer-events: none;
+}
+
+// Sibling glow layer (not clipped by .skill-system__hub's overflow: hidden)
+// carries the pulsing animation so it only ever touches opacity/transform —
+// avoids animating box-shadow directly on an infinite-loop element.
+.skill-system__hub-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5.25em;
+  height: 5.25em;
+  margin: -2.625em 0 0 -2.625em;
+  border-radius: 50%;
+  box-shadow:
+    0 0 20px rgba(91, 160, 214, 0.5),
+    0 0 36px rgba(91, 160, 214, 0.28);
+  animation: skill-hub-pulse 3.2s ease-in-out infinite;
+  will-change: opacity, transform;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .skill-system__hub::before {

@@ -1,10 +1,14 @@
+import dynamic from "next/dynamic";
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectSection from "@/components/ProjectSection";
-import GitHubSection from "@/components/GitHubSection";
 import Footer from "@/components/Footer";
+
+// Below-the-fold and pulls in react-github-calendar — split into its own
+// chunk instead of shipping it in the initial bundle every visitor parses.
+const GitHubSection = dynamic(() => import("@/components/GitHubSection"));
 
 export default function HomePage() {
   return (

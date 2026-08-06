@@ -8,10 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "gl-matrix": "^3.4.4",
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "react-github-calendar": "^5.0.8",
-    "sass": "^1.77.0"
+    "sass": "^1.77.0",
+    "typed.js": "^3.0.0"
   }
 }

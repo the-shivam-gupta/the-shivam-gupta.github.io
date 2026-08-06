@@ -79,7 +79,14 @@ export default function AboutSection() {
             className="about-img__corner about-img__corner--br"
             aria-hidden="true"
           ></span>
-          <img src="/transparent-image.webp" alt="Shivam Gupta" />
+          <img
+            src="/transparent-image.webp"
+            alt="Shivam Gupta"
+            width="388"
+            height="644"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="about-content">
           <p className="about-kicker">WHO I AM</p>

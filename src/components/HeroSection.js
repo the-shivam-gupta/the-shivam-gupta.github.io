@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import HeroGL from "@/lib/hero-gl";
 import Link from "next/link";
 
@@ -35,7 +36,7 @@ export default function HeroSection() {
     });
 
     const canvas = canvasRef.current;
-    if (canvas && typeof mat4 !== "undefined") {
+    if (canvas) {
       new HeroGL(canvas);
     }
 
@@ -83,7 +84,7 @@ export default function HeroSection() {
               aria-label="LinkedIn"
               data-tooltip="LinkedIn"
             >
-              <img src="/link.webp" alt="" />
+              <img src="/link.webp" alt="" width="512" height="512" decoding="async" />
             </a>
             <a
               href="https://github.com/the-shivam-gupta"
@@ -92,7 +93,7 @@ export default function HeroSection() {
               aria-label="GitHub"
               data-tooltip="GitHub"
             >
-              <img src="/code.webp" alt="" />
+              <img src="/code.webp" alt="" width="512" height="512" decoding="async" />
             </a>
           </div>
         </div>
@@ -100,8 +101,16 @@ export default function HeroSection() {
 
       <div className="skill-system" aria-label="Technical skills">
         <div className="skill-system__glow" aria-hidden="true"></div>
+        <div className="skill-system__hub-pulse" aria-hidden="true"></div>
         <div className="skill-system__hub">
-          <img src="/js-transparent.webp" alt="JavaScript" />
+          <img
+            src="/js-transparent.webp"
+            alt="JavaScript"
+            width="1113"
+            height="1264"
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
 
         <div className="skill-orbit skill-orbit--1">
@@ -110,14 +119,14 @@ export default function HeroSection() {
             style={{ "--orbit-t": 0 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/html.webp" alt="HTML" />
+            <img src="/html.webp" alt="HTML" width="512" height="512" decoding="async" />
           </div>
           <div
             className="skill-planet skill-icon--css"
             style={{ "--orbit-t": 0.5 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/css-3.webp" alt="CSS" />
+            <img src="/css-3.webp" alt="CSS" width="512" height="512" decoding="async" />
           </div>
         </div>
 
@@ -127,14 +136,14 @@ export default function HeroSection() {
             style={{ "--orbit-t": 0.25 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/physics.webp" alt="React" />
+            <img src="/physics.webp" alt="React" width="512" height="512" decoding="async" />
           </div>
           <div
             className="skill-planet skill-icon--github"
             style={{ "--orbit-t": 0.75 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/github.webp" alt="GitHub" />
+            <img src="/github.webp" alt="GitHub" width="512" height="512" decoding="async" />
           </div>
         </div>
 
@@ -144,14 +153,14 @@ export default function HeroSection() {
             style={{ "--orbit-t": 0.125 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/mysql.webp" alt="MySQL" />
+            <img src="/mysql.webp" alt="MySQL" width="512" height="512" decoding="async" />
           </div>
           <div
             className="skill-planet skill-icon--python"
             style={{ "--orbit-t": 0.625 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/python.webp" alt="Python" />
+            <img src="/python.webp" alt="Python" width="512" height="512" decoding="async" />
           </div>
         </div>
 
@@ -161,21 +170,21 @@ export default function HeroSection() {
             style={{ "--orbit-t": 0.875 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/java.webp" alt="Java" />
+            <img src="/java.webp" alt="Java" width="512" height="512" decoding="async" />
           </div>
           <div
             className="skill-planet skill-icon--nextjs"
             style={{ "--orbit-t": 0.375 }}
           >
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/nextjs.webp" alt="nextjs" />
+            <img src="/nextjs.webp" alt="nextjs" width="512" height="512" decoding="async" />
           </div>
         </div>
 
         <div className="skill-orbit skill-orbit--5">
           <div className="skill-planet skill-icon--c" style={{ "--orbit-t": 0 }}>
             <span className="skill-planet__body" aria-hidden="true"></span>
-            <img src="/c-.webp" alt="C" />
+            <img src="/c-.webp" alt="C" width="512" height="512" decoding="async" />
           </div>
         </div>
       </div>
