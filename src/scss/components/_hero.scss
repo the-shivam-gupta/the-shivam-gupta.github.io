@@ -357,7 +357,7 @@
     flex-direction: column-reverse;
     justify-content: space-around;
     height: 100%;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -399,7 +399,7 @@
     flex-direction: column-reverse;
     justify-content: space-around;
     height: 100%;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     padding-left: 3.75rem;
     padding-right: 3.75rem;
   }
@@ -435,7 +435,7 @@
     align-items: center;
     height: auto;
     min-height: 100vh;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     padding-left: 3.75rem;
     padding-right: 3.75rem;
     gap: 1.5rem;
@@ -465,6 +465,11 @@
   #header-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-top: calc(5.5rem + 3.5em);
+    margin-top: 0;
+  }
+  #hero-canvas {
+    top: calc(4.6rem + env(safe-area-inset-top, 0px));
   }
   .hero-intro__actions {
     gap: 1rem;

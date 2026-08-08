@@ -45,7 +45,8 @@
   z-index: 1;
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.08;
   object-fit: cover;
   object-position: center 12%;
   border-radius: 4px;
@@ -259,7 +260,13 @@
     gap: 2rem;
   }
   .about-img {
-    width: min(14rem, 70vw);
+    width: min(12rem, 55vw);
+  }
+  .about-img img {
+    height: auto;
+    aspect-ratio: 1 / 1.08;
+    object-fit: cover;
+    object-position: center 12%;
   }
   .about-content {
     margin: 0;
@@ -296,7 +303,13 @@
     gap: 2.25rem;
   }
   .about-img {
-    width: min(16rem, 55vw);
+    width: min(13rem, 45vw);
+  }
+  .about-img img {
+    height: auto;
+    aspect-ratio: 1 / 1.08;
+    object-fit: cover;
+    object-position: center 12%;
   }
   .about-content {
     margin: 0;
@@ -332,7 +345,13 @@
 
 @media only screen and (max-width: 425px) {
   .about-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 2.25rem 1.5rem 2.75rem;
+  }
+  .about-tabs {
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+  .about-tab {
+    padding: 0.6rem 0.1rem;
   }
 }

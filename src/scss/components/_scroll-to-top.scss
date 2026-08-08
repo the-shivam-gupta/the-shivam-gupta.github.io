@@ -82,3 +82,10 @@
 [data-theme="dark"] #button:hover .progress-ring__arrows path {
   stroke: #7fc1ee;
 }
+
+@media only screen and (max-width: 425px) {
+  #button {
+    right: 1rem;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 6.1rem);
+  }
+}

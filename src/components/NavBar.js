@@ -6,6 +6,14 @@ import ThemeToggle from "./ThemeToggle";
 const SECTION_IDS = ["home", "about", "experience", "project", "github"];
 const SECTION_LABELS = { github: "GitHub" };
 
+const TAB_ITEMS = [
+  { id: "home", label: "Home", icon: "fa-solid fa-house" },
+  { id: "about", label: "About", icon: "fa-solid fa-user" },
+  { id: "experience", label: "Work", icon: "fa-solid fa-briefcase" },
+  { id: "project", label: "Projects", icon: "fa-solid fa-code" },
+  { id: "github", label: "GitHub", icon: "fa-brands fa-github" },
+];
+
 export default function NavBar() {
   const pathname = usePathname();
   const router = useRouter();
@@ -121,48 +129,72 @@ export default function NavBar() {
   }, [isHome]);
 
   return (
-    <header className={"header" + (scrolled ? " is-scrolled" : "")}>
-      <button
-        type="button"
-        className="logo"
-        data-section="home"
-        aria-label="Shivam, Software Developer"
-        onClick={() => scrollToSection("home")}
-      >
-        <img
-          src="/shivam-logo.webp"
-          alt="S"
-          className="logo__img"
-          width="500"
-          height="500"
-          decoding="async"
-        />
-        <span className="logo__name">hivam</span>
-      </button>
-      <div className="header__actions">
-        <nav className="nav-pill" aria-label="Primary">
-          <ul className="nav-pill__list">
-            {SECTION_IDS.map((id) => (
-              <li
-                key={id}
-                className={
-                  "nav-pill__item" + (activeSection === id ? " is-active" : "")
-                }
-                data-section={id}
-                onClick={() => scrollToSection(id)}
-              >
-                {SECTION_LABELS[id] || id.charAt(0).toUpperCase() + id.slice(1)}
-              </li>
-            ))}
-          </ul>
-          <span
-            className="nav-pill__indicator"
-            aria-hidden="true"
-            ref={indicatorRef}
-          ></span>
-        </nav>
-        <ThemeToggle />
-      </div>
-    </header>
+    <>
+      <header className={"header" + (scrolled ? " is-scrolled" : "")}>
+        <button
+          type="button"
+          className="logo"
+          data-section="home"
+          aria-label="Shivam, Software Developer"
+          onClick={() => scrollToSection("home")}
+        >
+          <img
+            src="/shivam-logo.webp"
+            alt="S"
+            className="logo__img"
+            width="500"
+            height="500"
+            decoding="async"
+          />
+          <span className="logo__name">hivam</span>
+        </button>
+        <div className="header__actions">
+          <nav className="nav-pill" aria-label="Primary">
+            <ul className="nav-pill__list">
+              {SECTION_IDS.map((id) => (
+                <li
+                  key={id}
+                  className={
+                    "nav-pill__item" +
+                    (activeSection === id ? " is-active" : "")
+                  }
+                  data-section={id}
+                  onClick={() => scrollToSection(id)}
+                >
+                  {SECTION_LABELS[id] || id.charAt(0).toUpperCase() + id.slice(1)}
+                </li>
+              ))}
+            </ul>
+            <span
+              className="nav-pill__indicator"
+              aria-hidden="true"
+              ref={indicatorRef}
+            ></span>
+          </nav>
+          <ThemeToggle />
+        </div>
+      </header>
+
+      <nav className="tabbar" aria-label="Primary">
+        {TAB_ITEMS.map((tab) => (
+          <button
+            key={tab.id}
+            type="button"
+            className={
+              "tabbar__item" +
+              (activeSection === tab.id ? " is-active" : "")
+            }
+            data-section={tab.id}
+            aria-current={activeSection === tab.id ? "page" : undefined}
+            onClick={() => scrollToSection(tab.id)}
+          >
+            <span className="tabbar__icon" aria-hidden="true">
+              <i className={tab.icon}></i>
+            </span>
+            <span className="tabbar__label">{tab.label}</span>
+          </button>
+        ))}
+      </nav>
+    </>
   );
 }

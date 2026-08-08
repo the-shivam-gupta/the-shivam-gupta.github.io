@@ -14,11 +14,11 @@
   padding: calc(vw(28, 1920) + 5.5rem) vw(90, 1920) vw(100, 1920);
 
   @include media("tablet") {
-    padding: calc(vw(22, 768) + 6.5rem) vw(60, 768) vw(44, 768);
+    padding: calc(vw(42, 768) + 6.5rem) vw(60, 768) vw(44, 768);
   }
 
   @include media("mobile-sm") {
-    padding: calc(vw(18, 414) + 6.5rem) vw(20, 414) vw(36, 414);
+    padding: calc(vw(0, 414) + 4.5rem) vw(20, 414) vw(36, 414);
   }
 }
 
@@ -40,8 +40,8 @@
 
   @include media("tablet") {
     max-width: 100%;
-    font-size: vw(14, 768);
-    line-height: vw(28, 768);
+    font-size: 16px;
+    line-height: 26px;
   }
 
   @include media("mobile-sm") {
@@ -78,9 +78,9 @@
   color: var(--resume-ink);
 
   @include media("tablet") {
-    font-size: vw(34, 768);
-    line-height: vw(38, 768);
-    letter-spacing: vw(0.7, 768);
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: 0.7px;
   }
 
   @include media("mobile-sm") {
@@ -98,8 +98,8 @@
   color: var(--resume-accent-dark);
 
   @include media("tablet") {
-    font-size: vw(16, 768);
-    line-height: vw(24, 768);
+    font-size: 18px;
+    line-height: 24px;
   }
 
   @include media("mobile-sm") {
@@ -116,8 +116,8 @@
 
   @include media("tablet") {
     margin: 0 0 vw(8, 768);
-    font-size: vw(13, 768);
-    letter-spacing: vw(0.8, 768);
+    font-size: 15px;
+    letter-spacing: 0.8px;
   }
 
   @include media("mobile-sm") {
@@ -189,8 +189,8 @@
   color: var(--resume-muted);
 
   @include media("tablet") {
-    font-size: vw(13, 768);
-    letter-spacing: vw(0.8, 768);
+    font-size: 15px;
+    letter-spacing: 0.8px;
   }
 
   @include media("mobile-sm") {
@@ -240,14 +240,14 @@
   padding-bottom: vw(6, 1920);
 
   @include media("tablet") {
-    font-size: vw(14, 768);
-    line-height: vw(16, 768);
-    letter-spacing: vw(1.2, 768);
-    padding-bottom: vw(5, 768);
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    padding-bottom: 5px;
   }
 
   @include media("mobile-sm") {
-    font-size: vw(13, 414);
+    font-size: vw(14, 414);
     line-height: vw(16, 414);
     letter-spacing: vw(1, 414);
     padding-bottom: vw(4, 414);
@@ -355,18 +355,23 @@
   line-height: vw(28, 1920);
 
   @include media("tablet") {
-    font-size: vw(16, 768);
-    line-height: vw(24, 768);
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @include media("mobile-sm") {
     font-size: vw(16, 414);
     line-height: vw(23, 414);
+    font-weight: 400;
   }
 }
 
 .resume-doc__education-head .resume-doc__paragraph--tight strong {
   font-weight: 800;
+
+  @include media("mobile-sm") {
+    font-weight: 800;
+  }
 }
 
 .resume-doc__entry-head .resume-doc__muted,
@@ -380,8 +385,8 @@
   white-space: nowrap;
 
   @include media("tablet") {
-    font-size: vw(14, 768);
-    letter-spacing: vw(0.7, 768);
+    font-size: 14px;
+    letter-spacing: 0.7px;
   }
 
   @include media("mobile-sm") {
@@ -402,10 +407,10 @@
   color: var(--resume-ink);
 
   @include media("tablet") {
-    font-size: vw(16, 768);
-    line-height: vw(24, 768);
-    padding-left: vw(16, 768);
-    text-indent: vw(-16, 768);
+    font-size: 17px;
+    line-height: 24px;
+    padding-left: 16px;
+    text-indent: -16px;
   }
 
   @include media("mobile-sm") {
@@ -430,16 +435,17 @@
   color: var(--resume-muted);
 
   @include media("tablet") {
-    padding-left: vw(16, 768);
-    font-size: vw(13.5, 768);
-    letter-spacing: vw(0.8, 768);
+    padding-left: 16px;
+    font-size: 15px;
+    letter-spacing: 0.8px;
   }
 
   @include media("mobile-sm") {
     margin-bottom: vw(10, 414);
     padding-left: vw(14, 414);
-    font-size: vw(13, 414);
+    font-size: vw(14, 414);
     letter-spacing: vw(0.6, 414);
+    font-weight: 500;
   }
 }
 
@@ -475,6 +481,7 @@
   @include media("tablet") {
     margin: 0 0 vw(8, 768);
     padding-left: vw(16, 768);
+    font-size: 15px;
   }
 
   @include media("mobile-sm") {
@@ -482,6 +489,8 @@
     padding-left: vw(14, 414);
     text-align: left;
     hyphens: manual;
+    font-size: vw(14, 414);
+    font-weight: 400;
   }
 }
 
@@ -492,6 +501,15 @@
 .resume-doc__bullets > li strong, .resume-doc__bullets-1 > li strong {
   font-size: vw(18, 1920);
   font-weight: 700;
+
+  @include media("tablet") {
+    font-size: 16px;
+  }
+
+  @include media("mobile-sm") {
+    font-size: vw(15, 414);
+    font-weight: 700;
+  }
 }
 
 .resume-doc__bullets > li::before, .resume-doc__bullets-1 > li::before {

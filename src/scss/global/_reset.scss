@@ -7,12 +7,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   overflow-x: clip;
   color: #5a738a;
   min-height: 100vh;
+  background-color: #f3f9fd;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
@@ -42,6 +44,7 @@ a {
 
 [data-theme="dark"] body {
   color: #9fb3c8;
+  background-color: #0f1626;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
@@ -63,4 +66,14 @@ a {
     auto,
     auto;
   background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
+}
+
+@media only screen and (max-width: 425px) {
+  html {
+    scroll-padding-top: 4.25rem;
+  }
+
+  body {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 4.25rem);
+  }
 }
