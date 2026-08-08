@@ -97,7 +97,7 @@ export default function AboutSection() {
             role="tablist"
             aria-label="About sections"
           >
-            {TABS.map((tab) => (
+            {TABS.map((tab, i) => (
               <button
                 key={tab.id}
                 className={
@@ -109,7 +109,10 @@ export default function AboutSection() {
                 data-target={tab.id}
                 onClick={() => setActiveTab(tab.id)}
               >
-                {tab.label}
+                <span className="about-tab__num" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="about-tab__label">{tab.label}</span>
               </button>
             ))}
             <span

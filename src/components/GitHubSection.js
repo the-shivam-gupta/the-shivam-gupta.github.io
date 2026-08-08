@@ -80,7 +80,6 @@ export default function GitHubSection() {
       <div className="container github-wrap">
         <div className="github-panel" ref={panelRef}>
           <div className="github-heading">
-            <p className="github-kicker">My GitHub</p>
             <h2 className="github-title title">
               {"GitHub".split("").map((l, i) => (
                 <span className="letter" key={i}>

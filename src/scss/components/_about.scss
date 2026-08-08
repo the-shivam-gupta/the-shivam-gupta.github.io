@@ -121,44 +121,63 @@
 .about-tabs {
   position: relative;
   display: inline-flex;
-  gap: 0.2rem;
-  margin: 0 0 1.35rem;
-  padding: 0.3rem;
-  border-radius: 999px;
-  background: rgba(59, 130, 196, 0.08);
-  border: 1px solid var(--about-border);
+  align-items: center;
+  gap: 1.9rem;
+  margin: 0 0 1.5rem;
+  padding: 0 0 0.65rem;
+  border-bottom: 1px solid var(--about-border);
 }
 
 .about-tab {
   position: relative;
   z-index: 2;
-  padding: 0.55rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.15rem 0;
   border: 0;
-  border-radius: 999px;
   background: transparent;
   font-family: var(--font1);
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   color: var(--about-muted);
   cursor: pointer;
-  transition: color 0.3s ease;
   white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.about-tab:hover:not(.is-active) {
+  color: var(--about-accent);
+}
+
+.about-tab__num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: var(--about-accent);
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
 }
 
 .about-tab.is-active {
-  color: #fff;
+  color: var(--about-accent);
+}
+
+.about-tab.is-active .about-tab__num {
+  opacity: 1;
 }
 
 .about-tab-indicator {
   position: absolute;
   z-index: 1;
-  top: 0.3rem;
+  bottom: -1px;
   left: 0;
-  height: calc(100% - 0.6rem);
-  border-radius: 999px;
+  height: 2px;
+  border-radius: 2px;
   background: var(--about-accent);
-  box-shadow: 0 4px 12px rgba(59, 130, 196, 0.35);
+  box-shadow: 0 2px 8px rgba(59, 130, 196, 0.45);
   transition:
     transform 0.35s cubic-bezier(0.65, 0, 0.35, 1),
     width 0.35s cubic-bezier(0.65, 0, 0.35, 1);
@@ -222,7 +241,7 @@
 }
 
 [data-theme="dark"] .about-tabs {
-  background: rgba(110, 179, 228, 0.1);
+  border-bottom-color: rgba(110, 179, 228, 0.25);
 }
 
 @media (max-width: 900px) {
@@ -260,14 +279,12 @@
   .about-tabs {
     display: flex;
     justify-content: center;
+    gap: 1.4rem;
     max-width: 100%;
     width: 100%;
   }
   .about-tab {
-    flex: 1 1 auto;
-    min-width: 0;
-    padding: 0.5rem 0.55rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
