@@ -256,11 +256,16 @@
 
 .resume-doc__paragraph {
   margin: 0;
-  text-align: justify;
-  hyphens: auto;
+  font-size: vw(17, 1920);
+  font-weight: 300;
+
+  @include media("tablet") {
+    font-size: 15px;
+  }
 
   @include media("mobile-sm") {
-    hyphens: manual;
+    font-size: vw(14, 414);
+    font-weight: 400;
   }
 }
 
@@ -423,6 +428,11 @@
 
 .resume-doc__bullet-char {
   font-weight: 800;
+}
+
+.resume-doc__role-org {
+  font-weight: 500;
+  color: var(--resume-ink);
 }
 
 .resume-doc__role-sub {

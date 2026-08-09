@@ -138,14 +138,53 @@ export default function NavBar() {
           aria-label="Shivam, Software Developer"
           onClick={() => scrollToSection("home")}
         >
-          <img
-            src="/shivam-logo.webp"
-            alt="S"
+          <svg
             className="logo__img"
+            viewBox="0 0 500 500"
             width="500"
             height="500"
-            decoding="async"
-          />
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="shivamLogoCool" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#14D9B4" />
+                <stop offset="100%" stopColor="#0D7FC6" />
+              </linearGradient>
+              <linearGradient id="shivamLogoWarm" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#E31163" />
+                <stop offset="100%" stopColor="#FF9A1E" />
+              </linearGradient>
+            </defs>
+            <path
+              className="logo__shape logo__shape--cool"
+              d="M230 95 L140 195 L220 245"
+              fill="none"
+              stroke="url(#shivamLogoCool)"
+              strokeWidth="55"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              pathLength="1"
+            />
+            <path
+              className="logo__shape logo__shape--warm"
+              d="M290 190 L350 240 L290 345"
+              fill="none"
+              stroke="url(#shivamLogoWarm)"
+              strokeWidth="55"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              pathLength="1"
+            />
+            <path
+              className="logo__shape logo__shape--bar"
+              d="M290 110 L215 370"
+              fill="none"
+              stroke="#ffffff"
+              strokeWidth="16"
+              strokeLinecap="round"
+              pathLength="1"
+            />
+          </svg>
           <span className="logo__name">hivam</span>
         </button>
         <div className="header__actions">

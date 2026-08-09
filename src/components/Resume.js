@@ -12,6 +12,10 @@ function Pipe() {
   return <span className="resume-doc__pipe"> | </span>;
 }
 
+function Dot() {
+  return <span className="resume-doc__pipe"> • </span>;
+}
+
 export default function Resume() {
   return (
     <main className="resume-page">
@@ -19,93 +23,131 @@ export default function Resume() {
         <header className="resume-doc__masthead">
           <h1 className="resume-doc__name">Shivam Gupta</h1>
           <p className="resume-doc__headline">
-            Full Stack Developer | NextJS | MySQL | Redux | Strapi
-          </p>
-          <p className="resume-doc__links">
-            <Link href={PROFILE.portfolio}>Portfolio</Link>
-            <Pipe />
-            <a href={PROFILE.github} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-            <Pipe />
-            <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer">
-              LinkedIn
-            </a>
-            {/* <Pipe />
-            <a href={PROFILE.x} target="_blank" rel="noopener noreferrer">
-              X
-            </a> */}
+            Full Stack Developer — Next.js · React · Redux · Strapi · Node.js
           </p>
           <p className="resume-doc__contact">
-            Mumbai | +91-9326257600 | <a href="mailto:theshivamgupta.dev@gmail.com">theshivamgupta.dev@gmail.com</a>
+            Mumbai, India
+            <Dot />
+            +91-9326257600
+            <Dot />
+            <a href="mailto:theshivamgupta.dev@gmail.com">theshivamgupta.dev@gmail.com</a>
+            <Dot />
+            Portfolio: <Link href={PROFILE.portfolio}>the-shivam-gupta.github.io</Link>
+            <Dot />
+            LinkedIn:{" "}
+            <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/the-shivam-gupta
+            </a>
           </p>
         </header>
+
+        <section className="resume-doc__section" aria-labelledby="resume-summary">
+          <h2 id="resume-summary" className="resume-doc__section-title">
+            Summary
+          </h2>
+          <p className="resume-doc__paragraph">
+            Full Stack Developer with hands-on production experience across
+            Next.js, React, and headless CMS (Strapi) architectures. Delivers
+            accessible, animated UI components and Figma-to-production
+            features on live client platforms, backed by 1.5+ years of
+            open-source contribution across accessibility and
+            performance-focused codebases. Strong CS fundamentals from
+            focused GATE-level preparation in DSA, OS, DBMS, and Computer
+            Networks.
+          </p>
+        </section>
 
         <section className="resume-doc__section" aria-labelledby="resume-experience">
           <h2 id="resume-experience" className="resume-doc__section-title">
             Experience
           </h2>
           <div className="resume-doc__entry">
-            <div className="resume-doc__entry-head">
-              <p className="resume-doc__role-line">
-                <span className="resume-doc__bullet-char" aria-hidden>
-                  1.
-                </span>{" "}
-                Full Stack Developer
-              </p>
-              <span className="resume-doc__muted">Feb 2026 – Present</span>
-            </div>
+            <p className="resume-doc__role-line">
+              <strong>Full Stack Developer</strong>
+              <Pipe />
+              <span className="resume-doc__role-org">
+                Pixtop Media Solutions Pvt Ltd (Webmaffia)
+              </span>
+            </p>
             <p className="resume-doc__role-sub">
-              Pixtop Media Solutions Pvt Ltd (Webmaffia) — Mumbai, India
+              Feb 2026 – Present
+              <Dot />
+              Mumbai, India
             </p>
             <ul className="resume-doc__bullets-1">
               <li>
-                Built and maintained a large investor relations web portal with
-                content managed through a CMS, including multi-tab layouts and PDF
-                file support.
+                Built and maintain a large-scale investor relations web
+                portal with CMS-driven content, multi-tab layouts, and
+                in-browser PDF rendering, used by external stakeholders for
+                regulatory disclosures.
               </li>
               <li>
-                Created reusable UI components with smooth animations that work
-                well on both desktop and mobile devices.
+                Engineered reusable, animated UI components (GSAP/Framer
+                Motion) adopted across multiple product modules, ensuring
+                consistent behavior across desktop and mobile breakpoints.
               </li>
               <li>
-                Created Strapi CMS with MySQL, setting up content types and APIs
-                for dynamic data management.
+                Set up a Strapi CMS backed by MySQL from scratch, defining
+                content types, relations, and REST APIs that content teams
+                use to manage data without engineering support.
               </li>
               <li>
-                Delivered end-to-end features from Figma design handoff to
-                production deployment across multiple release cycles.
+                Owned features end-to-end from Figma design handoff through
+                production deployment across multiple release cycles,
+                coordinating directly with design and QA.
               </li>
             </ul>
           </div>
           <div className="resume-doc__entry">
-            <div className="resume-doc__entry-head">
-              <p className="resume-doc__role-line">
-                <span className="resume-doc__bullet-char" aria-hidden>
-                  2.
-                </span>{" "}
-                Open Source Contributor
-              </p>
-              <span className="resume-doc__muted">Aug 2023 – Jan 2025</span>
-            </div>
-            <p className="resume-doc__role-sub">Community Contributor</p>
+            <p className="resume-doc__role-line">
+              <strong>Technical Prep (GATE — Computer Science)</strong>
+              <Pipe />
+              <span className="resume-doc__role-org">Self-Directed</span>
+            </p>
+            <p className="resume-doc__role-sub">
+              Jan 2025 – Feb 2026
+              <Dot />
+              Mumbai, India
+            </p>
             <ul className="resume-doc__bullets-1">
               <li>
-                <strong>LinksHub:</strong> Improved accessibility (WCAG 2.1) and
-                fixed 10+ UI bugs during Hacktoberfest 2023.
+                Completed intensive, self-directed study of core Computer
+                Science fundamentals — Data Structures &amp; Algorithms,
+                Operating Systems, DBMS, and Computer Networks —
+                strengthening problem-solving and system-design foundations
+                applied directly in current engineering work.
+              </li>
+            </ul>
+          </div>
+          <div className="resume-doc__entry">
+            <p className="resume-doc__role-line">
+              <strong>Open Source Contributor</strong>
+              <Pipe />
+              <span className="resume-doc__role-org">Community Contributions</span>
+            </p>
+            <p className="resume-doc__role-sub">
+              Aug 2023 – Jan 2025
+              <Dot />
+              Remote
+            </p>
+            <ul className="resume-doc__bullets-1">
+              <li>
+                <strong>LinksHub:</strong> Improved accessibility to WCAG 2.1
+                standards and resolved 10+ UI bugs during Hacktoberfest 2023.
               </li>
               <li>
-                <strong>AI-Fusion:</strong> Enhanced UI/UX using TypeScript,
-                optimized dark mode, and implemented card sorting, improving
-                navigation speed by 25%.
+                <strong>AI-Fusion:</strong> Enhanced UI/UX using TypeScript
+                and optimized dark mode; implemented card sorting that
+                improved navigation speed by 25%.
               </li>
               <li>
-                <strong>Namespace:</strong> Improved responsiveness, fixed
-                navigation issues, and enhanced mobile experience.
+                <strong>Namespace:</strong> Improved responsiveness and fixed
+                navigation issues, enhancing the mobile experience.
               </li>
               <li>
-                <strong>React-native-authkit:</strong> Created comprehensive README
-                for RTK Query Auth Template, boosting developer onboarding speed.
+                <strong>React-native-authkit:</strong> Authored a
+                comprehensive README for the RTK Query Auth Template,
+                boosting developer onboarding speed.
               </li>
             </ul>
           </div>
@@ -117,20 +159,21 @@ export default function Resume() {
           </h2>
           <ul className="resume-doc__bullets">
             <li>
-              <strong>ShopVerse:</strong> Implemented authentication (email/password
-              + Google) and real-time Firestore sync. Developed wallet, rewards, and
-              orders modules, boosting user retention by 15%. Optimized Core Web
-              Vitals by reducing LCP from 3.8s to 2.1s.
+              <strong>ShopVerse:</strong> Implemented authentication
+              (email/password + Google) with real-time Firestore sync; built
+              wallet, rewards, and orders modules that boosted user
+              retention by 15%. Reduced LCP from 3.8s to 2.1s through Core
+              Web Vitals optimization.
             </li>
             <li>
-              <strong>MedGuide:</strong> Adapted an ML-powered diagnostic tool into a
-              clinician-friendly interface, improving diagnostic accuracy by 20% and
-              enabling real-time symptom input via Flask UI.
+              <strong>MedGuide:</strong> Adapted an ML-powered diagnostic
+              tool into a clinician-friendly Flask interface with real-time
+              symptom input, improving diagnostic accuracy by 20%.
             </li>
             <li>
-              <strong>LabourServices:</strong> Developed a job-matching app using Ionic
-              + React, connecting 50+ workers with customers. Integrated real-time
-              feedback and ratings to ensure service quality.
+              <strong>LabourServices:</strong> Built a job-matching app
+              (Ionic + React) connecting 50+ workers with customers, with
+              real-time feedback and ratings to maintain service quality.
             </li>
           </ul>
         </section>
@@ -145,6 +188,14 @@ export default function Resume() {
               ReactJS, Redux Toolkit, Tailwind CSS, HTML5, CSS3
             </li>
             <li>
+              <span className="resume-doc__skill-label"><strong>Backend:</strong></span> Strapi,
+              Node.js, RESTful APIs, Firebase (Auth, Firestore, Storage)
+            </li>
+            <li>
+              <span className="resume-doc__skill-label"><strong>State Management:</strong></span> {" "}
+              Redux, Redux Toolkit, Context API
+            </li>
+            <li>
               <span className="resume-doc__skill-label"><strong>Animation:</strong></span> GSAP,
               Framer Motion
             </li>
@@ -153,20 +204,9 @@ export default function Resume() {
               (ES6+), Python
             </li>
             <li>
-              <span className="resume-doc__skill-label"><strong>Backend:</strong></span> Strapi,
-              Firebase (Auth, Firestore, Storage), RESTful API, Node.js
-            </li>
-            <li>
-              <span className="resume-doc__skill-label"><strong>State Management:</strong></span> {" "}
-              Redux, Redux Toolkit, Context API
-            </li>
-            <li>
-              <span className="resume-doc__skill-label"><strong>Tools:</strong></span> Git, GitHub,
-              Figma, GitHub Actions
-            </li>
-            <li>
-              <span className="resume-doc__skill-label"><strong>Concepts:</strong></span> CI/CD,
-              Accessibility (WCAG 2.1), Core Web Vitals, Performance Optimization
+              <span className="resume-doc__skill-label"><strong>Tools &amp; Practices:</strong></span> {" "}
+              Git, GitHub, GitHub Actions, Figma, CI/CD, Accessibility (WCAG
+              2.1), Core Web Vitals, Performance Optimization
             </li>
           </ul>
         </section>
@@ -176,14 +216,17 @@ export default function Resume() {
             Education
           </h2>
           <div className="resume-doc__entry">
-            <div className="resume-doc__education-head">
-              <p className="resume-doc__paragraph resume-doc__paragraph--tight">
-                <strong>Atharva College of Engineering –</strong> Mumbai, India
-              </p>
-              <span className="resume-doc__muted">Jan 2021 – May 2024</span>
-            </div>
-            <p className="resume-doc__paragraph resume-doc__paragraph--tight resume-doc__indent">
-              B.E. Computer Science; GPA: 9.06
+            <p className="resume-doc__role-line">
+              <strong>B.E. Computer Science</strong>
+              <Pipe />
+              <span className="resume-doc__role-org">
+                Atharva College of Engineering, Mumbai
+              </span>
+            </p>
+            <p className="resume-doc__role-sub">
+              Jan 2021 – May 2024
+              <Dot />
+              GPA: 9.06 / 10
             </p>
           </div>
         </section>
@@ -197,18 +240,18 @@ export default function Resume() {
           </h2>
           <ul className="resume-doc__bullets">
             <li>
-              <strong>AI-Driven Healthcare Application – ICSTEMSD2024:</strong>{" "}
-              Developed a symptom analysis and medication engine with vital
-              monitoring for personalized dietary recommendations.
+              <strong>Best Project of the Session:</strong> Awarded to
+              MedGuide at Projectathon 2.0 (National-Level Competition).
             </li>
             <li>
-              <strong>Best Project of the Session:</strong> Awarded at Projectathon
-              2.0 (National Level Competition)
+              <strong>Published Research:</strong> AI-Driven Healthcare
+              Application at ICSTEMSD 2024 — symptom analysis and medication
+              engine with vital-sign-based dietary recommendations.
             </li>
             <li>
-              <strong>Projectathon Volunteer:</strong> Coordinated participants and
-              managed event operations for 100+ attendees in a national-level
-              competition.
+              <strong>Projectathon Volunteer:</strong> Coordinated
+              participants and managed event operations for 100+ attendees
+              in a national-level competition.
             </li>
           </ul>
         </section>

@@ -42,7 +42,7 @@ export default function ExperienceSection() {
                 <span className="exp-badge exp-badge--current">Current</span>
                 <span className="exp-date">Feb 2026 — Present</span>
               </div>
-              <h3>Junior Full Stack Developer</h3>
+              <h3>Full Stack Developer</h3>
               <div className="exp-org">Webmaffia (Pixtop Media Solutions)</div>
               <ul className="exp-list">
                 <li>Building large investor relation platforms</li>
@@ -51,6 +51,25 @@ export default function ExperienceSection() {
                 <li>Shipping features from Figma all the way to production</li>
                 <li>Making websites responsive, smooth and fast</li>
               </ul>
+            </div>
+          </div>
+
+          <div className="exp-item" style={{ "--exp-dot-color": "#4f8fc0" }}>
+            <span className="exp-dot"></span>
+            <div className="exp-card">
+              <div className="exp-badge-row">
+                <span className="exp-badge">Prep</span>
+                <span className="exp-date">Jan 2025 — Feb 2026</span>
+              </div>
+              <h3>Technical Prep (GATE — Computer Science)</h3>
+              <div className="exp-org">Self-Directed</div>
+              <p>
+                Completed intensive, self-directed study of core Computer
+                Science fundamentals — Data Structures &amp; Algorithms,
+                Operating Systems, DBMS, and Computer Networks — strengthening
+                the problem-solving and system-design foundations I apply in
+                my engineering work today.
+              </p>
             </div>
           </div>
 
