@@ -132,10 +132,22 @@ export default function AboutSection() {
               role="tabpanel"
             >
               <p className="about-lead">
-                I&apos;m not the kind of developer who started coding because I
-                knew exactly where it would take me. I started because I was
-                curious, and somewhere along the way that curiosity turned into
-                a career.
+                I started my journey when I first joined coaching for JEE, but
+                didn&apos;t get the results I expected. After MHT-CET, I joined
+                Atharva College. Since it was a COVID year, my 1st and half of
+                my 2nd year were spent online — we didn&apos;t really know how
+                online exams would go, so there was constant pressure looming
+                over how the year would turn out. After we got offline
+                lectures, things started getting exciting. Within my 2nd and
+                3rd year I discovered I loved building web apps, and started
+                learning by following tutorials (shoutout Code with Harry).
+                After finishing my 3rd year, in my 4th year I dedicated a year
+                to preparing for GATE — but it didn&apos;t end well. After
+                that, I started applying, got a referral from a friend I met
+                at Sabha for an opening at Webmaffia, the interview went well,
+                and
+                that&apos;s how I became a Junior Full Stack Developer.
+                Looking for new opportunities ahead.
               </p>
             </div>
             <div
@@ -147,11 +159,12 @@ export default function AboutSection() {
               role="tabpanel"
             >
               <p className="about-lead">
-                These days I spend my time building web applications, solving
-                interesting problems, and making sure the little details
-                don&apos;t get overlooked. I enjoy clean interfaces, smooth
-                interactions, and the kind of user experience people don&apos;t
-                have to think about.
+                These days I spend my time building web apps and tailored web
+                CMS solutions for clients like Lupin Global, Welspun Flooring,
+                and Tata Intellion, among others. I&apos;ve also improved
+                performance metrics for clients like Lupin Global and Lupin
+                US — taking LCP score from 6.5s to 2.5s, and overall
+                performance score from 56% to 96%.
               </p>
             </div>
             <div
@@ -163,10 +176,9 @@ export default function AboutSection() {
               role="tabpanel"
             >
               <p className="about-more">
-                And when I&apos;m away from work? I&apos;m usually learning
-                something new, contributing to open source, or tweaking a side
-                project that definitely started as &ldquo;just a quick
-                experiment.&rdquo;
+                Beyond code, I like to play mobile and PC games like COC and
+                WOTB. I also love playing outdoor games — only when all my
+                friends agree to it.
               </p>
             </div>
           </div>
