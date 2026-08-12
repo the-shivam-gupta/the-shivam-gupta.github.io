@@ -1,91 +1,135 @@
 .tabbar {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 50%;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
   z-index: 900;
   display: none;
-  justify-content: space-around;
-  align-items: stretch;
-  padding: 0.35rem 0.5rem calc(0.4rem + env(safe-area-inset-bottom, 0px));
-  background: rgba(255, 255, 255, 0.92);
-  border-top: 1px solid rgba(59, 130, 196, 0.18);
-  box-shadow: 0 -6px 20px rgba(59, 130, 196, 0.12);
-  backdrop-filter: saturate(180%) blur(14px);
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.45rem;
+  border-radius: 999px;
+  background: rgba(18, 27, 43, 0.92);
+  border: 1px solid rgba(110, 179, 228, 0.16);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 16px 34px -10px rgba(10, 20, 35, 0.55);
+  backdrop-filter: saturate(180%) blur(18px);
+}
+
+.tabbar__indicator {
+  position: absolute;
+  z-index: 1;
+  top: 0.45rem;
+  left: 0;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #4fa3e3, #2e6ba6);
+  box-shadow:
+    0 6px 16px -2px rgba(46, 107, 166, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .tabbar__item {
   position: relative;
+  z-index: 2;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
-  min-width: 0;
-  min-height: 3.5rem;
-  padding: 0.2rem 0.75rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  flex-shrink: 0;
   border: 0;
+  border-radius: 50%;
   background: transparent;
   font-family: var(--font1);
-  color: #5a738a;
+  color: rgba(255, 255, 255, 0.78);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
 .tabbar__item:focus-visible {
-  outline: 2px solid #3b82c4;
-  outline-offset: -2px;
-  border-radius: 8px;
+  outline: 2px solid #6eb3e4;
+  outline-offset: 2px;
 }
 
 .tabbar__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.35rem;
-  height: 1.85rem;
-  border-radius: 999px;
-  font-size: 1.05rem;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  font-size: 1.1rem;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .tabbar__label {
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1;
+  position: absolute;
+  bottom: calc(100% + 0.6rem);
+  left: 50%;
+  padding: 0.32rem 0.75rem;
+  border-radius: 999px;
+  background: #12253b;
+  color: #eaf3fb;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   white-space: nowrap;
+  box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translate(-50%, 6px) scale(0.85);
+  transform-origin: bottom center;
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tabbar__label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #12253b;
 }
 
 .tabbar__item.is-active {
-  color: #2e6ba6;
+  color: #ffffff;
 }
 
 .tabbar__item.is-active .tabbar__icon {
-  background: rgba(59, 130, 196, 0.16);
-  color: #2e6ba6;
+  transform: translateY(-1px) scale(1.08);
+}
+
+.tabbar__item.is-active .tabbar__label {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
 }
 
 [data-theme="dark"] .tabbar {
-  background: rgba(15, 22, 38, 0.92);
-  border-top-color: rgba(110, 179, 228, 0.22);
-  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.35);
+  background: rgba(10, 16, 28, 0.92);
+  border-color: rgba(110, 179, 228, 0.22);
+}
+
+[data-theme="dark"] .tabbar__indicator {
+  background: linear-gradient(145deg, #5fb0ea, #245a91);
 }
 
 [data-theme="dark"] .tabbar__item {
-  color: #9fb3c8;
+  color: rgba(255, 255, 255, 0.72);
 }
 
-[data-theme="dark"] .tabbar__item.is-active {
-  color: #6eb3e4;
+[data-theme="dark"] .tabbar__label {
+  background: #0c1826;
+  color: #eaf3fb;
 }
 
-[data-theme="dark"] .tabbar__item.is-active .tabbar__icon {
-  background: rgba(110, 179, 228, 0.16);
-  color: #6eb3e4;
+[data-theme="dark"] .tabbar__label::after {
+  border-top-color: #0c1826;
 }
 
 @media only screen and (max-width: 425px) {

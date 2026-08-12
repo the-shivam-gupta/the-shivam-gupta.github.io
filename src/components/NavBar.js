@@ -21,6 +21,7 @@ export default function NavBar() {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const indicatorRef = useRef(null);
+  const tabIndicatorRef = useRef(null);
   const scrollLockRef = useRef(false);
   const scrollLockTimeoutRef = useRef(null);
 
@@ -89,6 +90,12 @@ export default function NavBar() {
     function onResize() {
       const active = document.querySelector(".nav-pill__item.is-active");
       if (active) moveIndicator(active);
+      const activeTab = document.querySelector(".tabbar__item.is-active");
+      const tabIndicator = tabIndicatorRef.current;
+      if (activeTab && tabIndicator) {
+        tabIndicator.style.width = activeTab.offsetWidth + "px";
+        tabIndicator.style.transform = "translateX(" + activeTab.offsetLeft + "px)";
+      }
     }
     window.addEventListener("resize", onResize);
 
@@ -107,6 +114,15 @@ export default function NavBar() {
     if (indicator && active) {
       indicator.style.width = active.offsetWidth + "px";
       indicator.style.transform = "translateX(" + active.offsetLeft + "px)";
+    }
+
+    const tabIndicator = tabIndicatorRef.current;
+    const activeTab = document.querySelector(
+      `.tabbar__item[data-section="${activeSection}"]`
+    );
+    if (tabIndicator && activeTab) {
+      tabIndicator.style.width = activeTab.offsetWidth + "px";
+      tabIndicator.style.transform = "translateX(" + activeTab.offsetLeft + "px)";
     }
   }, [activeSection]);
 
@@ -215,6 +231,11 @@ export default function NavBar() {
       </header>
 
       <nav className="tabbar" aria-label="Primary">
+        <span
+          className="tabbar__indicator"
+          aria-hidden="true"
+          ref={tabIndicatorRef}
+        ></span>
         {TAB_ITEMS.map((tab) => (
           <button
             key={tab.id}
@@ -225,12 +246,15 @@ export default function NavBar() {
             }
             data-section={tab.id}
             aria-current={activeSection === tab.id ? "page" : undefined}
+            aria-label={tab.label}
             onClick={() => scrollToSection(tab.id)}
           >
+            <span className="tabbar__label" aria-hidden="true">
+              {tab.label}
+            </span>
             <span className="tabbar__icon" aria-hidden="true">
               <i className={tab.icon}></i>
             </span>
-            <span className="tabbar__label">{tab.label}</span>
           </button>
         ))}
       </nav>
