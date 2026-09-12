@@ -1,0 +1,220 @@
+.contact {
+  position: relative;
+  padding-inline: var(--pad-x);
+  padding-block: calc(var(--section-space) * 1.4) var(--section-space);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 4vh, 2.5rem);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label::before {
+  content: "";
+  width: 2.5rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.heading {
+  font-size: var(--fs-display);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: var(--track-tight);
+}
+
+.cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  overflow: hidden;
+  margin-top: clamp(2rem, 5vh, 4rem);
+  will-change: transform;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: -2% -1%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.65s var(--ease-out);
+  z-index: -1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover::before,
+  .cta:focus-visible::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .cta:hover .ctaText,
+  .cta:hover .ctaArrow {
+    color: var(--accent-ink);
+  }
+
+  .cta:hover .ctaArrow {
+    transform: translate(0.35rem, -0.35rem) rotate(8deg);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cta:active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .cta:active .ctaText,
+  .cta:active .ctaArrow {
+    color: var(--accent-ink);
+  }
+
+  .cta:active .ctaArrow {
+    transform: translate(0.35rem, -0.35rem) rotate(8deg);
+  }
+}
+
+.ctaText {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 7.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: var(--track-tight);
+  color: var(--ink);
+  transition: color 0.4s ease;
+  white-space: nowrap;
+}
+
+.ctaArrow {
+  width: clamp(2rem, 5vw, 4rem);
+  height: auto;
+  color: var(--ink);
+  transition: color 0.4s ease, transform 0.5s var(--ease-out);
+}
+
+.foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email {
+  font-family: var(--font-mono);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.location {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-faint);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  justify-items: start;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  padding: 0.6rem 1rem;
+  min-height: 3rem;
+  min-width: 0;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .social:hover {
+    color: var(--accent-ink);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .social:active {
+    color: var(--accent-ink);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+.socialIcon {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: clamp(2.2rem, 11vw, 4.25rem);
+  }
+
+  .ctaText {
+    font-size: clamp(2.25rem, 9vw, 4rem);
+  }
+
+  .foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta::before,
+  .ctaText,
+  .ctaArrow {
+    transition: none;
+  }
+  .cta:active .ctaArrow {
+    transform: none;
+  }
+}

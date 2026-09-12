@@ -1,0 +1,270 @@
+.services {
+  position: relative;
+}
+
+.stage {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 34rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  background: var(--bg);
+  padding-top: calc(var(--nav-h) + clamp(1.5rem, 4vh, 2.5rem));
+  padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
+}
+
+.head {
+  flex-shrink: 0;
+  padding-inline: var(--pad-x);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label::before {
+  content: "";
+  width: 2.5rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.viewport {
+  min-height: 0;
+  display: flex;
+}
+
+.track {
+  display: flex;
+  align-items: stretch;
+}
+
+.panel {
+  flex: 0 0 auto;
+  width: clamp(20rem, 34vw, 32rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-inline: clamp(1.75rem, 3vw, 2.75rem);
+  border-right: 1px solid var(--line);
+}
+
+.panel:last-child {
+  border-right: none;
+}
+
+.panel:first-child {
+  padding-left: var(--pad-x);
+}
+
+.panel:last-child {
+  padding-right: var(--pad-x);
+}
+
+.panelNumber {
+  display: block;
+  font-family: var(--font-numeral);
+  font-weight: 800;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 1;
+  letter-spacing: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ink-faint);
+  margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  transition: color 0.6s ease, -webkit-text-stroke-color 0.6s ease;
+}
+
+.panelTitle {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(1.25rem, 3vh, 2rem);
+}
+
+.titleLine {
+  font-size: clamp(1.65rem, 3.6vw, 2.85rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  transition: color 0.6s ease;
+}
+
+.accentLine {
+  display: block;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 3px;
+  min-height: 3px;
+  background: var(--accent);
+  margin-bottom: clamp(1.5rem, 4vh, 2.25rem);
+}
+
+.panelDesc {
+  max-width: 26ch;
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  line-height: var(--lh-body);
+  color: var(--ink-muted);
+  margin-bottom: clamp(1.5rem, 4vh, 2.25rem);
+  transition: color 0.6s ease;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+}
+
+.techItem {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-faint);
+  transition: color 0.6s ease;
+}
+
+.panelActive .panelNumber {
+  color: var(--accent);
+  -webkit-text-stroke-color: var(--ink);
+}
+
+.panelActive .titleLine {
+  color: var(--ink);
+}
+
+.panelActive .panelDesc {
+  color: var(--ink-soft);
+}
+
+.panelActive .techItem {
+  color: var(--ink-muted);
+}
+
+.progress {
+  flex-shrink: 0;
+  padding-inline: var(--pad-x);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progressIndex {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.progressTotal {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.progressTrack {
+  position: relative;
+  flex: 1;
+  max-width: 16rem;
+  height: 1px;
+  background: var(--line);
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  will-change: transform;
+}
+
+@mixin stacked-layout {
+  .stage {
+    height: auto;
+    min-height: 0;
+    padding-top: calc(var(--nav-h) + clamp(2rem, 8vh, 3rem));
+    padding-bottom: clamp(2rem, 8vh, 3rem);
+  }
+
+  .viewport {
+    flex: none;
+    overflow: visible;
+  }
+
+  .track {
+    flex-direction: column;
+    width: auto !important;
+    transform: none !important;
+  }
+
+  .panel {
+    width: 100% !important;
+    min-height: 70vh;
+    justify-content: center;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding-inline: var(--pad-x) !important;
+    padding-block: clamp(3rem, 10vh, 4rem);
+  }
+
+  .panel:last-child {
+    border-bottom: none;
+  }
+
+  .panelNumber {
+    color: var(--ink);
+    -webkit-text-stroke-color: var(--ink);
+  }
+
+  .titleLine {
+    color: var(--ink);
+  }
+
+  .panelDesc {
+    color: var(--ink-soft);
+  }
+
+  .techItem {
+    color: var(--ink-muted);
+  }
+
+  .progress {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .panel {
+    width: clamp(18rem, 50vw, 24rem);
+  }
+
+  .panelNumber {
+    font-size: clamp(3rem, 9vw, 5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  @include stacked-layout;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @include stacked-layout;
+
+  .panelNumber,
+  .titleLine,
+  .panelDesc,
+  .techItem {
+    transition: none;
+  }
+}

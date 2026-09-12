@@ -1,0 +1,219 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--pad-x);
+  padding-top: var(--nav-h);
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+.orb {
+  position: absolute;
+  right: -8rem;
+  top: 30%;
+  width: clamp(16rem, 34vw, 30rem);
+  aspect-ratio: 1;
+  z-index: 0;
+  will-change: transform;
+}
+
+.orbRing {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+}
+
+.orbDash {
+  position: absolute;
+  inset: 12%;
+  border: 1px dashed var(--ink-faint);
+  border-radius: 50%;
+  animation: spin 70s linear infinite;
+}
+
+.orbDot {
+  position: absolute;
+  top: 9%;
+  left: 28%;
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.availability {
+  font-size: var(--fs-label);
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.availabilityDot {
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.title {
+  margin-block: clamp(1.5rem, 4vh, 3rem);
+  font-size: var(--fs-display);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: var(--track-tight);
+}
+
+.line {
+  display: block;
+  will-change: transform;
+}
+
+.offsetRight {
+  text-align: right;
+  transform: translateX(2vw);
+}
+
+.offsetLeft {
+  text-align: left;
+  margin-left: 4vw;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+}
+
+.bottomRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.supporting {
+  max-width: 38ch;
+  font-size: var(--fs-base);
+  color: var(--ink-soft);
+}
+
+.metaCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.metaBlock {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.metaLabel {
+  font-size: 0.6rem;
+  color: var(--ink-faint);
+}
+
+.metaValue {
+  font-size: var(--fs-label);
+  color: var(--ink);
+}
+
+.scrollHint {
+  margin-top: 1.5rem;
+  font-size: var(--fs-label);
+  color: var(--ink-soft);
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: clamp(2.4rem, 10.5vw, 5.5rem);
+  }
+
+  .offsetRight {
+    transform: none;
+  }
+
+  .offsetLeft {
+    margin-left: 8vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .orb {
+    right: -6rem;
+    top: 22%;
+    width: 70vw;
+  }
+
+  .topRow {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .title {
+    margin-block: clamp(2rem, 8vh, 4rem);
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .metaCol {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbDash {
+    animation: none;
+  }
+  .availabilityDot {
+    animation: none;
+  }
+}

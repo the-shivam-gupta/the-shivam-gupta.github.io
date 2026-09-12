@@ -1,0 +1,68 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--pad-x);
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+}
+
+.name {
+  color: var(--ink);
+}
+
+.word {
+  font-size: clamp(3rem, 14vw, 11rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  overflow: hidden;
+  text-align: center;
+  will-change: transform;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.lineTrack {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  align-self: center;
+  overflow: hidden;
+}
+
+.line {
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(0);
+  will-change: transform;
+}

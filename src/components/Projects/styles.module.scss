@@ -1,0 +1,258 @@
+.projects {
+  padding-inline: var(--pad-x);
+  padding-block: var(--section-space);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: clamp(3rem, 8vh, 6rem);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label::before {
+  content: "";
+  width: 2.5rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.title {
+  font-size: var(--fs-xl);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: var(--track-tight);
+}
+
+.project {
+  padding-block: clamp(3rem, 8vh, 6rem);
+  border-top: 1px solid var(--line);
+}
+
+.project:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.projectHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-bottom: clamp(2rem, 6vh, 4rem);
+}
+
+.headLeft {
+  width: clamp(3.5rem, 8vw, 7rem);
+  flex-shrink: 0;
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ink-faint);
+  display: block;
+  will-change: transform;
+  transition: color 0.4s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project:hover .number {
+    color: var(--accent);
+  }
+}
+
+.headMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.headMeta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.metaKey {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-faint);
+}
+
+.metaValue {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink);
+}
+
+.mediaLink {
+  display: block;
+}
+
+.mediaWrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-2);
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mediaLink:hover .img {
+    transform: scale(1.04);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .mediaLink:active .img {
+    transform: scale(1.04);
+  }
+}
+
+.aspectLabel {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+  background: rgba(250, 248, 242, 0.78);
+  padding: 0.35rem 0.6rem;
+}
+
+.viewLabel {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink);
+  background: rgba(250, 248, 242, 0.78);
+  padding: 0.5rem 0.75rem;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.4s ease, transform 0.4s var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mediaLink:hover .viewLabel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .viewLabel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.foot {
+  margin-top: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.description {
+  max-width: 52ch;
+  color: var(--ink-soft);
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.techItem {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.75rem;
+}
+
+@media (max-width: 1023px) {
+  .projectHead {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .projectHead {
+    gap: 1.25rem;
+  }
+
+  .headLeft {
+    width: 3rem;
+  }
+
+  .number {
+    font-size: 2.75rem;
+  }
+
+  .title {
+    font-size: clamp(2.25rem, 10.5vw, 3.25rem);
+    overflow-wrap: anywhere;
+  }
+
+  .headMeta {
+    gap: 1.5rem;
+  }
+
+  .foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .tech {
+    justify-content: flex-start;
+  }
+}

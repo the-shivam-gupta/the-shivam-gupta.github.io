@@ -1,0 +1,10 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <circle cx="1080" cy="90" r="180" fill="none" stroke="#2a2a2c" stroke-width="1.5"/>
+  <circle cx="1080" cy="90" r="120" fill="none" stroke="#d9ff3f" stroke-width="1.5"/>
+  <circle cx="1080" cy="90" r="8" fill="#d9ff3f"/>
+  <text x="80" y="90" font-family="monospace" font-size="22" fill="#9c9c95" letter-spacing="4">SHIVAM GUPTA - FULL STACK DEVELOPER</text>
+  <text x="80" y="430" font-family="sans-serif" font-weight="500" font-size="160" fill="#efefe9">SHIVAM</text>
+  <text x="80" y="560" font-family="sans-serif" font-weight="500" font-size="160" fill="#d9ff3f">GUPTA.</text>
+  <line x1="80" y1="600" x2="1120" y2="600" stroke="#2a2a2c" stroke-width="1"/>
+</svg>

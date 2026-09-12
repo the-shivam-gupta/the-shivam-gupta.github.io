@@ -1,0 +1,315 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="svc-crop">
+      <rect x="424" y="602" width="752" height="192"/>
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="1600" height="1000" fill="#edeae2"/>
+  <g stroke="#ddd8c9" stroke-width="1">
+    <line x1="0" y1="250" x2="1600" y2="250"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+  </g>
+  <g stroke="#ddd8c9" stroke-width="1.5">
+    <path d="M 84 146 h 12 M 90 140 v 12"/>
+    <path d="M 350 596 h 12 M 356 590 v 12"/>
+    <path d="M 1538 916 h 12 M 1544 910 v 12"/>
+  </g>
+  <text x="80" y="80" font-family="monospace" font-size="20" fill="#5c584e">SHOPVERSE - E-COMMERCE PLATFORM / 02</text>
+
+  <!-- user session chip -->
+  <rect x="70" y="232" width="210" height="50" rx="25" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <circle cx="96" cy="257" r="15" fill="#f3f1e9" stroke="#5c584e" stroke-width="1.5"/>
+  <circle cx="96" cy="252" r="5" fill="#5c584e"/>
+  <path d="M 87 266 a 9 7 0 0 1 18 0" fill="#5c584e"/>
+  <text x="122" y="253" font-family="monospace" font-size="12" fill="#1f1e1a">welcome back, aarav</text>
+  <text x="122" y="270" font-family="monospace" font-size="10" fill="#5c584e">gold member &#183; 24 orders</text>
+  <circle cx="264" cy="244" r="4" fill="#ff4d2e"/>
+  <path d="M 280 257 H 396" stroke="#ddd8c9" stroke-width="1.5"/>
+  <circle cx="400" cy="257" r="3" fill="#ff4d2e"/>
+
+  <!-- code panel -->
+  <rect x="70" y="310" width="280" height="230" rx="14" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <line x1="72" y1="338" x2="348" y2="338" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="88" cy="324" r="4" fill="#ddd8c9"/>
+  <circle cx="104" cy="324" r="4" fill="#ddd8c9"/>
+  <circle cx="120" cy="324" r="4" fill="#ddd8c9"/>
+  <text x="140" y="328" font-family="monospace" font-size="11" fill="#5c584e">Cart.jsx</text>
+  <g font-family="monospace" font-size="12">
+    <text x="90" y="366" fill="#5c584e">&lt;ShopVerse&gt;</text>
+    <text x="104" y="392" fill="#ff4d2e">&lt;ProductGrid /&gt;</text>
+    <text x="104" y="418" fill="#ff4d2e">&lt;Cart count=&#123;3&#125; /&gt;</text>
+    <text x="104" y="444" fill="#5c584e">&lt;Checkout /&gt;</text>
+    <text x="90" y="470" fill="#5c584e">&lt;/ShopVerse&gt;</text>
+  </g>
+  <path d="M 350 424 H 396" stroke="#5c584e" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <path d="M 362 416 l 8 8 l -8 8 M 374 416 l 8 8 l -8 8" stroke="#ff4d2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="400" cy="424" r="3" fill="#ff4d2e"/>
+
+  <!-- browser window -->
+  <rect x="400" y="120" width="800" height="690" rx="20" fill="#faf8f2" stroke="#1f1e1a" stroke-width="3"/>
+  <line x1="404" y1="168" x2="1196" y2="168" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="432" cy="145" r="6" fill="#ddd8c9"/>
+  <circle cx="456" cy="145" r="6" fill="#ddd8c9"/>
+  <circle cx="480" cy="145" r="6" fill="#ddd8c9"/>
+  <rect x="510" y="131" width="280" height="30" rx="15" fill="#f3f1e9" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="528" cy="146" r="3.5" fill="#ff4d2e"/>
+  <text x="542" y="151" font-family="monospace" font-size="13" fill="#5c584e">shopverse.app</text>
+
+  <!-- site header -->
+  <rect x="424" y="182" width="36" height="36" rx="9" fill="#ff4d2e"/>
+  <text x="442" y="207" text-anchor="middle" font-family="monospace" font-size="19" font-weight="bold" fill="#0a0a0b">S</text>
+  <text x="472" y="206" font-family="monospace" font-size="18" font-weight="bold" letter-spacing="1" fill="#1f1e1a">SHOPVERSE</text>
+  <rect x="590" y="184" width="330" height="32" rx="16" fill="#f3f1e9" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="612" cy="200" r="7" fill="none" stroke="#5c584e" stroke-width="2"/>
+  <line x1="617" y1="205" x2="623" y2="211" stroke="#5c584e" stroke-width="2" stroke-linecap="round"/>
+  <text x="636" y="205" font-family="monospace" font-size="13" fill="#5c584e">Search products, brands&#8230;</text>
+  <rect x="888" y="191" width="18" height="18" rx="4" fill="#f3f1e9" stroke="#ddd8c9" stroke-width="1"/>
+  <text x="897" y="205" text-anchor="middle" font-family="monospace" font-size="12" fill="#5c584e">/</text>
+  <path d="M 946 199 C 944 195 938 191 935 195 C 932 199 937 205 946 211 C 955 205 960 199 957 195 C 954 191 948 195 946 199 Z" fill="none" stroke="#5c584e" stroke-width="2"/>
+  <path d="M 1014 190 h 9 l 7 24 h 32 l 7 -19 h -42" stroke="#1f1e1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="1036" cy="221" r="4" fill="#1f1e1a"/>
+  <circle cx="1056" cy="221" r="4" fill="#1f1e1a"/>
+  <circle cx="1064" cy="184" r="9" fill="#ff4d2e"/>
+  <text x="1064" y="189" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0a0a0b">3</text>
+  <path d="M 1096 196 h 20 m 0 0 l -5 -5 m 5 5 l -5 5 M 1120 206 h -20 m 0 0 l 5 -5 m -5 5 l 5 5" stroke="#5c584e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="1152" cy="200" r="15" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <circle cx="1152" cy="195" r="5" fill="#5c584e"/>
+  <path d="M 1143 210 a 9 7 0 0 1 18 0" fill="#5c584e"/>
+
+  <!-- category nav -->
+  <g font-family="monospace" font-size="11">
+    <rect x="424" y="240" width="63" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+    <text x="455" y="257" text-anchor="middle" fill="#5c584e">SHIRTS</text>
+    <rect x="497" y="240" width="76" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+    <text x="535" y="257" text-anchor="middle" fill="#5c584e">FOOTWEAR</text>
+    <rect x="583" y="240" width="97" height="26" rx="13" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+    <text x="631" y="257" text-anchor="middle" fill="#ff4d2e">ELECTRONICS</text>
+    <rect x="690" y="240" width="70" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+    <text x="725" y="257" text-anchor="middle" fill="#5c584e">WATCHES</text>
+    <rect x="770" y="240" width="49" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+    <text x="794" y="257" text-anchor="middle" fill="#5c584e">BAGS</text>
+    <rect x="829" y="240" width="63" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+    <text x="860" y="257" text-anchor="middle" fill="#5c584e">BEAUTY</text>
+    <rect x="902" y="240" width="83" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+    <text x="943" y="257" text-anchor="middle" fill="#5c584e">OUTERWEAR</text>
+    <rect x="995" y="240" width="97" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+    <text x="1043" y="257" text-anchor="middle" fill="#5c584e">ACCESSORIES</text>
+  </g>
+  <rect x="1104" y="240" width="72" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="1128" y="257" font-family="monospace" font-size="10" fill="#5c584e">POPULAR</text>
+  <path d="M 1160 251 l 4 4 l 4 -4" stroke="#5c584e" stroke-width="1.5" fill="none"/>
+
+  <!-- product card 1 : headphones (hover + added) -->
+  <rect x="424" y="286" width="236" height="300" rx="12" fill="#faf8f2" stroke="#ff4d2e" stroke-width="2"/>
+  <rect x="438" y="300" width="208" height="150" rx="8" fill="#f3f1e9"/>
+  <rect x="446" y="308" width="52" height="20" rx="10" fill="#ff4d2e"/>
+  <text x="472" y="322" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0a0a0b">-30%</text>
+  <path d="M 500 388 A 42 42 0 0 1 584 388" stroke="#1f1e1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <rect x="492" y="382" width="20" height="34" rx="9" fill="#ff4d2e"/>
+  <rect x="572" y="382" width="20" height="34" rx="9" fill="#ff4d2e"/>
+  <g fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5">
+    <circle cx="634" cy="318" r="12"/>
+    <circle cx="634" cy="348" r="12"/>
+    <circle cx="634" cy="378" r="12"/>
+  </g>
+  <path d="M 634 313 C 632.5 310 628.5 307.5 626.5 309.5 C 624.5 311.5 626.5 315 634 320 C 641.5 315 643.5 311.5 641.5 309.5 C 639.5 307.5 635.5 310 634 313 Z" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+  <path d="M 627 344 h 10 m 0 0 l -3 -3 m 3 3 l -3 3 M 641 352 h -10 m 0 0 l 3 -3 m -3 3 l 3 3" stroke="#5c584e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <ellipse cx="634" cy="378" rx="6" ry="4" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+  <circle cx="634" cy="378" r="1.8" fill="#5c584e"/>
+  <text x="440" y="480" font-family="monospace" font-size="14" fill="#1f1e1a">ANC HEADPHONES</text>
+  <g fill="#ff4d2e">
+    <path transform="translate(447 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(461 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(475 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(489 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+  </g>
+  <path transform="translate(503 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z" fill="#ddd8c9"/>
+  <text x="515" y="504" font-family="monospace" font-size="11" fill="#5c584e">(1.2k)</text>
+  <text x="440" y="532" font-family="monospace" font-size="16" font-weight="bold" fill="#ff4d2e">$89</text>
+  <text x="496" y="532" font-family="monospace" font-size="13" fill="#5c584e">$119</text>
+  <line x1="494" y1="527" x2="528" y2="527" stroke="#5c584e" stroke-width="1.5"/>
+  <rect x="440" y="544" width="204" height="34" rx="17" fill="#ff4d2e"/>
+  <path d="M 510 558 l 6 6 l 12 -14" stroke="#0a0a0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="534" y="566" font-family="monospace" font-size="12" font-weight="bold" fill="#0a0a0b">ADDED</text>
+
+  <!-- product card 2 : smartwatch (favorited) -->
+  <rect x="682" y="286" width="236" height="300" rx="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <rect x="696" y="300" width="208" height="150" rx="8" fill="#f3f1e9"/>
+  <rect x="704" y="308" width="52" height="20" rx="10" fill="#ff4d2e"/>
+  <text x="730" y="322" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0a0a0b">-20%</text>
+  <circle cx="892" cy="318" r="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <path d="M 892 311 C 890.5 308 886.5 305.5 884.5 307.5 C 882.5 309.5 884.5 313 892 318 C 899.5 313 901.5 309.5 899.5 307.5 C 897.5 305.5 893.5 308 892 311 Z" fill="#ff4d2e"/>
+  <rect x="788" y="322" width="24" height="34" rx="6" fill="#faf8f2" stroke="#1f1e1a" stroke-width="2"/>
+  <rect x="788" y="414" width="24" height="34" rx="6" fill="#faf8f2" stroke="#1f1e1a" stroke-width="2"/>
+  <rect x="778" y="350" width="44" height="54" rx="12" fill="#0a0a0b" stroke="#ff4d2e" stroke-width="3.5"/>
+  <rect x="786" y="360" width="28" height="6" rx="2" fill="#ff4d2e"/>
+  <path d="M 786 384 h 8 l 4 -7 l 6 12 l 4 -6 h 8" stroke="#ff4d2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="824" y="366" width="5" height="10" rx="2" fill="#1f1e1a"/>
+  <text x="698" y="480" font-family="monospace" font-size="14" fill="#1f1e1a">AMOLED SMARTWATCH</text>
+  <g fill="#ff4d2e">
+    <path transform="translate(705 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(719 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(733 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(747 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+  </g>
+  <path transform="translate(761 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z" fill="#ddd8c9"/>
+  <text x="773" y="504" font-family="monospace" font-size="11" fill="#5c584e">(876)</text>
+  <text x="698" y="532" font-family="monospace" font-size="16" font-weight="bold" fill="#ff4d2e">$129</text>
+  <text x="754" y="532" font-family="monospace" font-size="13" fill="#5c584e">$159</text>
+  <line x1="752" y1="527" x2="786" y2="527" stroke="#5c584e" stroke-width="1.5"/>
+  <rect x="698" y="544" width="204" height="34" rx="17" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+  <text x="800" y="566" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="1" fill="#ff4d2e">ADD TO CART</text>
+
+  <!-- product card 3 : sneakers -->
+  <rect x="940" y="286" width="236" height="300" rx="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <rect x="954" y="300" width="208" height="150" rx="8" fill="#f3f1e9"/>
+  <rect x="962" y="308" width="52" height="20" rx="10" fill="#ff4d2e"/>
+  <text x="988" y="322" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0a0a0b">-40%</text>
+  <circle cx="1150" cy="318" r="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <path d="M 1150 313 C 1148.5 310 1144.5 307.5 1142.5 309.5 C 1140.5 311.5 1142.5 315 1150 320 C 1157.5 315 1159.5 311.5 1157.5 309.5 C 1155.5 307.5 1151.5 310 1150 313 Z" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+  <path d="M 1020 393 Q 1024 370 1042 368 Q 1052 367 1060 374 L 1072 382 Q 1088 386 1098 391 L 1096 396 L 1020 396 Z" fill="#ff4d2e"/>
+  <path d="M 1034 378 l 10 4 M 1030 384 l 12 4 M 1027 390 l 12 4" stroke="#0a0a0b" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 1014 398 H 1098 Q 1106 398 1104 405 Q 1102 410 1094 410 H 1022 Q 1013 410 1013 404 Z" fill="#1f1e1a"/>
+  <text x="956" y="480" font-family="monospace" font-size="14" fill="#1f1e1a">RUNNER SNEAKERS</text>
+  <g fill="#ff4d2e">
+    <path transform="translate(963 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(977 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(991 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(1005 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+  </g>
+  <path transform="translate(1019 500)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z" fill="#ddd8c9"/>
+  <text x="1031" y="504" font-family="monospace" font-size="11" fill="#5c584e">(2.4k)</text>
+  <text x="956" y="532" font-family="monospace" font-size="16" font-weight="bold" fill="#ff4d2e">$59</text>
+  <text x="1012" y="532" font-family="monospace" font-size="13" fill="#5c584e">$99</text>
+  <line x1="1010" y1="527" x2="1044" y2="527" stroke="#5c584e" stroke-width="1.5"/>
+  <rect x="956" y="544" width="204" height="34" rx="17" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+  <text x="1058" y="566" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="1" fill="#ff4d2e">ADD TO CART</text>
+
+  <!-- next row (scroll crop) -->
+  <g clip-path="url(#svc-crop)">
+    <rect x="424" y="602" width="236" height="300" rx="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+    <rect x="438" y="616" width="208" height="150" rx="8" fill="#f3f1e9"/>
+    <rect x="446" y="624" width="52" height="20" rx="10" fill="#ff4d2e"/>
+    <text x="472" y="638" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0a0a0b">-25%</text>
+    <circle cx="634" cy="634" r="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+    <path d="M 634 629 C 632.5 626 628.5 623.5 626.5 625.5 C 624.5 627.5 626.5 631 634 636 C 641.5 631 643.5 627.5 641.5 625.5 C 639.5 623.5 635.5 626 634 629 Z" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+    <path d="M 490 663 L 524 641 Q 542 655 560 641 L 594 663 L 578 691 L 568 684 V 757 H 516 V 684 L 506 691 Z" fill="#ff4d2e"/>
+    <rect x="682" y="602" width="236" height="300" rx="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+    <rect x="696" y="616" width="208" height="150" rx="8" fill="#f3f1e9"/>
+    <rect x="704" y="624" width="56" height="20" rx="10" fill="none" stroke="#ff4d2e" stroke-width="1.5"/>
+    <text x="732" y="638" text-anchor="middle" font-family="monospace" font-size="11" fill="#ff4d2e">NEW</text>
+    <circle cx="892" cy="634" r="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+    <path d="M 892 629 C 890.5 626 886.5 623.5 884.5 625.5 C 882.5 627.5 884.5 631 892 636 C 899.5 631 901.5 627.5 899.5 625.5 C 897.5 623.5 893.5 626 892 629 Z" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+    <path d="M 793 656 V 644 L 809 634 V 656 Z" fill="#ff4d2e"/>
+    <rect x="791" y="656" width="18" height="12" fill="#1f1e1a"/>
+    <rect x="788" y="668" width="24" height="34" rx="3" fill="#faf8f2" stroke="#1f1e1a" stroke-width="2"/>
+    <path d="M 820 632 v 12 M 814 638 h 12" stroke="#5c584e" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="940" y="602" width="236" height="300" rx="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+    <rect x="954" y="616" width="208" height="150" rx="8" fill="#f3f1e9"/>
+    <rect x="962" y="624" width="52" height="20" rx="10" fill="#ff4d2e"/>
+    <text x="988" y="638" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0a0a0b">-15%</text>
+    <circle cx="1150" cy="634" r="12" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+    <path d="M 1150 629 C 1148.5 626 1144.5 623.5 1142.5 625.5 C 1140.5 627.5 1142.5 631 1150 636 C 1157.5 631 1159.5 627.5 1157.5 625.5 C 1155.5 623.5 1151.5 626 1150 629 Z" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+    <path d="M 1040 662 C 1040 642 1050 636 1058 636 C 1066 636 1076 642 1076 662" stroke="#ff4d2e" stroke-width="3" fill="none"/>
+    <path d="M 1024 662 L 1092 662 L 1086 754 Q 1085 760 1078 760 H 1038 Q 1031 760 1030 754 Z" fill="#faf8f2" stroke="#1f1e1a" stroke-width="2.5" stroke-linejoin="round"/>
+    <rect x="1050" y="700" width="16" height="16" rx="3" fill="#ff4d2e"/>
+  </g>
+
+  <!-- quick view panel -->
+  <rect x="340" y="560" width="240" height="170" rx="14" fill="#faf8f2" stroke="#ff4d2e" stroke-width="2"/>
+  <ellipse cx="556" cy="584" rx="7" ry="5" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+  <circle cx="556" cy="584" r="1.8" fill="#5c584e"/>
+  <text x="356" y="590" font-family="monospace" font-size="10" letter-spacing="2" fill="#5c584e">QUICK VIEW</text>
+  <rect x="354" y="602" width="90" height="90" rx="8" fill="#f3f1e9"/>
+  <rect x="390" y="614" width="14" height="18" rx="4" fill="#faf8f2" stroke="#1f1e1a" stroke-width="1.5"/>
+  <rect x="390" y="662" width="14" height="18" rx="4" fill="#faf8f2" stroke="#1f1e1a" stroke-width="1.5"/>
+  <rect x="383" y="628" width="28" height="38" rx="8" fill="#0a0a0b" stroke="#ff4d2e" stroke-width="2.5"/>
+  <rect x="388" y="634" width="18" height="4" rx="1.5" fill="#ff4d2e"/>
+  <text x="456" y="618" font-family="monospace" font-size="13" fill="#1f1e1a">SMARTWATCH</text>
+  <g fill="#ff4d2e">
+    <path transform="translate(461 634) scale(0.66)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(470 634) scale(0.66)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+    <path transform="translate(479 634) scale(0.66)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z"/>
+  </g>
+  <path transform="translate(488 634) scale(0.66)" d="M 0 -6 L 1.8 -1.8 L 6 -1.8 L 2.7 0.9 L 4 5.1 L 0 2.6 L -4 5.1 L -2.7 0.9 L -6 -1.8 L -1.8 -1.8 Z" fill="#ddd8c9"/>
+  <text x="456" y="660" font-family="monospace" font-size="14" font-weight="bold" fill="#ff4d2e">$129</text>
+  <rect x="456" y="672" width="104" height="26" rx="13" fill="none" stroke="#ff4d2e" stroke-width="1.5"/>
+  <text x="508" y="689" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="1" fill="#ff4d2e">ADD TO CART</text>
+
+  <!-- cursor interaction -->
+  <circle cx="598" cy="566" r="10" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+  <circle cx="598" cy="566" r="20" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <path transform="translate(600 560) scale(1.3)" d="M 0 0 L 0 17 L 4.5 13.5 L 7.5 20 L 11 18.4 L 8 12 L 13.5 12 Z" fill="#1f1e1a" stroke="#0a0a0b" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- right system : connectors -->
+  <path d="M 1200 176 H 1244 V 196 H 1276" stroke="#ddd8c9" stroke-width="1.5" fill="none"/>
+  <circle cx="1280" cy="196" r="3" fill="#ff4d2e"/>
+  <path d="M 1200 336 H 1256 V 366 H 1306" stroke="#ddd8c9" stroke-width="1.5" fill="none"/>
+  <circle cx="1310" cy="366" r="3" fill="#ff4d2e"/>
+  <path d="M 1200 470 C 1250 462 1300 470 1349 494" stroke="#5c584e" stroke-width="1.5" stroke-dasharray="4 5" fill="none"/>
+  <path d="M 1200 640 H 1294" stroke="#ddd8c9" stroke-width="1.5" fill="none"/>
+  <circle cx="1298" cy="640" r="3" fill="#ff4d2e"/>
+  <path d="M 1410 196 C 1450 204 1470 214 1492 232" stroke="#ddd8c9" stroke-width="1.5" stroke-dasharray="3 6" fill="none"/>
+  <path d="M 1495 310 C 1500 360 1502 380 1500 396" stroke="#ddd8c9" stroke-width="1.5" stroke-dasharray="3 6" fill="none"/>
+
+  <!-- right system : cart tile -->
+  <rect x="1280" y="140" width="130" height="112" rx="14" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <path d="M 1308 168 h 12 l 10 32 h 40 l 10 -26 h -54" stroke="#1f1e1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="1336" cy="212" r="5" fill="#1f1e1a"/>
+  <circle cx="1366" cy="212" r="5" fill="#1f1e1a"/>
+  <circle cx="1382" cy="162" r="11" fill="#ff4d2e"/>
+  <text x="1382" y="167" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#0a0a0b">3</text>
+  <text x="1345" y="272" text-anchor="middle" font-family="monospace" font-size="10" letter-spacing="2" fill="#5c584e">CART</text>
+
+  <!-- right system : favorite heart -->
+  <path d="M 1500 240 C 1495 231 1483 224 1477 230 C 1471 236 1476 245 1500 260 C 1524 245 1529 236 1523 230 C 1517 224 1505 231 1500 240 Z" fill="#ff4d2e"/>
+  <path d="M 1532 212 v 12 M 1526 218 h 12" stroke="#5c584e" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- right system : payment card -->
+  <rect x="1310" y="310" width="190" height="112" rx="14" fill="#faf8f2" stroke="#1f1e1a" stroke-width="2"/>
+  <rect x="1330" y="344" width="26" height="20" rx="4" fill="#ff4d2e"/>
+  <g fill="#5c584e">
+    <circle cx="1372" cy="378" r="3"/><circle cx="1383" cy="378" r="3"/><circle cx="1394" cy="378" r="3"/><circle cx="1405" cy="378" r="3"/>
+    <circle cx="1420" cy="378" r="3"/><circle cx="1431" cy="378" r="3"/><circle cx="1442" cy="378" r="3"/><circle cx="1453" cy="378" r="3"/>
+  </g>
+  <path d="M 1470 366 q 10 12 0 24 M 1478 360 q 16 18 0 36" stroke="#ff4d2e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- right system : jewelry -->
+  <circle cx="1500" cy="440" r="16" fill="none" stroke="#1f1e1a" stroke-width="3"/>
+  <path d="M 1492 414 L 1508 414 L 1513 422 L 1500 434 L 1487 422 Z" fill="#ff4d2e"/>
+
+  <!-- right system : discount tag -->
+  <g transform="rotate(-8 1420 500)">
+    <rect x="1352" y="472" width="136" height="56" rx="10" fill="#ff4d2e"/>
+    <circle cx="1374" cy="500" r="5" fill="#edeae2"/>
+    <text x="1450" y="508" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#0a0a0b">-40%</text>
+  </g>
+
+  <!-- right system : delivery box -->
+  <polygon points="1298,606 1340,590 1382,606 1340,622" fill="#ff4d2e"/>
+  <polygon points="1298,606 1298,664 1340,680 1340,622" fill="#faf8f2" stroke="#ddd8c9" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1382,606 1382,664 1340,680 1340,622" fill="#5c584e" stroke="#ddd8c9" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- tech layer -->
+  <g stroke="#5c584e" stroke-width="1.5" fill="none">
+    <ellipse cx="1470" cy="84" rx="20" ry="7"/>
+    <ellipse cx="1470" cy="84" rx="20" ry="7" transform="rotate(60 1470 84)"/>
+    <ellipse cx="1470" cy="84" rx="20" ry="7" transform="rotate(-60 1470 84)"/>
+  </g>
+  <circle cx="1470" cy="84" r="3.5" fill="#ff4d2e"/>
+  <rect x="1516" y="540" width="48" height="40" rx="10" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="1540" y="566" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#5c584e">&lt;/&gt;</text>
+  <path d="M 1196 800 L 1250 782 H 1364" stroke="#ddd8c9" stroke-width="1.5" fill="none"/>
+  <circle cx="1250" cy="782" r="3" fill="#ff4d2e"/>
+  <circle cx="1364" cy="782" r="3" fill="#ff4d2e"/>
+  <rect x="1256" y="760" width="44" height="44" rx="10" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="1278" y="788" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#ff4d2e">JS</text>
+  <rect x="1320" y="760" width="44" height="44" rx="10" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1.5"/>
+  <path d="M 1346 770 L 1334 786 H 1341 L 1338 796 L 1352 780 H 1345 L 1348 770 Z" fill="#ff4d2e"/>
+
+  <!-- caption -->
+  <text x="80" y="944" font-family="monospace" font-size="16" fill="#5c584e">MULTI-CATEGORY COMMERCE - DISCOVER &#183; COMPARE &#183; SAVE &#183; CHECKOUT</text>
+</svg>

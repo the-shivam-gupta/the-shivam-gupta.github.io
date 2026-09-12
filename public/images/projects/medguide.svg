@@ -1,0 +1,126 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect width="1600" height="1000" fill="#edeae2"/>
+  <g stroke="#ddd8c9" stroke-width="1">
+    <line x1="0" y1="250" x2="1600" y2="250"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+  </g>
+  <text x="80" y="90" font-family="monospace" font-size="20" fill="#5c584e">MEDGUIDE - ML DIAGNOSTIC TOOL / 03</text>
+
+  <!-- medical cross badge -->
+  <rect x="1420" y="110" width="110" height="110" rx="26" fill="none" stroke="#1f1e1a" stroke-width="2"/>
+  <g fill="#ff4d2e">
+    <rect x="1460" y="120" width="30" height="90"/>
+    <rect x="1430" y="150" width="90" height="30"/>
+  </g>
+
+  <!-- patient -->
+  <ellipse cx="260" cy="858" rx="168" ry="10" fill="#ddd8c9"/>
+  <rect x="128" y="760" width="264" height="22" fill="#1f1e1a" stroke="#ddd8c9" stroke-width="1"/>
+  <rect x="148" y="782" width="14" height="62" fill="#1f1e1a" stroke="#ddd8c9" stroke-width="1"/>
+  <rect x="358" y="782" width="14" height="62" fill="#1f1e1a" stroke="#ddd8c9" stroke-width="1"/>
+  <path d="M 232 660 Q 218 715 238 748" stroke="#ffffff" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <rect x="208" y="588" width="104" height="184" rx="46" fill="#ff4d2e"/>
+  <circle cx="260" cy="545" r="46" fill="#ffffff" stroke="#1f1e1a" stroke-width="4"/>
+  <circle cx="280" cy="550" r="5" fill="#1f1e1a"/>
+  <path d="M 272 574 Q 284 582 296 574" stroke="#1f1e1a" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- handheld phone -->
+  <g transform="rotate(12 401 664)">
+    <rect x="372" y="612" width="58" height="104" rx="10" fill="#5c584e" stroke="#1f1e1a" stroke-width="3"/>
+    <rect x="379" y="621" width="44" height="74" rx="4" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+    <rect x="385" y="630" width="32" height="5" fill="#ff4d2e"/>
+    <rect x="385" y="641" width="24" height="5" fill="#ff4d2e"/>
+    <path d="M 384 668 h 10 l 5 -10 l 7 16 l 5 -8 h 12" stroke="#ff4d2e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <path d="M 300 655 Q 345 705 392 690" stroke="#ffffff" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <circle cx="398" cy="688" r="12" fill="#ffffff"/>
+
+  <!-- dotted link to enlarged view -->
+  <path d="M 436 662 C 480 640 495 640 516 658" stroke="#5c584e" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" fill="none"/>
+  <g fill="#ff4d2e">
+    <circle cx="458" cy="648" r="3.5"/>
+    <circle cx="484" cy="644" r="3.5"/>
+    <circle cx="506" cy="650" r="3.5"/>
+  </g>
+
+  <!-- enlarged app view -->
+  <rect x="520" y="140" width="360" height="720" rx="36" fill="#faf8f2" stroke="#1f1e1a" stroke-width="3"/>
+  <rect x="544" y="180" width="312" height="640" rx="14" fill="#f3f1e9" stroke="#ddd8c9" stroke-width="1"/>
+  <rect x="660" y="156" width="80" height="8" rx="4" fill="#0a0a0b"/>
+  <rect x="660" y="794" width="80" height="6" rx="3" fill="#2a2a2c"/>
+
+  <!-- symptoms input -->
+  <text x="568" y="234" font-family="monospace" font-size="14" letter-spacing="2" fill="#5c584e">SYMPTOMS</text>
+  <text x="832" y="234" text-anchor="end" font-family="monospace" font-size="12" letter-spacing="1" fill="#ff4d2e">+ ADD</text>
+  <rect x="568" y="246" width="264" height="40" rx="8" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+  <text x="582" y="272" font-family="monospace" font-size="15" fill="#1f1e1a">feve</text>
+  <rect x="618" y="256" width="3" height="20" fill="#ff4d2e"/>
+  <rect x="568" y="306" width="88" height="34" rx="17" fill="#ff4d2e"/>
+  <text x="612" y="328" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#0a0a0b">FEVER</text>
+  <rect x="666" y="306" width="88" height="34" rx="17" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+  <text x="710" y="328" text-anchor="middle" font-family="monospace" font-size="13" fill="#ff4d2e">COUGH</text>
+  <rect x="764" y="306" width="68" height="34" rx="17" fill="none" stroke="#5c584e" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <g fill="#5c584e">
+    <rect x="795" y="314" width="6" height="18"/>
+    <rect x="789" y="320" width="18" height="6"/>
+  </g>
+
+  <!-- analysis -->
+  <line x1="568" y1="370" x2="832" y2="370" stroke="#ddd8c9" stroke-width="1"/>
+  <text x="568" y="406" font-family="monospace" font-size="14" letter-spacing="2" fill="#5c584e">ANALYSIS</text>
+  <text x="832" y="406" text-anchor="end" font-family="monospace" font-size="11" letter-spacing="1" fill="#5c584e">ML MODEL</text>
+  <path d="M 568 465 H 615 L 631 431 L 653 499 L 671 447 L 685 473 H 832" stroke="#ff4d2e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="568" y="516" width="264" height="52" rx="8" fill="#faf8f2" stroke="#ff4d2e" stroke-width="2"/>
+  <text x="584" y="548" font-family="monospace" font-size="16" font-weight="bold" fill="#1f1e1a">INFLUENZA</text>
+  <text x="816" y="548" text-anchor="end" font-family="monospace" font-size="16" font-weight="bold" fill="#ff4d2e">92%</text>
+
+  <!-- branch connectors -->
+  <path d="M 832 542 H 940 V 374 H 972" stroke="#ddd8c9" stroke-width="2" fill="none"/>
+  <path d="M 940 542 V 646 H 972" stroke="#ddd8c9" stroke-width="2" fill="none"/>
+  <circle cx="976" cy="370" r="3.5" fill="#5c584e"/>
+  <circle cx="976" cy="650" r="3.5" fill="#5c584e"/>
+
+  <!-- mild remedies card -->
+  <rect x="980" y="250" width="420" height="240" rx="16" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+  <g transform="rotate(-30 1030 310)">
+    <rect x="1008" y="300" width="44" height="20" rx="10" fill="#ff4d2e"/>
+    <rect x="1030" y="300" width="22" height="20" fill="#faf8f2"/>
+    <rect x="1008" y="300" width="44" height="20" rx="10" fill="none" stroke="#1f1e1a" stroke-width="2"/>
+  </g>
+  <text x="1070" y="318" font-family="monospace" font-size="17" font-weight="bold" letter-spacing="1" fill="#1f1e1a">MILD &#183; REMEDIES</text>
+  <g>
+    <circle cx="1014" cy="368" r="8" fill="#ff4d2e"/>
+    <path d="M 1010 368 l 3 3 l 6 -7" stroke="#0a0a0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="1036" y="374" font-family="monospace" font-size="15" fill="#1f1e1a">Rest &amp; oral hydration</text>
+    <circle cx="1014" cy="404" r="8" fill="#ff4d2e"/>
+    <path d="M 1010 404 l 3 3 l 6 -7" stroke="#0a0a0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="1036" y="410" font-family="monospace" font-size="15" fill="#1f1e1a">Paracetamol for fever</text>
+    <circle cx="1014" cy="440" r="8" fill="#ff4d2e"/>
+    <path d="M 1010 440 l 3 3 l 6 -7" stroke="#0a0a0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="1036" y="446" font-family="monospace" font-size="15" fill="#1f1e1a">Steam inhalation, warm soup</text>
+  </g>
+
+  <!-- severe doctor card -->
+  <rect x="980" y="530" width="420" height="240" rx="16" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+  <circle cx="1030" cy="596" r="26" fill="none" stroke="#1f1e1a" stroke-width="2"/>
+  <g fill="#ff4d2e">
+    <rect x="1023" y="580" width="14" height="32"/>
+    <rect x="1014" y="589" width="32" height="14"/>
+  </g>
+  <text x="1070" y="604" font-family="monospace" font-size="17" font-weight="bold" letter-spacing="1" fill="#1f1e1a">SEVERE &#183; VISIT DOCTOR</text>
+  <g fill="#5c584e">
+    <circle cx="1014" cy="645" r="4"/>
+    <circle cx="1014" cy="681" r="4"/>
+    <circle cx="1014" cy="717" r="4"/>
+  </g>
+  <g font-family="monospace" font-size="15" fill="#5c584e">
+    <text x="1036" y="651">High fever &gt; 3 days</text>
+    <text x="1036" y="687">Breathing difficulty</text>
+    <text x="1036" y="723">Symptoms worsen despite care</text>
+  </g>
+
+  <!-- caption -->
+  <text x="80" y="940" font-family="monospace" font-size="18" fill="#5c584e">SYMPTOMS &#8594; DIAGNOSIS &#8594; REMEDIES / CLINIC REFERRAL</text>
+</svg>

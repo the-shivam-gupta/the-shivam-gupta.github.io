@@ -1,0 +1,288 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#edeae2"/>
+  <g stroke="#ddd8c9" stroke-width="1">
+    <line x1="0" y1="250" x2="1600" y2="250"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+  </g>
+  <g stroke="#ddd8c9" stroke-width="1.5">
+    <path d="M 84 146 h 12 M 90 140 v 12"/>
+    <path d="M 1538 966 h 12 M 1544 960 v 12"/>
+  </g>
+  <text x="80" y="80" font-family="monospace" font-size="20" fill="#5c584e">PERIODICSPACE &#8212; PERIODIC TABLE EXPLORER / 01</text>
+  <g transform="translate(1500 84)" stroke="#5c584e" stroke-width="1.5" fill="none">
+    <ellipse cx="0" cy="0" rx="24" ry="9"/>
+    <ellipse cx="0" cy="0" rx="24" ry="9" transform="rotate(60 0 0)"/>
+    <ellipse cx="0" cy="0" rx="24" ry="9" transform="rotate(-60 0 0)"/>
+  </g>
+  <circle cx="1500" cy="84" r="4" fill="#ff4d2e"/>
+  <rect x="140" y="110" width="1360" height="840" rx="20" fill="#faf8f2" stroke="#ddd8c9" stroke-width="3"/>
+  <line x1="144" y1="158" x2="1496" y2="158" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="172" cy="134" r="6" fill="#ddd8c9"/>
+  <circle cx="196" cy="134" r="6" fill="#ddd8c9"/>
+  <circle cx="220" cy="134" r="6" fill="#ddd8c9"/>
+  <rect x="606" y="120" width="428" height="30" rx="15" fill="#f3f1e9" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="626" cy="135" r="3.5" fill="#ff4d2e"/>
+  <text x="640" y="140" font-family="monospace" font-size="13" fill="#5c584e">periodicspace.vercel.app</text>
+  <text x="820" y="222" text-anchor="middle" font-family="monospace" font-size="34" font-weight="bold" fill="#1f1e1a">Periodic Table.</text>
+  <circle cx="1054" cy="211" r="5" fill="#ff4d2e"/>
+  <text x="820" y="252" text-anchor="middle" font-family="monospace" font-size="13" fill="#5c584e">The same 118-element dataset, everywhere &#8212; table, properties, and games.</text>
+  <rect x="600" y="270" width="440" height="40" rx="20" fill="#f3f1e9" stroke="#ddd8c9" stroke-width="1.5"/>
+  <circle cx="626" cy="290" r="7" fill="none" stroke="#5c584e" stroke-width="2"/>
+  <line x1="631" y1="295" x2="637" y2="301" stroke="#5c584e" stroke-width="2" stroke-linecap="round"/>
+  <text x="650" y="295" font-family="monospace" font-size="13" fill="#5c584e">Search by name, symbol, or number&#8230;</text>
+  <rect x="700" y="328" width="80" height="34" rx="17" fill="#ff4d2e"/>
+  <text x="740" y="350" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#faf8f2">TABLE</text>
+  <rect x="788" y="328" width="150" height="34" rx="17" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="863" y="350" text-anchor="middle" font-family="monospace" font-size="12" fill="#5c584e">LIST / PROPERTIES</text>
+  <rect x="946" y="328" width="80" height="34" rx="17" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="986" y="350" text-anchor="middle" font-family="monospace" font-size="12" fill="#5c584e">GAME</text>
+  <rect x="700" y="376" width="150" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="775" y="393" text-anchor="middle" font-family="monospace" font-size="10" fill="#5c584e">FILTER: ALL ELEMENTS</text>
+  <rect x="858" y="376" width="140" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="928" y="393" text-anchor="middle" font-family="monospace" font-size="10" fill="#5c584e">COLOR BY: CATEGORY</text>
+  <rect x="1006" y="376" width="70" height="26" rx="13" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="1041" y="393" text-anchor="middle" font-family="monospace" font-size="10" fill="#5c584e">MORE</text>
+  <rect x="170.0" y="430" width="68.2" height="44" rx="6" fill="#1f6b63" stroke="#ff4d2e" stroke-width="3"/>
+  <text x="204.1" y="457.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#efefe9">H</text>
+  <rect x="1397.8" y="430" width="68.2" height="44" rx="6" fill="#5b3a8f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="457.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">He</text>
+  <rect x="170.0" y="482" width="68.2" height="44" rx="6" fill="#8a2f3a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="204.1" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Li</text>
+  <rect x="242.2" y="482" width="68.2" height="44" rx="6" fill="#b5602a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="276.3" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Be</text>
+  <rect x="1036.7" y="482" width="68.2" height="44" rx="6" fill="#2f6b4a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">B</text>
+  <rect x="1108.9" y="482" width="68.2" height="44" rx="6" fill="#1f6b63" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">C</text>
+  <rect x="1181.1" y="482" width="68.2" height="44" rx="6" fill="#1f6b63" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">N</text>
+  <rect x="1253.3" y="482" width="68.2" height="44" rx="6" fill="#1f6b63" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">O</text>
+  <rect x="1325.6" y="482" width="68.2" height="44" rx="6" fill="#1f5a7a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">F</text>
+  <rect x="1397.8" y="482" width="68.2" height="44" rx="6" fill="#5b3a8f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="509.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ne</text>
+  <rect x="170.0" y="534" width="68.2" height="44" rx="6" fill="#8a2f3a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="204.1" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Na</text>
+  <rect x="242.2" y="534" width="68.2" height="44" rx="6" fill="#b5602a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="276.3" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Mg</text>
+  <rect x="1036.7" y="534" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Al</text>
+  <rect x="1108.9" y="534" width="68.2" height="44" rx="6" fill="#2f6b4a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Si</text>
+  <rect x="1181.1" y="534" width="68.2" height="44" rx="6" fill="#1f6b63" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">P</text>
+  <rect x="1253.3" y="534" width="68.2" height="44" rx="6" fill="#1f6b63" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">S</text>
+  <rect x="1325.6" y="534" width="68.2" height="44" rx="6" fill="#1f5a7a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cl</text>
+  <rect x="1397.8" y="534" width="68.2" height="44" rx="6" fill="#5b3a8f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="561.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ar</text>
+  <rect x="170.0" y="586" width="68.2" height="44" rx="6" fill="#8a2f3a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="204.1" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">K</text>
+  <rect x="242.2" y="586" width="68.2" height="44" rx="6" fill="#b5602a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="276.3" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ca</text>
+  <rect x="314.4" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="348.6" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Sc</text>
+  <rect x="386.7" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="420.8" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ti</text>
+  <rect x="458.9" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="493.0" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">V</text>
+  <rect x="531.1" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="565.2" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cr</text>
+  <rect x="603.3" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="637.4" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Mn</text>
+  <rect x="675.6" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="709.7" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Fe</text>
+  <rect x="747.8" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="781.9" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Co</text>
+  <rect x="820.0" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="854.1" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ni</text>
+  <rect x="892.2" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="926.3" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cu</text>
+  <rect x="964.4" y="586" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="998.6" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Zn</text>
+  <rect x="1036.7" y="586" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ga</text>
+  <rect x="1108.9" y="586" width="68.2" height="44" rx="6" fill="#2f6b4a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ge</text>
+  <rect x="1181.1" y="586" width="68.2" height="44" rx="6" fill="#2f6b4a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">As</text>
+  <rect x="1253.3" y="586" width="68.2" height="44" rx="6" fill="#1f6b63" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Se</text>
+  <rect x="1325.6" y="586" width="68.2" height="44" rx="6" fill="#1f5a7a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Br</text>
+  <rect x="1397.8" y="586" width="68.2" height="44" rx="6" fill="#5b3a8f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="613.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Kr</text>
+  <rect x="170.0" y="638" width="68.2" height="44" rx="6" fill="#8a2f3a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="204.1" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Rb</text>
+  <rect x="242.2" y="638" width="68.2" height="44" rx="6" fill="#b5602a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="276.3" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Sr</text>
+  <rect x="314.4" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="348.6" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Y</text>
+  <rect x="386.7" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="420.8" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Zr</text>
+  <rect x="458.9" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="493.0" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Nb</text>
+  <rect x="531.1" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="565.2" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Mo</text>
+  <rect x="603.3" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="637.4" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Tc</text>
+  <rect x="675.6" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="709.7" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ru</text>
+  <rect x="747.8" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="781.9" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Rh</text>
+  <rect x="820.0" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="854.1" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Pd</text>
+  <rect x="892.2" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="926.3" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ag</text>
+  <rect x="964.4" y="638" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="998.6" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cd</text>
+  <rect x="1036.7" y="638" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">In</text>
+  <rect x="1108.9" y="638" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Sn</text>
+  <rect x="1181.1" y="638" width="68.2" height="44" rx="6" fill="#2f6b4a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Sb</text>
+  <rect x="1253.3" y="638" width="68.2" height="44" rx="6" fill="#2f6b4a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Te</text>
+  <rect x="1325.6" y="638" width="68.2" height="44" rx="6" fill="#1f5a7a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">I</text>
+  <rect x="1397.8" y="638" width="68.2" height="44" rx="6" fill="#5b3a8f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="665.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Xe</text>
+  <rect x="170.0" y="690" width="68.2" height="44" rx="6" fill="#8a2f3a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="204.1" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cs</text>
+  <rect x="242.2" y="690" width="68.2" height="44" rx="6" fill="#b5602a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="276.3" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ba</text>
+  <rect x="314.4" y="690" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="348.6" y="717.0" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#f3f3ee">57-71</text>
+  <rect x="386.7" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="420.8" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Hf</text>
+  <rect x="458.9" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="493.0" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ta</text>
+  <rect x="531.1" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="565.2" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">W</text>
+  <rect x="603.3" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="637.4" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Re</text>
+  <rect x="675.6" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="709.7" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Os</text>
+  <rect x="747.8" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="781.9" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ir</text>
+  <rect x="820.0" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="854.1" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Pt</text>
+  <rect x="892.2" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="926.3" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Au</text>
+  <rect x="964.4" y="690" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="998.6" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Hg</text>
+  <rect x="1036.7" y="690" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Tl</text>
+  <rect x="1108.9" y="690" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Pb</text>
+  <rect x="1181.1" y="690" width="68.2" height="44" rx="6" fill="#2f6b4a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Bi</text>
+  <rect x="1253.3" y="690" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Po</text>
+  <rect x="1325.6" y="690" width="68.2" height="44" rx="6" fill="#1f5a7a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">At</text>
+  <rect x="1397.8" y="690" width="68.2" height="44" rx="6" fill="#5b3a8f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="717.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Rn</text>
+  <rect x="170.0" y="742" width="68.2" height="44" rx="6" fill="#8a2f3a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="204.1" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Fr</text>
+  <rect x="242.2" y="742" width="68.2" height="44" rx="6" fill="#b5602a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="276.3" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ra</text>
+  <rect x="314.4" y="742" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="348.6" y="769.0" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#f3f3ee">89-103</text>
+  <rect x="386.7" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="420.8" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Rf</text>
+  <rect x="458.9" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="493.0" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Db</text>
+  <rect x="531.1" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="565.2" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Sg</text>
+  <rect x="603.3" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="637.4" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Bh</text>
+  <rect x="675.6" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="709.7" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Hs</text>
+  <rect x="747.8" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="781.9" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Mt</text>
+  <rect x="820.0" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="854.1" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ds</text>
+  <rect x="892.2" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="926.3" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Rg</text>
+  <rect x="964.4" y="742" width="68.2" height="44" rx="6" fill="#9c3060" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="998.6" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cn</text>
+  <rect x="1036.7" y="742" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Nh</text>
+  <rect x="1108.9" y="742" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Fl</text>
+  <rect x="1181.1" y="742" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Mc</text>
+  <rect x="1253.3" y="742" width="68.2" height="44" rx="6" fill="#a68f2f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Lv</text>
+  <rect x="1325.6" y="742" width="68.2" height="44" rx="6" fill="#1f5a7a" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ts</text>
+  <rect x="1397.8" y="742" width="68.2" height="44" rx="6" fill="#5b3a8f" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="769.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Og</text>
+  <rect x="386.7" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="420.8" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">La</text>
+  <rect x="458.9" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="493.0" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ce</text>
+  <rect x="531.1" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="565.2" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Pr</text>
+  <rect x="603.3" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="637.4" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Nd</text>
+  <rect x="675.6" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="709.7" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Pm</text>
+  <rect x="747.8" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="781.9" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Sm</text>
+  <rect x="820.0" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="854.1" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Eu</text>
+  <rect x="892.2" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="926.3" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Gd</text>
+  <rect x="964.4" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="998.6" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Tb</text>
+  <rect x="1036.7" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Dy</text>
+  <rect x="1108.9" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ho</text>
+  <rect x="1181.1" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Er</text>
+  <rect x="1253.3" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Tm</text>
+  <rect x="1325.6" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Yb</text>
+  <rect x="1397.8" y="826" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="853.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Lu</text>
+  <rect x="386.7" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="420.8" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Ac</text>
+  <rect x="458.9" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="493.0" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Th</text>
+  <rect x="531.1" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="565.2" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Pa</text>
+  <rect x="603.3" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="637.4" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">U</text>
+  <rect x="675.6" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="709.7" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Np</text>
+  <rect x="747.8" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="781.9" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Pu</text>
+  <rect x="820.0" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="854.1" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Am</text>
+  <rect x="892.2" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="926.3" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cm</text>
+  <rect x="964.4" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="998.6" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Bk</text>
+  <rect x="1036.7" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1070.8" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Cf</text>
+  <rect x="1108.9" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1143.0" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Es</text>
+  <rect x="1181.1" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1215.2" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Fm</text>
+  <rect x="1253.3" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1287.4" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Md</text>
+  <rect x="1325.6" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1359.7" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">No</text>
+  <rect x="1397.8" y="880" width="68.2" height="44" rx="6" fill="#2f8a72" stroke="#0a0a0b" stroke-width="1.5"/>
+  <text x="1431.9" y="907.0" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#f3f3ee">Lr</text>
+
+  <text x="80" y="980" font-family="monospace" font-size="16" fill="#5c584e">118 ELEMENTS &#8212; TABLE &#183; LIST &#183; PROPERTIES &#183; GAME MODES / BUILT 2026</text>
+</svg>

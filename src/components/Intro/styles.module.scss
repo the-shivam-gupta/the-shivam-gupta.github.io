@@ -1,0 +1,188 @@
+.intro {
+  padding-inline: var(--pad-x);
+  padding-block: var(--section-space);
+}
+
+.statement {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--track-tight);
+  max-width: 30ch;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.letter {
+  will-change: opacity;
+}
+
+.caption {
+  margin-top: 2.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+}
+
+$chip-rest-w: 1.6em;
+$chip-rest-h: 0.9em;
+$chip-vertical-nudge: 0.1em;
+$chip-open-w: clamp(15.5rem, 34vw, 19rem);
+$chip-open-pad-x: 1.6rem;
+$chip-open-w-mobile: min(90vw, 17rem);
+$chip-open-pad-x-mobile: 1.25rem;
+
+.chipWrap {
+  position: relative;
+  top: $chip-vertical-nudge;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin-inline: 0.3em;
+  contain: layout;
+}
+
+.chipWrap:has(.chip.open) {
+  z-index: 30;
+}
+
+.chipSpacer {
+  display: inline-block;
+  width: $chip-rest-w;
+  height: $chip-rest-h;
+  visibility: hidden;
+}
+
+.chip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 0fr;
+  gap: 0;
+  width: $chip-rest-w;
+  min-height: $chip-rest-h;
+  overflow: hidden;
+  padding: 0.15em 0.18em;
+  border-radius: 0.2em;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-3);
+  cursor: pointer;
+  transition:
+    width 0.6s var(--ease-out),
+    padding 0.6s var(--ease-out),
+    grid-template-rows 0.6s var(--ease-out),
+    gap 0.6s var(--ease-out),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.chip.open {
+  z-index: 30;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  width: $chip-open-w;
+  padding: 1.5rem $chip-open-pad-x 1.75rem;
+  border-color: var(--accent-line);
+  box-shadow: 0 1.5rem 3rem -1.25rem rgba(31, 30, 26, 0.28);
+  cursor: default;
+}
+
+.chip.flipped {
+  left: auto;
+  right: 0;
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.chipHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chipIcon {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.chipCaret {
+  width: 0.18em;
+  height: 0.245em;
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: transform 0.55s var(--ease-out);
+}
+
+.chip.open .chipCaret {
+  transform: rotate(180deg);
+}
+
+.chipBody {
+  display: block;
+  width: calc(#{$chip-open-w} - #{$chip-open-pad-x} * 2);
+  justify-self: start;
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chip.open .chipBody {
+  opacity: 1;
+  text-align: left;
+  transition: opacity 0.4s ease 0.15s;
+}
+
+.chipTitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: normal;
+  color: var(--ink);
+  margin-bottom: 0.55rem;
+}
+
+.chipText {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 767px) {
+  .statement {
+    max-width: 100%;
+  }
+
+  .chip.open {
+    width: $chip-open-w-mobile;
+    padding: 1.25rem $chip-open-pad-x-mobile 1.5rem;
+  }
+
+  .chipBody {
+    width: calc(#{$chip-open-w-mobile} - #{$chip-open-pad-x-mobile} * 2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip,            
+  .chipCaret,
+  .chipBody {
+    transition: none;
+  }
+}

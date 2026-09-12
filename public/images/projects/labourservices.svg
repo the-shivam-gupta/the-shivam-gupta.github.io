@@ -1,0 +1,132 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect width="1600" height="1000" fill="#edeae2"/>
+  <g stroke="#ddd8c9" stroke-width="1">
+    <line x1="0" y1="250" x2="1600" y2="250"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+  </g>
+  <text x="80" y="80" font-family="monospace" font-size="20" fill="#5c584e">LABOURSERVICES - JOB MATCHING / 04</text>
+
+  <!-- user -->
+  <ellipse cx="260" cy="858" rx="168" ry="10" fill="#ddd8c9"/>
+  <rect x="128" y="760" width="264" height="22" fill="#1f1e1a" stroke="#ddd8c9" stroke-width="1"/>
+  <rect x="148" y="782" width="14" height="62" fill="#1f1e1a" stroke="#ddd8c9" stroke-width="1"/>
+  <rect x="358" y="782" width="14" height="62" fill="#1f1e1a" stroke="#ddd8c9" stroke-width="1"/>
+  <path d="M 232 660 Q 218 715 238 748" stroke="#ffffff" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <rect x="208" y="588" width="104" height="184" rx="46" fill="#ff4d2e"/>
+  <circle cx="260" cy="545" r="46" fill="#ffffff" stroke="#1f1e1a" stroke-width="4"/>
+  <circle cx="280" cy="550" r="5" fill="#1f1e1a"/>
+  <path d="M 272 574 Q 284 582 296 574" stroke="#1f1e1a" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- handheld phone -->
+  <g transform="rotate(12 401 664)">
+    <rect x="372" y="612" width="58" height="104" rx="10" fill="#5c584e" stroke="#1f1e1a" stroke-width="3"/>
+    <rect x="379" y="621" width="44" height="74" rx="4" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+    <rect x="385" y="630" width="32" height="5" fill="#ff4d2e"/>
+    <rect x="385" y="641" width="24" height="5" fill="#ff4d2e"/>
+    <rect x="385" y="656" width="32" height="10" rx="3" fill="#ff4d2e"/>
+  </g>
+  <path d="M 300 655 Q 345 705 392 690" stroke="#ffffff" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <circle cx="398" cy="688" r="12" fill="#ffffff"/>
+
+  <!-- dotted link to enlarged view -->
+  <path d="M 436 662 C 480 640 495 640 516 658" stroke="#5c584e" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" fill="none"/>
+  <g fill="#ff4d2e">
+    <circle cx="458" cy="648" r="3.5"/>
+    <circle cx="484" cy="644" r="3.5"/>
+    <circle cx="506" cy="650" r="3.5"/>
+  </g>
+
+  <!-- enlarged app view -->
+  <rect x="520" y="140" width="360" height="720" rx="36" fill="#faf8f2" stroke="#1f1e1a" stroke-width="3"/>
+  <rect x="544" y="180" width="312" height="640" rx="14" fill="#f3f1e9" stroke="#ddd8c9" stroke-width="1"/>
+  <rect x="660" y="156" width="80" height="8" rx="4" fill="#0a0a0b"/>
+  <rect x="660" y="794" width="80" height="6" rx="3" fill="#2a2a2c"/>
+
+  <!-- category list -->
+  <text x="568" y="228" font-family="monospace" font-size="14" letter-spacing="2" fill="#5c584e">CATEGORY</text>
+  <rect x="568" y="244" width="264" height="44" rx="10" fill="#faf8f2" stroke="#ff4d2e" stroke-width="2"/>
+  <circle cx="594" cy="266" r="5" fill="#ff4d2e"/>
+  <text x="620" y="273" font-family="monospace" font-size="15" font-weight="bold" fill="#1f1e1a">ELECTRICIAN</text>
+  <circle cx="812" cy="266" r="8" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+  <circle cx="812" cy="266" r="3.5" fill="#ff4d2e"/>
+
+  <rect x="588" y="306" width="118" height="34" rx="17" fill="#ff4d2e"/>
+  <path d="M 604 320 l 5 5 l 10 -11" stroke="#0a0a0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="624" y="330" font-family="monospace" font-size="13" font-weight="bold" fill="#0a0a0b">FAN REPAIR</text>
+  <rect x="716" y="306" width="100" height="34" rx="17" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <text x="766" y="328" text-anchor="middle" font-family="monospace" font-size="13" fill="#5c584e">WIRING</text>
+
+  <rect x="568" y="358" width="264" height="44" rx="10" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="594" cy="380" r="5" fill="#5c584e"/>
+  <text x="620" y="387" font-family="monospace" font-size="15" fill="#1f1e1a">PLUMBER</text>
+  <circle cx="812" cy="380" r="8" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+
+  <rect x="568" y="414" width="264" height="44" rx="10" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="594" cy="436" r="5" fill="#5c584e"/>
+  <text x="620" y="443" font-family="monospace" font-size="15" fill="#1f1e1a">CARPENTER</text>
+  <circle cx="812" cy="436" r="8" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+
+  <rect x="568" y="470" width="264" height="44" rx="10" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+  <circle cx="594" cy="492" r="5" fill="#5c584e"/>
+  <text x="620" y="499" font-family="monospace" font-size="15" fill="#1f1e1a">CLEANING</text>
+  <circle cx="812" cy="492" r="8" fill="none" stroke="#5c584e" stroke-width="1.5"/>
+
+  <!-- booking summary -->
+  <line x1="568" y1="544" x2="832" y2="544" stroke="#ddd8c9" stroke-width="1"/>
+  <text x="568" y="580" font-family="monospace" font-size="14" letter-spacing="2" fill="#5c584e">BOOKING</text>
+  <rect x="568" y="594" width="264" height="76" rx="10" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+  <text x="584" y="622" font-family="monospace" font-size="15" fill="#1f1e1a">FAN REPAIR &#183; TODAY</text>
+  <text x="584" y="650" font-family="monospace" font-size="13" fill="#5c584e">Visit charge $5 &#183; 1 hr slot</text>
+  <rect x="568" y="694" width="264" height="48" rx="24" fill="#ff4d2e"/>
+  <text x="700" y="724" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#0a0a0b">BOOK NOW</text>
+
+  <!-- flow connectors -->
+  <path d="M 832 632 H 950 V 234 H 1112" stroke="#ddd8c9" stroke-width="2" fill="none"/>
+  <path d="M 950 632 V 484 H 1112" stroke="#ddd8c9" stroke-width="2" fill="none"/>
+  <path d="M 950 632 V 734 H 1112" stroke="#ddd8c9" stroke-width="2" fill="none"/>
+  <g fill="#5c584e">
+    <circle cx="1116" cy="230" r="3.5"/>
+    <circle cx="1116" cy="480" r="3.5"/>
+    <circle cx="1116" cy="730" r="3.5"/>
+  </g>
+
+  <!-- card 1 : worker notified -->
+  <rect x="1120" y="140" width="440" height="190" rx="16" fill="#faf8f2" stroke="#ddd8c9" stroke-width="1"/>
+  <rect x="1167" y="182" width="6" height="8" rx="2" fill="#ff4d2e"/>
+  <path d="M 1148 222 Q 1170 186 1192 222 V 232 H 1148 Z" fill="#ff4d2e"/>
+  <circle cx="1170" cy="240" r="5" fill="#ff4d2e"/>
+  <path d="M 1202 202 q 8 8 0 18 M 1210 194 q 13 13 0 30" stroke="#5c584e" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <text x="1230" y="212" font-family="monospace" font-size="17" font-weight="bold" letter-spacing="1" fill="#1f1e1a">WORKER NOTIFIED</text>
+  <text x="1230" y="242" font-family="monospace" font-size="14" fill="#5c584e">Fan repair &#183; 15 min away</text>
+  <rect x="1230" y="264" width="130" height="32" rx="16" fill="#ff4d2e"/>
+  <text x="1295" y="285" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#0a0a0b">ON THE WAY</text>
+
+  <!-- card 2 : on-site visit -->
+  <rect x="1120" y="388" width="440" height="190" rx="16" fill="none" stroke="#ddd8c9" stroke-width="1.5"/>
+  <path d="M 1132 464 L 1170 430 L 1208 464" stroke="#1f1e1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="1140" y="464" width="60" height="46" fill="none" stroke="#1f1e1a" stroke-width="2.5"/>
+  <rect x="1160" y="484" width="20" height="26" fill="#ff4d2e"/>
+  <text x="1230" y="454" font-family="monospace" font-size="17" font-weight="bold" letter-spacing="1" fill="#1f1e1a">ON-SITE VISIT</text>
+  <text x="1230" y="484" font-family="monospace" font-size="14" fill="#5c584e">Worker arrived at your door</text>
+  <rect x="1230" y="508" width="150" height="32" rx="16" fill="none" stroke="#ff4d2e" stroke-width="2"/>
+  <text x="1305" y="529" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#ff4d2e">IN PROGRESS</text>
+
+  <!-- card 3 : review -->
+  <rect x="1120" y="635" width="440" height="190" rx="16" fill="#faf8f2" stroke="#ff4d2e" stroke-width="2"/>
+  <text x="1170" y="668" font-family="monospace" font-size="17" font-weight="bold" letter-spacing="1" fill="#1f1e1a">RATE SERVICE</text>
+  <g fill="#ff4d2e">
+    <path transform="translate(1186 706)" d="M 0 -16 L 4.7 -4.9 L 16 -4.9 L 7.2 2.4 L 10.6 13.6 L 0 6.8 L -10.6 13.6 L -7.2 2.4 L -16 -4.9 L -4.7 -4.9 Z"/>
+    <path transform="translate(1230 706)" d="M 0 -16 L 4.7 -4.9 L 16 -4.9 L 7.2 2.4 L 10.6 13.6 L 0 6.8 L -10.6 13.6 L -7.2 2.4 L -16 -4.9 L -4.7 -4.9 Z"/>
+    <path transform="translate(1274 706)" d="M 0 -16 L 4.7 -4.9 L 16 -4.9 L 7.2 2.4 L 10.6 13.6 L 0 6.8 L -10.6 13.6 L -7.2 2.4 L -16 -4.9 L -4.7 -4.9 Z"/>
+    <path transform="translate(1318 706)" d="M 0 -16 L 4.7 -4.9 L 16 -4.9 L 7.2 2.4 L 10.6 13.6 L 0 6.8 L -10.6 13.6 L -7.2 2.4 L -16 -4.9 L -4.7 -4.9 Z"/>
+  </g>
+  <path transform="translate(1362 706)" d="M 0 -16 L 4.7 -4.9 L 16 -4.9 L 7.2 2.4 L 10.6 13.6 L 0 6.8 L -10.6 13.6 L -7.2 2.4 L -16 -4.9 L -4.7 -4.9 Z" fill="none" stroke="#5c584e" stroke-width="2" stroke-linejoin="round"/>
+  <text x="1170" y="752" font-family="monospace" font-size="14" fill="#5c584e">&#34;Fixed my fan in 20 mins!&#34;</text>
+  <rect x="1170" y="772" width="130" height="30" rx="15" fill="#ff4d2e"/>
+  <text x="1235" y="792" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#0a0a0b">SUBMITTED</text>
+
+  <!-- caption -->
+  <text x="80" y="940" font-family="monospace" font-size="18" fill="#5c584e">SELECT &#8594; NOTIFY &#8594; ON-SITE &#8594; REVIEW</text>
+</svg>

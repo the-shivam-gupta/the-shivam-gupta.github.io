@@ -1,0 +1,179 @@
+.testimonials {
+  padding-inline: var(--pad-x);
+  padding-block: var(--section-space);
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label::before {
+  content: "";
+  width: 2.5rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.control {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--ink);
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .control:hover {
+    color: var(--accent-ink);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .control:active {
+    color: var(--accent-ink);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  margin-top: clamp(3rem, 8vh, 6rem);
+  min-height: clamp(24rem, 50vh, 30rem);
+  align-content: center;
+  align-items: center;
+}
+
+.layer {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.tQuote {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: var(--track-tight);
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.tAuthor {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+}
+
+.tAvatar {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent-line);
+  border-radius: 50%;
+  background: var(--accent-soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.tMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.tName {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink);
+}
+
+.tRole {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--ink-faint);
+}
+
+.foot {
+  margin-top: clamp(3rem, 8vh, 5rem);
+  display: flex;
+  justify-content: center;
+}
+
+.progress {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.progressTotal {
+  color: var(--ink-faint);
+  font-size: 0.55em;
+}
+
+@media (max-width: 767px) {
+  .stage {
+    min-height: clamp(22rem, 60vh, 26rem);
+  }
+
+  .tQuote {
+    font-size: clamp(1.6rem, 7.5vw, 2.3rem);
+  }
+
+  .tAvatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .control {
+    transition: none;
+  }
+}
